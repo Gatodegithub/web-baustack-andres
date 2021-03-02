@@ -1,0 +1,123 @@
+:root {
+  --botones: #fff;
+  --color-parrafo: rgba(0, 0, 0, 0.55);
+  --secondary-color: #EA4C02;
+  --tertiary-color: #773090;
+  --fourth-color: #B41764;
+  --fifth-color: #F89321;
+  --tips-green: #3CD692;
+}
+
+/* Generales */
+body {
+  background-color: rgb(248, 258, 258);
+}
+p {
+  color: var(--color-parrafo);
+}
+.secondary-color {
+  color: var(--secondary-color);
+}
+.bg-secondary-color {
+  background-color: var(--secondary-color);
+}
+.btn-outline-secondary {
+  border-color: var(--secondary-color);
+}
+.btn-outline-secondary:hover {
+  background-color: var(--secondary-color);
+}
+.tertiary-color {
+  color: var(--tertiary-color);
+}
+.bg-tertiary-color {
+  background-color: var(--tertiary-color);
+}
+.btn-outline-tertiary{
+  border-color: var(--tertiary-color);
+}
+.btn-outline-tertiary:hover {
+  background-color: var(--tertiary-color);
+  color: #fff;
+}
+.fourth-color {
+  color: var(--fourth-color);
+}
+.fifth-color {
+  color: var(--fifth-color);
+}
+.bg-fifth-color {
+  background-color: var(--fifth-color);
+}
+.tips-green {
+  color: var(--tips-green);
+}
+svg.bi.bi-facebook {
+  color: orange !important;
+}
+svg.bi.bi-instagram {
+  color: purple;
+}
+svg.bi.bi-linkedin {
+  color: purple;
+}
+.contact-list li {
+  position: relative;
+}
+.contact-list li:not(:last-child)::before {
+  content: url("./telephone-fill.svg");
+  position: absolute;
+  top: 3px;
+  left: -20px;
+}
+.contact-list li:last-child::before {
+  content: url("./envelope-fill.svg");
+  position: absolute;
+  top: 3px;
+  left: -20px;
+}
+/* FIN GENERALES */
+
+/* de 992px para arriba */
+@media screen and (min-width: 992px) {
+  header {
+    margin-top: -80px;
+    display: flex;
+  }
+  iframe {
+    width: 80%;
+    height: 400px;
+  }
+}
+
+/* de 991px para abajo */
+@media screen and (max-width: 991px) {
+  .header {
+    display: block;
+  }
+}
+
+/* de 576px para abajo (extra small)*/
+@media screen and (max-width: 576px) {
+  .pt-es-4 {
+    padding-top: 20px;
+  }
+  .hero-video {
+    margin-top: -100px;
+  }
+}
+
+/* Projects Buttons */
+.btn-group .btn {
+  min-width: 30%;
+  width: 200px;
+}
+.btn-group .btn:hover {
+  background-color: aquamarine;
+}
+
+
+/* Tips */
+.tip {
+  width: 300px;
+}
