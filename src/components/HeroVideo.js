@@ -1,13 +1,12 @@
 import React from "react";
 
-export default function HeroVideo() {
+export default function HeroVideo({handleClick, t, i18n}) {
   return (
     <section className="container-fluid bg-light hero-video">
       <div className="row">
         <div className="col-lg-12 px-md-5">
           <h2 className="text-center px-lg-5">
-            Crear tu propia aplicación nunca fue tan fácil, no necesitas
-            conocimientos técnicos!
+            {t('HeroVideo.title')}
           </h2>
         </div>
       </div>

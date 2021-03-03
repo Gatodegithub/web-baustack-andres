@@ -6,12 +6,12 @@ import calendarh from "../Icons/calendarh.svg";
 import peoplecalendar from "../Icons/peoplecalendar.svg";
 import twocircle from "../Icons/twocircle.svg";
 
-export default function Tips() {
+export default function Tips({handleClick, t, i18n}) {
   return (
     <section className="container-fluid bg-light">
       <div className="row">
         <div className="col-lg-12">
-          <h2 className="text-center pt-5">El impacto de utilizar Baustack</h2>
+          <h2 className="text-center pt-5">{t('Tips.title')}</h2>
         </div>
       </div>
       <div className="row">
@@ -20,7 +20,11 @@ export default function Tips() {
             <div className="tip d-flex">
               <img src={people3} alt="people3"></img>
               <div className="mt-3 pl-3">
-                <p className=""><h4 className="tips-green"><b>3 Horas</b></h4> a la semana ahorradas <br></br>en promedio por cada empleado</p>
+                <p className="">
+                  <h4 className="tips-green">
+                    <b>{t('Tips.tips1.subtitle')}</b></h4> 
+                    {t('Tips.tips1.text')}
+                </p>
             </div>
           </div>
             
@@ -29,7 +33,8 @@ export default function Tips() {
             <div className="tip d-flex">
               <img src={worldh} alt="worldh"></img>
               <div className="mt-3 pl-3">
-                <p className=""><h4 className="tips-green"><b>15.600 Horas</b></h4> ahorradas por empresas <br></br>semanalmente usando Baustack</p>
+                <p className=""><h4 className="tips-green"><b>{t('Tips.tips2.subtitle')}
+                  </b></h4>{t('Tips.tips2.text')}</p>
               </div>
             </div>
           </div>

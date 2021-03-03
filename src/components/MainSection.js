@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../data.svg";
 
-export default function MainSection() {
+export default function MainSection({handleClick, t, i18n}) {
   return (
     <main className="container py-5">
       <div className="row pb-sm-5">
@@ -10,17 +10,16 @@ export default function MainSection() {
         </div>
         <div className="col-lg-6 text-center text-lg-left my-auto">
           <h2 className="display-4">
-            <b className="tertiary-color">Comienza en segundos</b>
+            <b>{t('Mainsection.row1.title')}</b>
           </h2>
           <p className="pr-lg-5">
-            Tu equipo amará la similitud con las planillas Excel, con la
-            potencia de una base de datos
+            {t('Mainsection.row1.subtitle')}
           </p>
           <a
             href="true"
             className="btn btn-lg btn-outline-secondary secondary-color rounded-pill"
           >
-            Empezar ahora
+            {t('action')}
           </a>
         </div>
       </div>
@@ -29,18 +28,17 @@ export default function MainSection() {
         <div className="col-lg-6 text-center text-lg-right my-auto">
           <h2 className="display-4 mt-5">
             <b className="secondary-color">
-              Soporte al<br></br> cliente en Chile
+              {t('Mainsection.row2.title')}
             </b>
           </h2>
           <p className="pl-lg-5">
-            Tenemos presencia local en Chile, y podemos resolver todas tus dudas
-            con nuestro soporte telefónico
+          {t('Mainsection.row2.subtitle')}
           </p>
           <a
             href="true"
             className="btn btn-lg btn-outline-tertiary tertiary-color rounded-pill"
           >
-            Empezar ahora
+            {t('action')}
           </a>
         </div>
         <div className="col-lg-6 text-center text-lg-left">
@@ -54,17 +52,16 @@ export default function MainSection() {
         </div>
         <div className="col-lg-6 text-center text-lg-left my-auto order-first order-sm-last">
           <h2 className="display-4">
-            <b className="fourth-color">Gestiona tus documentos</b>
+            <b className="fourth-color">{t('Mainsection.row3.title')}</b>
           </h2>
           <p className="pr-lg-5">
-            Crea alertas automáticas para el vencimiento de tus documentos.
-            Nunca más se te pasará una fecha importante
+            {t('Mainsection.row3.subtitle')}
           </p>
           <a
             href="true"
             className="btn btn-lg btn-outline-secondary secondary-color rounded-pill"
           >
-            Empezar ahora
+            {t('action')}
           </a>
         </div>
       </div>
@@ -72,17 +69,16 @@ export default function MainSection() {
       <div className="row py-sm-5">
         <div className="col-lg-6 text-center text-lg-right my-auto">
           <h2 className="display-4 mt-5">
-            <b className="secondary-color">Una sola fuente de información</b>
+            <b className="secondary-color">{t('Mainsection.row4.title')}</b>
           </h2>
           <p className="pl-lg-5">
-            Centralizar la información permite agilizar el trabajo en equipo,
-            optimizando el uso de recursos
+            {t('Mainsection.row4.subtitle')}
           </p>
           <a
             href="true"
             className="btn btn-lg btn-outline-tertiary tertiary-color rounded-pill"
           >
-            Empezar ahora
+            {t('action')}
           </a>
         </div>
         <div className="col-lg-6 text-center text-lg-left">
@@ -96,17 +92,16 @@ export default function MainSection() {
         </div>
         <div className="col-lg-6 text-center text-lg-left my-auto order-first order-sm-last">
           <h2 className="display-4">
-            <b className="fourth-color">Trazabilidad de cambios</b>
+            <b className="fourth-color">{t('Mainsection.row5.title')}</b>
           </h2>
           <p className="pr-lg-5">
-            Toda la información que necesitas al alcance tu mano. Cada cambio
-            realizado queda registrado con nombre y apellido.
+            {t('Mainsection.row5.subtitle')}
           </p>
           <a
             href="true"
             className="btn btn-lg btn-outline-secondary secondary-color rounded-pill"
           >
-            Empezar ahora
+            {t('action')}
           </a>
         </div>
       </div>

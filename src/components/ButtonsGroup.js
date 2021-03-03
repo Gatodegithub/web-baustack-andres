@@ -1,12 +1,12 @@
 import React from "react";
 import Buttons from "./Buttons";
 
-export default function ButtonsGroup() {
+export default function ButtonsGroup({handleClick, t, i18n}) {
   return (
     <section className="container py-5">
       <div className="row">
         <div className="col-lg-12">
-          <h2 className="text-center secondary-color">Estas son algunas de las aplicaciones que puedes crear con Baustack:</h2>
+          <h2 className="text-center secondary-color">{t('Buttonsgroup.title')}</h2>
         </div>
       </div>
       <div className="row">
@@ -20,7 +20,7 @@ export default function ButtonsGroup() {
         </div>
       </div>
       <div className="row">
-        <div className="col-lg-12"><h5 className="text-center secondary-color">... y muchas más!</h5></div>
+        <div className="col-lg-12"><h5 className="text-center secondary-color">{t('Buttonsgroup.subtitle')}</h5></div>
       </div>
     </section>
   );

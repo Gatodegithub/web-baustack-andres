@@ -1,0 +1,56 @@
+{
+  "action":"Empezar ahora",
+  "Nav": {
+    "1": "Comunícate con ventas",
+    "2": "Iniciar Sesión"
+  },
+  "Header": {
+    "title": "Una sola fuente de información",
+    "subtitle": "Aprovecha las ventajas de trabajar en una base de datos, con la simpleza de una planilla Excel"
+  },
+  "HeroVideo": {
+    "title": "Crear tu propia aplicación nunca fue tan fácil, no necesitas conocimientos técnicos!"
+  },
+  "Buttonsgroup": {
+    "title": "Estas son algunas de las aplicaciones que puedes crear con Baustack:",
+    "subtitle": "... y muchas más!"
+  },
+  "Mainsection": {
+    "row1": {
+      "title": "Comienza en segundos",
+      "subtitle": "Tu equipo amará la similitud con las planillas Excel, con la potencia de una base de datos"
+    },
+    "row2": {
+      "title": "Soporte al cliente en Chile",
+      "subtitle": "Tenemos presencia local en Chile, y podemos resolver todas tus dudas con nuestro soporte telefónico"
+    },
+    "row3": {
+      "title": "Gestiona tus documentos",
+      "subtitle": "Crea alertas automáticas para el vencimiento de tus documentos. Nunca más se te pasará una fecha importante"
+    },
+    "row4": {
+      "title": "Una sola fuente de información",
+      "subtitle": "Centralizar la información permite agilizar el trabajo en equipo, optimizando el uso de recursos"
+    },
+    "row5": {
+      "title": "Trazabilidad de cambios",
+      "subtitle": "Toda la información que necesitas al alcance tu mano. Cada cambio realizado queda registrado con nombre y apellido."
+    }
+  },
+  "HeroAction": {
+    "title": "Prueba Baustack con tu equipo",
+    "subtitle": "Prueba gratuita de 14 días | No se requiere tarjeta de crédito"
+  },
+  "Tips": {
+    "title": "El impacto de utilizar Baustack",
+    "tips1": {
+      "subtitle": "3 Horas",
+      "text": "a la semana ahorradas en promedio por cada empleado"
+    },
+    "tips2": {
+      "subtitle": "15.600 Horas",
+      "text": "ahorradas por empresas semanalmente usando Baustack"
+    }
+    
+  }
+}
