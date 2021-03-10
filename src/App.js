@@ -1,41 +1,63 @@
-import "./App.css";
-import "./styles.css";
-import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-import Contact from "./components/Contact";
-import HeroVideo from "./components/HeroVideo";
-import Header from "./components/Header";
-import ButtonsGroup from "./components/ButtonsGroup";
-import MainSection from "./components/MainSection";
-import HeroAction from "./components/HeroAction";
-import Tips from "./components/Tips";
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import NavBar from "./components/NavBar.jsx";
+import "fontsource-roboto";
+import { Grid, Paper, Typography } from "@material-ui/core";
+import Header from "./components/Header.jsx";
+import { makeStyles } from "@material-ui/core/styles";
+import Footer from "./components/Footer.jsx";
+import Services from "./components/Services.jsx";
 
+const useStyles = makeStyles((theme) => ({
+  // Clase global!
+  "@global": {
+    ".btn-pill": {
+      borderRadius: "50rem!important",
+    },
+  },
+  textColor: {
+    color: theme.palette.primary.light,
+    [theme.breakpoints.up('md')]: {
+      padding: '0px 4em'
+    }
+  },
+}));
 
-function App() {
-  
-  const { t, i18n } = useTranslation();
-  function handleClick(lang){
-    i18n.changeLanguage(lang);
-  }
-  
+export default function App() {
+  const classes = useStyles();
+
   return (
     <>
-      <div className="text-center">
-        <button className="" onClick={()=>handleClick('es')}><span>Spanish</span></button>
-        <button className="" onClick={()=>handleClick('en')}><span>English</span></button>
-      </div>
-      <NavBar handleClick={handleClick} t={t} i18n={i18n} />
-      <Header handleClick={handleClick} t={t} i18n={i18n} />
-      <HeroVideo handleClick={handleClick} t={t} i18n={i18n} />
-      <ButtonsGroup handleClick={handleClick} t={t} i18n={i18n} />
-      <MainSection handleClick={handleClick} t={t} i18n={i18n} />
-      <HeroAction handleClick={handleClick} t={t} i18n={i18n} />
-      <Tips handleClick={handleClick} t={t} i18n={i18n} />
-      <Contact handleClick={handleClick} t={t} i18n={i18n} />
-      <Footer handleClick={handleClick} t={t} i18n={i18n} />
+      <Paper style={{ overflow: "hidden" }}>
+        <NavBar />
+        <Header />
+        <Grid
+          container
+          justify="center"
+          spacing={4}
+          style={{ backgroundColor: "#330033" }}
+        >
+          <Grid item xs={12}>
+            <Typography
+              variant="h4"
+              component="h1"
+              align="center"
+              className={classes.textColor}
+            >
+              Crear tu propia aplicación con tablas inteligentes nunca fue tan
+              fácil, no necesitas saber de programación!
+            </Typography>
+          </Grid>
+          <Grid item>
+            <iframe
+              src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+              title="YouTube video"
+            ></iframe>
+          </Grid>
+        </Grid>
+
+        <Services />
+        <Footer />
+      </Paper>
     </>
   );
 }
-
-export default App;
