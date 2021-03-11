@@ -18,7 +18,7 @@ export default function Header() {
   const classes = useStyles();
 
   return (
-    <Container className={classes.root}>
+    <Container className={classes.root} component="header">
       <Grid container alignItems="center">
         <Grid item sm={12} md={5}>
           <Typography variant="h1" style={{wordBreak: "break-word"}}><b>Tablas inteligentes en la nube</b></Typography>

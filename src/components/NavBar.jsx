@@ -45,7 +45,7 @@ export default function NavBar() {
 
   return (
     <>
-      <AppBar position="static" className={classes.root}>
+      <AppBar position="static" className={classes.root} component="nav">
         <Toolbar className={classes.toolBar}>
           <IconButton
             className={classes.logoButton}

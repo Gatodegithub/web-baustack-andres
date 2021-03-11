@@ -4,6 +4,7 @@ import App from "./App";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core/styles";
 
+// AVERIGUAR SI EN EL TEMA SE PUEDEN CREAR PROPIEDADES CON ESTILOS NUEVOS.
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -11,6 +12,14 @@ const theme = createMuiTheme({
       dark: "#cf171f",
       light: "#f89321",
     },
+    secondary: {
+      main :"#773090",
+    },
+    MuiButton: {
+      outlinedSecondary: {
+        color: "#773090",
+      }
+    }
   },
 });
 
