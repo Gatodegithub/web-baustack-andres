@@ -98,6 +98,7 @@ export default function Services() {
       <Typography
         variant="h4"
         align="center"
+        color="secondary"
         className={classNames(classes.titlePadding, "pt-3", "pb-3")}
       >
         Estas son algunas de las aplicaciones que puedes crear con Baustack:

@@ -58,7 +58,7 @@ export default function Header() {
             Aprovecha las ventajas de trabajar en una base de datos, con la
             simpleza de una planilla Excel
           </Typography>
-          <Button variant="contained" className="btn-pill btn-blue">Empezar ahora</Button>
+          <Button variant="contained" size="large" color="primary" className="btn-pill">Empezar ahora</Button>
         </Grid>
         <Grid item sm={11} md={7} align="center">
           img

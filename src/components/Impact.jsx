@@ -38,13 +38,12 @@ export default function Impact() {
   const classes = useStyles();
 
   return (
-    <Grid container style={{backgroundColor: "#fafafa",marginTop:"-12px"}}>
+    <Grid container style={{backgroundColor: "#fafafa",marginTop:"-12px"}} className="pb-3">
       <Grid item xs={12}>
         <Typography
           variant="h4"
           align="center"
           className="pt-2 pb-2"
-          style={{ color: "#2B2C5D" }}
         >
           El impacto de utilizar Baustack
         </Typography>

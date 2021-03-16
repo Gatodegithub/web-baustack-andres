@@ -12,11 +12,15 @@ import classNames from "classnames";
 import Videos from "./assets/videos/Intro Baustack.mp4";
 import { useStyles } from "./helpers/globalAppClasses";
 import Impact from "./components/Impact.jsx";
+import WhoWork from "./components/WhoWork.jsx"
+import Testimonials from "./components/Testimonials.jsx";
+// import { useTheme } from "@material-ui/core/styles";
 /* DEBO IMPORTAR LOS VIDEOS Y LAS IMAGENES YA QUE NO PUEDO PONER PATH DIRECTAMENTE */
 // DEBO AÑADIR MUTED A LA ETIQUETA VIDEO PARA QUE SE REPRODUSCA SOLO
 
 export default function App() {
   const classes = useStyles();
+  // const theme = useTheme();
 
   return (
     <>
@@ -60,7 +64,7 @@ export default function App() {
         title="Gestiona todo en Baustack"
         description="¡Incluye fechas, checkboxes, documentos, alertas de vencimiento y mucho más!"
         color="secondary"
-        variant="outlined"
+        variant="contained"
         bg={"#f89321"}
         textColor="#fff"
       />
@@ -69,12 +73,14 @@ export default function App() {
       <Heros
         title="Prueba Baustack con tu equipo"
         description="Prueba gratuita de 14 días | No se requiere tarjeta de crédito"
-        color="primary"
+        light
         variant="contained"
         bg="#773090"
         textColor="#fff"
       />
       <Impact />
+      <WhoWork />
+      <Testimonials />
       <Contact />
       <Footer />
     </>

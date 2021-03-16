@@ -6,10 +6,6 @@ export const useStyles = makeStyles((theme) => ({
     ".btn-pill": { borderRadius: "50rem!important" },
     ".btn-blue": {backgroundColor: "#2680EB", color:"#fff", padding:"9px 38px"},
     ".btn-blue:hover": {backgroundColor: "#2680EB", color:"#fff"},
-    ".shadow": {
-      boxShadow:
-        "rgb(0 0 0 / 20%) 0px 3px 3px -2px, rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px",
-    },
     // theme spacing?
     ".pt-1": { paddingTop: "1em" },
     ".pt-2": { paddingTop: "2em" },
