@@ -1,95 +1,82 @@
 import React from "react";
 import NavBar from "./components/NavBar.jsx";
 import "fontsource-roboto";
-import { Grid, Paper, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@material-ui/core";
 import Header from "./components/Header.jsx";
-import { makeStyles } from "@material-ui/core/styles";
 import Footer from "./components/Footer.jsx";
 import Services from "./components/Services.jsx";
 import Heros from "./components/Heros.jsx";
 import Demos from "./components/Demos.jsx";
 import Contact from "./components/Contact.jsx";
-
-const useStyles = makeStyles((theme) => ({
-  // Clase global!
-  "@global": {
-    ".btn-pill": { borderRadius: "50rem!important" },
-    ".shadow": {
-      boxShadow:
-        "rgb(0 0 0 / 20%) 0px 3px 3px -2px, rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px",
-    },
-    ".pt-1": { paddingTop: "1em" },
-    ".pt-2": { paddingTop: "2em" },
-    ".pb-1": { paddingBottom: "1em" },
-    ".pb-2": { paddingBottom: "2em" },
-  },
-  textColor: {
-    [theme.breakpoints.up("md")]: {
-      padding: "0px 4em",
-    },
-  },
-}));
+import classNames from "classnames";
+import Videos from "./assets/videos/Intro Baustack.mp4";
+import { useStyles } from "./helpers/globalAppClasses";
+import Impact from "./components/Impact.jsx";
+/* DEBO IMPORTAR LOS VIDEOS Y LAS IMAGENES YA QUE NO PUEDO PONER PATH DIRECTAMENTE */
+// DEBO AÑADIR MUTED A LA ETIQUETA VIDEO PARA QUE SE REPRODUSCA SOLO
 
 export default function App() {
   const classes = useStyles();
 
   return (
     <>
-      <Paper style={{ overflow: "hidden" }}>
-        <NavBar />
-        <Header />
-        {/* VIDEO PRINCIPAL */}
-        <Grid container justify="center" spacing={4} component="section">
+      <NavBar />
+      <Header />
+      {/* VIDEO PRINCIPAL */}
+      <Container>
+        <Grid container justify="center" component="section">
           <Grid item xs={12}>
             <Typography
               variant="h4"
               align="center"
-              className={classes.textColor}
+              className={classNames(classes.textColor, "pb-2", "pt-2")}
               color="secondary"
+              style={{ fontWeight: "bold" }}
             >
               Crear tu propia aplicación con tablas inteligentes nunca fue tan
               fácil, no necesitas saber de programación!
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <iframe
-              width="100%"
-              height="300px"
-              src="https://www.youtube.com/embed/zpOULjyy-n8"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture"
-              allowFullScreen
-              title="video principal"
-            ></iframe>
-            {/* encryptedmedia << atributo para probar */}
+          <Grid item xs={11} sm={10} md={7} align="center">
+            <Box className="contVideo">
+              <video
+                autoPlay
+                muted
+                loop
+                width="100%"
+                height="100%"
+                className="videoResponsive"
+              >
+                <source src={Videos} type="video/mp4" />
+              </video>
+            </Box>
           </Grid>
         </Grid>
+      </Container>
 
-        <Services />
-        {/* HERO ONE */}
-        <Heros
-          title="Gestiona todo en Baustack"
-          description="¡Incluye fechas, checkboxes, documentos, alertas de vencimiento y mucho más!"
-          color="secondary"
-          variant="outlined"
-          bg={"#f89321"}
-          textColor="#fff"
-        />
-
-        <Demos />
-
-        {/* HERO TWO */}
-        <Heros
-          title="Prueba Baustack con tu equipo"
-          description="Prueba gratuita de 14 días | No se requiere tarjeta de crédito"
-          color="primary"
-          variant="contained"
-          bg="#773090"
-          textColor="#fff"
-        />
-        <Contact />
-        <Footer />
-      </Paper>
+      <Services />
+      {/* HERO ONE */}
+      <Heros
+        title="Gestiona todo en Baustack"
+        description="¡Incluye fechas, checkboxes, documentos, alertas de vencimiento y mucho más!"
+        color="secondary"
+        variant="outlined"
+        bg={"#f89321"}
+        textColor="#fff"
+      />
+      <Demos />
+      {/* HERO TWO */}
+      <Heros
+        title="Prueba Baustack con tu equipo"
+        description="Prueba gratuita de 14 días | No se requiere tarjeta de crédito"
+        color="primary"
+        variant="contained"
+        bg="#773090"
+        textColor="#fff"
+      />
+      <Impact />
+      <Contact />
+      <Footer />
     </>
   );
 }

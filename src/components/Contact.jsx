@@ -18,14 +18,14 @@ import React from "react";
 export default function Contact() {
   // const classes = useStyles();
   return (
-    <Grid container>
-      <Grid item xs={12} align="center">
-        <Typography variant="h2" className="pt-1 pb-1">
+    <Grid container justify="center">
+      <Grid item xs={12}>
+        <Typography variant="h4" className="pt-1 pb-1" align="center">
           Contacto
         </Typography>
       </Grid>
-      <Grid item xs={false} sm={4}></Grid>
-      <Grid item xs={12} sm={4}>
+      {/* <Grid item xs={false} sm={4}></Grid> */}
+      <Grid item xs={10} sm={4}>
         <form noValidate autoComplete="off">
           <TextField
             id="outlined-basic"
@@ -35,14 +35,14 @@ export default function Contact() {
             className="shadow"
             margin="normal"
           />
-          <TextField
+          {/* <TextField
             id="outlined-basic"
             label="Teléfono"
             variant="outlined"
             fullWidth
             margin="normal"
             className="shadow"
-          />
+          /> */}
           <TextField
             id="outlined-basic"
             label="Email"
@@ -58,12 +58,10 @@ export default function Contact() {
             margin="normal"
             className="shadow"
           /> */}
+          <Button className="btn-pill btn-blue" fullWidth variant="contained" color="primary" size="large" style={{marginTop: "2em"}}>Enviar</Button>
         </form>
       </Grid>
-      <Grid item xs={false} sm={4}></Grid>
-      <Grid item xs={12} align="center">
-        <Button variant="contained" color="primary" size="large" style={{marginTop: "2em"}}>Enviar</Button>
-      </Grid>
+      {/* <Grid item xs={false} sm={4}></Grid> */}
     </Grid>
   );
 }

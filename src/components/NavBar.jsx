@@ -23,13 +23,22 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: "0",
   },
   logoButton: {
-    marginRight: theme.spacing(2),
+    [theme.breakpoints.up("lg")]: {
+      marginLeft: theme.spacing(8),
+    },
+    [theme.breakpoints.only("md")]: {
+      marginLeft: theme.spacing(4),
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: theme.spacing(-2)
+    }
   },
   linksContainer: {
     display: "flex",
     flexGrow: 1,
     justifyContent: "flex-end",
     alignItems: "center",
+    paddingRight: theme.spacing(8)
   },
   links: {
     marginRight: theme.spacing(3),
@@ -47,13 +56,7 @@ export default function NavBar() {
     <>
       <AppBar position="static" className={classes.root} component="nav">
         <Toolbar className={classes.toolBar}>
-          <IconButton
-            className={classes.logoButton}
-            aria-label="menu"
-            disableRipple
-          >
-            <img src={logo} alt="baustack" width="192px"></img>
-          </IconButton>
+          <Link href="#"><img src={logo} alt="baustack" width="192px" className={classes.logoButton}></img></Link>
           <Typography
             className={classNames(
               classes.linksContainer,
@@ -69,29 +72,22 @@ export default function NavBar() {
             >
               Comunícate con ventas
             </Link>
-            <Link
+            {/* <Link
               href="#"
               underline="hover"
               color="textPrimary"
               className={classes.links}
             >
               Iniciar Sesión
-            </Link>
-            <Button
-              size="medium"
-              color="primary"
-              variant="contained"
-              className={"btn-pill"}
-            >
-              Empezar ahora
-            </Button>
+            </Link> */}
+            <Button variant="contained" className="btn-pill btn-blue" style={{padding:"4px 21px"}}>Iniciar Sesión</Button>
           </Typography>
           <IconButton
             className={matches ? "" : classes.displayNon}
             aria-label="menu"
             style={{color: "black"}}
           >
-            <MenuIcon style={{ fontSize: "38px" }} />
+            <MenuIcon style={{ fontSize: "38px",marginBottom:"5px" }} />
           </IconButton>
         </Toolbar>
       </AppBar>

@@ -8,6 +8,7 @@ import {
 import React from "react";
 import logo from "../assets/img/logo.png";
 import phone from "../assets/img/telephone-fill.svg";
+import mail from "../assets/img/correoFooter.svg";
 import facebook from "../assets/img/face.svg";
 import instagram from "../assets/img/insta.svg";
 import linkedin from "../assets/img/linked.svg";
@@ -20,10 +21,17 @@ const useStyles = makeStyles({
   list1: {
     listStyle: "none",
     paddingLeft: 10,
-    "& li::before": {
+    "& li:not(:last-child)::before": {
       position: "relative",
       content: `url(${phone})`,
       left: "-10px",
+      bottom: "-3px",
+    },
+    "& li:last-child::before": {
+      position: "relative",
+      content: `url(${mail})`,
+      left: "-10px",
+      bottom: "-3px",
     },
   },
   list2: {
@@ -41,10 +49,10 @@ export default function Footer() {
 
   return (
     <Container component="footer" className={classes.footBorder}>
-      <Grid container spacing={2} style={{ marginTop: "2rem" }}>
+      <Grid container spacing={2} style={{ marginTop: "3.5rem" }}>
         <Grid item xs={false} md={1}></Grid>
         <Grid item xs={12} sm={12} md={3} align="left">
-          <img src={logo} alt="logo" />
+          <img src={logo} alt="logo" className="pb-1" />
           <Typography color="textSecondary" gutterBottom>
             Crea tus propias aplicaciones en la nube de forma autónoma, sin la
             necesidad de conocimientos técnicos.
@@ -57,7 +65,11 @@ export default function Footer() {
         </Grid>
         <Grid item xs={false} md={1}></Grid>
         <Grid item xs={12} sm={12} md={3}>
-          <Typography variant="h4" gutterBottom>
+          <Typography
+            variant="h5"
+            className="pb-1"
+            style={{ paddingTop: "11px", color: "#2B2C5D" }}
+          >
             Links importantes
           </Typography>
           <Typography color="textSecondary">
@@ -75,14 +87,21 @@ export default function Footer() {
         </Grid>
         <Grid item xs={false} md={1}></Grid>
         <Grid item xs={12} sm={12} md={3}>
-          <Typography variant="h4" gutterBottom>
+          <Typography
+            variant="h5"
+            style={{
+              paddingTop: "11px",
+              paddingBottom: "7px",
+              color: "#2B2C5D",
+            }}
+          >
             Síguenos en:
           </Typography>
           <Box component="ul" className={classes.list2}>
             <li>
               <img src={facebook} alt="facebookLogo" />
             </li>
-            <li style={{ margin: "0px 10px" }}>
+            <li style={{ margin: "0px 1px" }}>
               <img src={instagram} alt="instagramLogo" />
             </li>
             <li>
@@ -94,7 +113,7 @@ export default function Footer() {
           <Typography
             color="textSecondary"
             align="center"
-            style={{ padding: "2rem 0" }}
+            style={{ padding: "2rem 0 4rem" }}
           >
             2021 Todos los derechos reservados baustack.com
           </Typography>

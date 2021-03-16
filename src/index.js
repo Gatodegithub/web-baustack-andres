@@ -5,23 +5,36 @@ import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core/styles";
 
 // AVERIGUAR SI EN EL TEMA SE PUEDEN CREAR PROPIEDADES CON ESTILOS NUEVOS.
-const theme = createMuiTheme({
+const theme = createMuiTheme(({
   palette: {
     primary: {
-      main: "#ea4c02",
-      dark: "#cf171f",
-      light: "#f89321",
+      main: "#ff6600",
+      dark: "#f89321",
+      // light: "#f89321",
     },
-    secondary: {
-      main :"#773090",
+    secondary: {main :"#773090",},
+  },
+  typography: {
+    button: {
+      fontWeight: "bold",
+      letterSpacing: "0",
+      textTransform: "none",
     },
-    MuiButton: {
-      outlinedSecondary: {
-        color: "#773090",
-      }
+    h2: {
+      fontWeight: "bold",
+    },
+    h3: {
+      fontSize: "46px",
+      fontWeight: "bold",
+    },
+    h4: {
+      fontWeight: "bold",
+    },
+    h5: {
+      fontWeight: "bold",
     }
   },
-});
+}));
 
 ReactDOM.render(
   <React.StrictMode>

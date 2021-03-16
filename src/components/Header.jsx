@@ -1,16 +1,42 @@
 import { Button, Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
-import imgHeader from "../assets/img/analytics.svg";
+// import imgHeader from "../assets/img/analytics.svg";
+import classNames from "classnames";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    height: "calc(100vh - 104px)",
-    [theme.breakpoints.up('sm')]:  {
-      marginBottom: '2em',
+    [theme.breakpoints.up("md")]: {
+      height: "calc(100vh - 104px)",
+      paddingLeft: "72px",
+      paddingRight: "72px"
     },
-    [theme.breakpoints.down('sm')]:  {
-      marginBottom: '20em',
-    }
+
+  },
+  title: {
+    fontWeight: "bold",
+    [theme.breakpoints.only("md")]: {
+      fontSize: "5rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      marginTop: ".6em",
+      fontSize: "4.5rem",
+      paddingRight: "3.4em"
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "4.2rem",
+      paddingRight: "2em"
+    },
+  },
+  description: {
+    [theme.breakpoints.up("lg")]: {
+      paddingRight: "11em",
+    },
+    [theme.breakpoints.only("md")]: {
+      paddingRight: "5em",
+    },
+    [theme.breakpoints.down("xs")]: {
+      paddingRight: "10em",
+    },
   }
 }));
 
@@ -19,23 +45,28 @@ export default function Header() {
 
   return (
     <Container className={classes.root} component="header">
-      <Grid container alignItems="center">
+      <Grid container alignItems="center" style={{height:"100%"}}>
         <Grid item sm={12} md={5}>
-          <Typography variant="h1" style={{wordBreak: "break-word"}}><b>Tablas inteligentes en la nube</b></Typography>
-          <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+          <Typography variant="h1" className={classes.title}>
+            Tablas inteligentes en la nube
+          </Typography>
+          <Typography
+            variant="subtitle1"
+            color="textSecondary"
+            className={classNames(classes.description, "pb-1")}
+          >
             Aprovecha las ventajas de trabajar en una base de datos, con la
             simpleza de una planilla Excel
           </Typography>
-          <Button variant="contained" color="primary" className="btn-pill">
-            Empezar ahora
-          </Button>
+          <Button variant="contained" className="btn-pill btn-blue">Empezar ahora</Button>
         </Grid>
-        <Grid item sm={11} md={7}>
-          <img
+        <Grid item sm={11} md={7} align="center">
+          img
+          {/* <img
             src={imgHeader}
             alt="analytics"
             style={{ maxWidth: "100%" }}
-          ></img>
+          ></img> */}
         </Grid>
       </Grid>
     </Container>
