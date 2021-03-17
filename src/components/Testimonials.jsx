@@ -3,9 +3,11 @@ import React from "react";
 import Carousel from "react-elastic-carousel";
 import firstT from "../assets/img/Testimonials/first.svg";
 
+// DECIR QUE RECOMIENDO QUE LA IMAGEN NO TENGA ESA SOBRE SALIDA YA QUE GENERA PROBLEMAS EN EL CARRUSEL!
+
 const useStyles = makeStyles((theme) => ({
   carrusel: {
-    "& .cukhLH, .sc-gsTCUz": {
+    "& .cukhLH, .sc-gsTCUz, .bcaJjD": {
       overflow: "visible",
     },
     "& .rec-item-wrapper": {

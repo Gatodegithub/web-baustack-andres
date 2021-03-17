@@ -107,7 +107,7 @@ export default function Demos() {
         <Grid item xs={12} md={6} align="center">
           <Typography
             variant="h2"
-            color="secondary"
+            style={{color: "#b41764"}}
             gutterBottom
             className={classes.paddingTitleR}
           >
@@ -142,7 +142,7 @@ export default function Demos() {
         <Grid item xs={12} md={6} align="center">
           <Typography
             variant="h2"
-            color="primary"
+            style={{color:"#EA4C02"}}
             gutterBottom
             className={classes.paddingTitleL}
           >

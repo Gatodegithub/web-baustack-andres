@@ -46,6 +46,16 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       padding: "0px 17em",
     },
+    '& div:nth-child(3)': {
+      '& img': {
+        marginLeft: "1.2em"
+      }
+    },
+    '& div:nth-child(6)': {
+      '& img': {
+        marginLeft: "1.2em"
+      }
+    },
   },
 }));
 
@@ -112,8 +122,7 @@ export default function Services() {
           <Typography
             variant="h4"
             className="pt-3 pb-4"
-            color="primary"
-            style={{ fontWeight: "bold" }}
+            style={{ fontWeight: "bold",color:"#F89321" }}
           >
             ...y muchas más!
           </Typography>

@@ -65,7 +65,7 @@ export default function App() {
         description="¡Incluye fechas, checkboxes, documentos, alertas de vencimiento y mucho más!"
         color="secondary"
         variant="contained"
-        bg={"#f89321"}
+        bg={"#F89321"}
         textColor="#fff"
       />
       <Demos />
