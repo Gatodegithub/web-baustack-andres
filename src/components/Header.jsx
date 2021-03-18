@@ -1,7 +1,8 @@
 import { Button, Container, Grid, makeStyles, Typography } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 // import imgHeader from "../assets/img/analytics.svg";
 import classNames from "classnames";
+import PopUp from "./PopUp.jsx";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -43,6 +44,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Header() {
   const classes = useStyles();
 
+  const [open, setOpen] = useState(false);
+
   return (
     <Container className={classes.root} component="header">
       <Grid container alignItems="center" style={{height:"100%"}}>
@@ -58,7 +61,7 @@ export default function Header() {
             Aprovecha las ventajas de trabajar en una base de datos, con la
             simpleza de una planilla Excel
           </Typography>
-          <Button variant="contained" size="large" color="primary" className="btn-pill">Empezar ahora</Button>
+          <Button variant="contained" size="large" color="primary" className="btn-pill" onClick={()=>setOpen(true)}>Empezar ahora</Button>
         </Grid>
         <Grid item sm={11} md={7} align="center">
           img
@@ -69,6 +72,8 @@ export default function Header() {
           ></img> */}
         </Grid>
       </Grid>
+
+      <PopUp openPopup={open} setPopup={setOpen}/>
     </Container>
   );
 }

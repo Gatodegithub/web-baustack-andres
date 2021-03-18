@@ -7,11 +7,11 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import logo from "../assets/img/logo.png";
-import phone from "../assets/img/telephone-fill.svg";
-import mail from "../assets/img/correoFooter.svg";
-import facebook from "../assets/img/face.svg";
-import instagram from "../assets/img/insta.svg";
-import linkedin from "../assets/img/linked.svg";
+import phone from "../assets/img/Footer/telephone-fill.svg";
+import mail from "../assets/img/Footer/correoFooter.svg";
+import facebook from "../assets/img/Footer/face.svg";
+import instagram from "../assets/img/Footer/insta.svg";
+import linkedin from "../assets/img/Footer/linked.svg";
 
 const useStyles = makeStyles({
   footBorder: {

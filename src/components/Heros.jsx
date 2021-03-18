@@ -5,8 +5,9 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
+import PopUp from "./PopUp.jsx";
 
 const useStyles = makeStyles((theme) => ({
   descriptionPadding: {
@@ -40,6 +41,8 @@ export default function Heros({
 }) {
   const classes = useStyles();
 
+  const [open, setOpen] = useState(false);
+
   return (
     <Container disableGutters maxWidth={false}>
       <Grid
@@ -71,12 +74,15 @@ export default function Heros({
             variant={variant}
             className={classNames(light ? classes.colorLight : "", "btn-pill")}
             size="large"
+            onClick={()=>setOpen(true)}
           >
             Empezar ahora
           </Button>
         </Grid>
       </Grid>
       ;
+      <PopUp openPopup={open} setPopup={setOpen}/>
+
     </Container>
   );
 }

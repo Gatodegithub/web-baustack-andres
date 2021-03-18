@@ -6,7 +6,8 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
+import PopUp from "./PopUp.jsx";
 
 const useStyles = makeStyles((theme) => ({
   paddingL: {
@@ -61,6 +62,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Demos() {
   const classes = useStyles();
 
+  const [open, setOpen] = useState(false);
+
   return (
     <Container component="section" style={{padding:"5em 0em"}}>
       <Grid container alignItems="center" className="pt-2" align="center">
@@ -88,6 +91,7 @@ export default function Demos() {
               variant="outlined"
               size="large"
               className="btn-pill"
+              onClick={()=>setOpen(true)}
             >
               Empezar ahora
             </Button>
@@ -128,6 +132,7 @@ export default function Demos() {
               variant="outlined"
               size="large"
               className="btn-pill"
+              onClick={()=>setOpen(true)}
             >
               Empezar ahora
             </Button>
@@ -163,6 +168,7 @@ export default function Demos() {
               variant="outlined"
               size="large"
               className="btn-pill"
+              onClick={()=>setOpen(true)}
             >
               Empezar ahora
             </Button>
@@ -172,6 +178,9 @@ export default function Demos() {
           VIDEO
         </Grid>
       </Grid>
+
+      <PopUp openPopup={open} setPopup={setOpen}/>
+
     </Container>
   );
 }

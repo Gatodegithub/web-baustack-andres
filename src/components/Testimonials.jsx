@@ -1,6 +1,6 @@
 import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
-import Carousel from "react-elastic-carousel";
+// import Carousel from "react-elastic-carousel";
 import firstT from "../assets/img/Testimonials/first.svg";
 
 // DECIR QUE RECOMIENDO QUE LA IMAGEN NO TENGA ESA SOBRE SALIDA YA QUE GENERA PROBLEMAS EN EL CARRUSEL!
@@ -13,6 +13,12 @@ const useStyles = makeStyles((theme) => ({
     "& .rec-item-wrapper": {
       pointerEvents: "none",
     },
+    // '& .rec-carousel-item-hidden': {
+    //   display:"none",
+    // },
+    // '& .rec-carousel-item-visible': {
+    //   display:"block"
+    // }
   },
   root: {
     position: "relative",
@@ -33,8 +39,8 @@ export default function Testimonials() {
 
   return (
     <Grid container justify="center" style={{ paddingTop: "12em",paddingBottom:"9em" }}>
-      <Grid item xs={8} md={8}>
-        <Carousel showArrows={false} className={classes.carrusel}>
+      <Grid item xs={8} md={8} >
+        {/* <Carousel showArrows={false} className={classes.carrusel} > */}
           <Box borderRadius="40px" className={classes.root}>
             <Grid
               container
@@ -54,7 +60,7 @@ export default function Testimonials() {
               </Grid>
             </Grid>
           </Box>
-        </Carousel>
+        {/* </Carousel> */}
       </Grid>
     </Grid>
   );

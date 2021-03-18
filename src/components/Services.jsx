@@ -4,19 +4,18 @@ import {
   Container,
   Grid,
   makeStyles,
-  Paper,
   Typography,
 } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { services } from "../helpers/dataServices";
 import classNames from "classnames";
-import crm from "../assets/img/crm.svg";
-import gc from "../assets/img/gestionCausas.svg";
-import cv from "../assets/img/contratosVencer.svg";
-import cp from "../assets/img/controlPolizas.svg";
-import pe from "../assets/img/planifEventos.svg";
-import gp from "../assets/img/gestionProyects.svg";
+import crm from "../assets/img/Servicess/crm.svg";
+import gc from "../assets/img/Servicess/gestionCausas.svg";
+import cv from "../assets/img/Servicess/contratosVencer.svg";
+import cp from "../assets/img/Servicess/controlPolizas.svg";
+import pe from "../assets/img/Servicess/planifEventos.svg";
+import gp from "../assets/img/Servicess/gestionProyects.svg";
 
 const arrIcons = [crm, gc, cv, cp, pe, gp];
 
@@ -46,15 +45,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       padding: "0px 17em",
     },
-    '& div:nth-child(3)': {
-      '& img': {
-        marginLeft: "1.2em"
-      }
+    "& div:nth-child(3)": {
+      "& img": {
+        marginLeft: "1.2em",
+      },
     },
-    '& div:nth-child(6)': {
-      '& img': {
-        marginLeft: "1.2em"
-      }
+    "& div:nth-child(6)": {
+      "& img": {
+        marginLeft: "1.2em",
+      },
     },
   },
 }));
@@ -63,7 +62,7 @@ function ServiceCard({ title, arrImg, description, id }) {
   const classes = useStyles();
 
   return (
-    <Paper className={classes.paper} elevation={11}>
+    <Box boxShadow={14} className={classes.paper}>
       <Card className={classes.card}>
         <Typography
           variant="h6"
@@ -79,7 +78,7 @@ function ServiceCard({ title, arrImg, description, id }) {
           </Typography>
         </CardContent>
       </Card>
-    </Paper>
+    </Box>
   );
 }
 
@@ -122,7 +121,7 @@ export default function Services() {
           <Typography
             variant="h4"
             className="pt-3 pb-4"
-            style={{ fontWeight: "bold",color:"#F89321" }}
+            style={{ fontWeight: "bold", color: "#F89321" }}
           >
             ...y muchas más!
           </Typography>

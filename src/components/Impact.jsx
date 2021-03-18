@@ -1,11 +1,11 @@
 import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
-import pR from "../assets/img/peopleRelog.svg";
-import wR from "../assets/img/worldRelog.svg";
-import cR from "../assets/img/calendarRelog.svg";
-import pT from "../assets/img/peopleTeach.svg";
-import pG from "../assets/img/peopleGraphics.svg";
-import tC from "../assets/img/twoCircle.svg";
+import pR from "../assets/img/Impact/peopleRelog.svg";
+import wR from "../assets/img/Impact/worldRelog.svg";
+import cR from "../assets/img/Impact/calendarRelog.svg";
+import pT from "../assets/img/Impact/peopleTeach.svg";
+import pG from "../assets/img/Impact/peopleGraphics.svg";
+import tC from "../assets/img/Impact/twoCircle.svg";
 
 const useStyles = makeStyles((theme) => ({
   centerRow1: {
