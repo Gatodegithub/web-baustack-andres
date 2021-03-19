@@ -1,23 +1,26 @@
 import React, { useState } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+// import IconButton from "@material-ui/core/IconButton";
+// import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core/styles";
-import { Button, Typography, Link, Drawer } from "@material-ui/core";
+import { Button, Typography, Link } from "@material-ui/core";
 import logo from "../assets/img/logo.png";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
+// import useMediaQuery from "@material-ui/core/useMediaQuery";
 import classNames from "classnames";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+// import List from "@material-ui/core/List";
+// import ListItem from "@material-ui/core/ListItem";
 // import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
+// import ListItemText from "@material-ui/core/ListItemText";
 import PopUp from "./PopUp.jsx";
 
 // https://material-ui.com/system/display/#display   << me ahorro el codigo del display menu
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: "15px 40px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "15px 5px",
+    },
     flexGrow: 1,
     backgroundColor: "#fff",
     boxShadow: "0px 0px",
@@ -30,13 +33,14 @@ const useStyles = makeStyles((theme) => ({
   },
   logoButton: {
     [theme.breakpoints.up("lg")]: {
-      marginLeft: theme.spacing(8),
+      marginLeft: theme.spacing(2),
     },
     [theme.breakpoints.only("md")]: {
       marginLeft: theme.spacing(4),
     },
     [theme.breakpoints.down("sm")]: {
-      marginLeft: theme.spacing(-2),
+      marginLeft: theme.spacing(0),
+      width: "160px"
     },
   },
   linksContainer: {
@@ -45,9 +49,25 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     alignItems: "center",
     paddingRight: theme.spacing(8),
+    [theme.breakpoints.down("sm")]: {
+      paddingRight: theme.spacing(0),
+    },
+
+    '& button': {
+      [theme.breakpoints.down("sm")]: {
+        lineHeight: "1.4",
+      }
+    }
+
   },
   links: {
     marginRight: theme.spacing(3),
+
+    [theme.breakpoints.down("sm")]: {
+      marginRight: theme.spacing(0),
+      lineHeight: "1.4",
+    },
+
   },
   displayNon: {
     display: "none",
@@ -63,20 +83,20 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function NavBar() {
-  const matches = useMediaQuery("(max-width:875px)");
+  // const matches = useMediaQuery("(max-width:875px)");
   const classes = useStyles();
 
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   const [openModal, setOpenModal] = useState(false);
 
-  const handleDrawer = () => {
-    setOpen(true);
-  };
+  // const handleDrawer = () => {
+  //   setOpen(true);
+  // };
 
   const handleModal = () => {
     setOpenModal(true);
-    setOpen(false);
+    // setOpen(false);
   }
 
   // const itemList = [
@@ -99,7 +119,7 @@ export default function NavBar() {
           <Typography
             className={classNames(
               classes.linksContainer,
-              matches && classes.displayNon
+              // matches && classes.displayNon
             )}
             align="center"
           >
@@ -108,6 +128,7 @@ export default function NavBar() {
               underline="hover"
               color="textPrimary"
               className={classes.links}
+              onClick={handleModal}
             >
               Comunícate con ventas
             </Link>
@@ -119,18 +140,18 @@ export default function NavBar() {
               Iniciar Sesión
             </Button>
           </Typography>
-          <IconButton
+          {/* <IconButton
             className={matches ? "" : classes.displayNon}
             aria-label="menu"
-            style={{ color: "black" }}
+            style={{ color: "black",marginRight: "-20px",display:"none" }}
             onClick={handleDrawer}
           >
             <MenuIcon style={{ fontSize: "38px", marginBottom: "5px" }} />
-          </IconButton>
+          </IconButton> */}
         </Toolbar>
       </AppBar>
 
-      <Drawer
+      {/* <Drawer
         anchor="left"
         open={open}
         onClose={() => setOpen(false)}
@@ -147,7 +168,7 @@ export default function NavBar() {
             </ListItem>
           </List>
         </div>
-      </Drawer>
+      </Drawer> */}
 
       <PopUp openPopup={openModal} setPopup={setOpenModal}/>
     </div>

@@ -1,24 +1,27 @@
-import { Button, Container, Grid, makeStyles, Typography } from "@material-ui/core";
+import { Box, Button, Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import React, { useState } from "react";
-// import imgHeader from "../assets/img/analytics.svg";
+import imgHeader from "../assets/img/Imagen Inicial.png";
 import classNames from "classnames";
 import PopUp from "./PopUp.jsx";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    [theme.breakpoints.up("md")]: {
-      height: "calc(100vh - 104px)",
+    [theme.breakpoints.only("md")]: {
+      height: "calc(100vh - 254px)",
       paddingLeft: "72px",
       paddingRight: "72px"
     },
 
   },
   title: {
+    [theme.breakpoints.up("md")]: {
+      marginTop: ".5em",
+    },
     [theme.breakpoints.only("md")]: {
       fontSize: "5rem",
     },
     [theme.breakpoints.down("sm")]: {
-      marginTop: ".6em",
+      marginTop: ".4em",
       fontSize: "4.5rem",
       paddingRight: "3.4em"
     },
@@ -29,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
   description: {
     [theme.breakpoints.up("lg")]: {
-      paddingRight: "11em",
+      paddingRight: "8.3em",
     },
     [theme.breakpoints.only("md")]: {
       paddingRight: "5em",
@@ -47,7 +50,7 @@ export default function Header() {
 
   return (
     <Container className={classes.root} component="header">
-      <Grid container alignItems="center" style={{height:"100%"}}>
+      <Grid container alignItems="flex-end">
         <Grid item sm={12} md={5}>
           <Typography variant="h1" className={classes.title}>
             Tablas inteligentes en la nube
@@ -62,13 +65,13 @@ export default function Header() {
           </Typography>
           <Button variant="contained" size="large" color="primary" className="btn-pill" onClick={()=>setOpen(true)}>Empezar ahora</Button>
         </Grid>
-        <Grid item sm={11} md={7} align="center">
-          img
-          {/* <img
+        <Grid item sm={11} md={7}>
+          <Box
+            component="img"
             src={imgHeader}
-            alt="analytics"
-            style={{ maxWidth: "100%" }}
-          ></img> */}
+            alt="Header img"
+            style={{width: "100%" }}
+          ></Box>
         </Grid>
       </Grid>
 
