@@ -1,6 +1,5 @@
 import React from "react";
 import NavBar from "./components/NavBar.jsx";
-import "fontsource-roboto";
 import { Box, Container, Grid, Typography } from "@material-ui/core";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
@@ -12,14 +11,17 @@ import classNames from "classnames";
 import Videos from "./assets/videos/Intro Baustack.mp4";
 import { useStyles } from "./helpers/globalAppClasses";
 import Impact from "./components/Impact.jsx";
-import WhoWork from "./components/WhoWork.jsx"
+import WhoWork from "./components/WhoWork.jsx";
 import Testimonials from "./components/Testimonials.jsx";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 // import { useTheme } from "@material-ui/core/styles";
 /* DEBO IMPORTAR LOS VIDEOS Y LAS IMAGENES YA QUE NO PUEDO PONER PATH DIRECTAMENTE */
 // DEBO AÑADIR MUTED A LA ETIQUETA VIDEO PARA QUE SE REPRODUSCA SOLO
 
 export default function App() {
   const classes = useStyles();
+  const matches = useMediaQuery("(max-width:600px)");
+
   // const theme = useTheme();
 
   return (
@@ -33,9 +35,13 @@ export default function App() {
             <Typography
               variant="h4"
               align="center"
-              className={classNames(classes.textColor, "pb-2", "pt-2")}
+              className={classNames(
+                classes.textColor,
+                "pb-2",
+                "pt-2",
+                matches ? "h4InCel" : ""
+              )}
               color="secondary"
-              style={{ fontWeight: "bold" }}
             >
               Crear tu propia aplicación con tablas inteligentes nunca fue tan
               fácil, no necesitas saber de programación!

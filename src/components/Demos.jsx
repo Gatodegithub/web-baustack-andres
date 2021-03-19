@@ -8,6 +8,8 @@ import {
 } from "@material-ui/core";
 import React, { useState } from "react";
 import PopUp from "./PopUp.jsx";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import classNames from "classnames";
 
 const useStyles = makeStyles((theme) => ({
   paddingL: {
@@ -61,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Demos() {
   const classes = useStyles();
+  const matches = useMediaQuery("(max-width:600px)");
 
   const [open, setOpen] = useState(false);
 
@@ -72,7 +75,7 @@ export default function Demos() {
             variant="h2"
             color="secondary"
             gutterBottom
-            className={classes.paddingTitleL}
+            className={classNames(classes.paddingTitleL, matches ? "h2InCel" : "")}
           >
             Una sola fuente de información
           </Typography>
@@ -113,7 +116,7 @@ export default function Demos() {
             variant="h2"
             style={{color: "#b41764"}}
             gutterBottom
-            className={classes.paddingTitleR}
+            className={classNames(classes.paddingTitleR, "h2InCel")}
           >
             Fácil de configurar
           </Typography>
@@ -149,7 +152,7 @@ export default function Demos() {
             variant="h2"
             style={{color:"#EA4C02"}}
             gutterBottom
-            className={classes.paddingTitleL}
+            className={classNames(classes.paddingTitleL, "h2InCel")}
           >
             Fácil de usar
           </Typography>

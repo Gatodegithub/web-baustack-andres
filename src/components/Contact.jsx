@@ -6,13 +6,15 @@ import {
   Typography,
 } from "@material-ui/core";
 import React from "react";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import classNames from "classnames";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     "& .MuiOutlinedInput-root": {
       borderRadius: "15px",
       boxShadow:
-        "0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)",
+        "3px 3px 3px -3px rgb(0 0 0 / 10%), 0px 8px 10px 1px rgb(0 0 0 / 10%), 0px 3px 14px 2px rgb(0 0 0 / 1%)",
     },
     "& .MuiOutlinedInput-notchedOutline": {
       borderWidth: "0px",
@@ -22,18 +24,26 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiFormControl-marginNormal": {
       marginTop: "16px",
-      marginBottom: "0px"
+      marginBottom: "0px",
+    },
+    "& .MuiInputLabel-formControl": {
+      color: "rgba(0, 0, 0, 0.3)",
     }
   },
 }));
 
 export default function Contact() {
   const classes = useStyles();
+  const matches = useMediaQuery("(max-width:600px)");
 
   return (
     <Grid container justify="center" className={classes.root}>
       <Grid item xs={12}>
-        <Typography variant="h4" className="pt-1 pb-1" align="center">
+        <Typography
+          variant="h4"
+          className={classNames("pt-1", "pb-1", matches ? "h4InCel" : "")}
+          align="center"
+        >
           Contacto
         </Typography>
       </Grid>
@@ -82,7 +92,11 @@ export default function Contact() {
             fullWidth
             variant="contained"
             color="primary"
-            style={{ marginTop: "1em",marginBottom:"3.5em",fontSize:"1.2em" }}
+            style={{
+              marginTop: "1em",
+              marginBottom: "3.5em",
+              fontSize: "1.2em",
+            }}
           >
             Enviar
           </Button>

@@ -16,6 +16,7 @@ import cv from "../assets/img/Servicess/contratosVencer.svg";
 import cp from "../assets/img/Servicess/controlPolizas.svg";
 import pe from "../assets/img/Servicess/planifEventos.svg";
 import gp from "../assets/img/Servicess/gestionProyects.svg";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const arrIcons = [crm, gc, cv, cp, pe, gp];
 
@@ -39,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
       paddingRight: "6em",
       paddingLeft: "6em",
     },
-    fontWeight: "bold",
   },
   contCard: {
     [theme.breakpoints.up("md")]: {
@@ -62,12 +62,12 @@ function ServiceCard({ title, arrImg, description, id }) {
   const classes = useStyles();
 
   return (
-    <Box boxShadow={14} className={classes.paper}>
+    <Box boxShadow={10} className={classes.paper}>
       <Card className={classes.card}>
         <Typography
           variant="h6"
           align="center"
-          style={{ paddingTop: "15px", fontWeight: "bold" }}
+          style={{ paddingTop: "15px", fontWeight: "900" }}
         >
           {title}
         </Typography>
@@ -84,6 +84,7 @@ function ServiceCard({ title, arrImg, description, id }) {
 
 export default function Services() {
   const classes = useStyles();
+  const matches = useMediaQuery("(max-width:600px)");
 
   const getData = (service) => {
     return (
@@ -108,7 +109,7 @@ export default function Services() {
         variant="h4"
         align="center"
         color="secondary"
-        className={classNames(classes.titlePadding, "pt-3", "pb-3")}
+        className={classNames(classes.titlePadding, "pt-3", "pb-3", matches ? "h4InCel" : "")}
       >
         Estas son algunas de las aplicaciones que puedes crear con Baustack:
       </Typography>
@@ -121,7 +122,7 @@ export default function Services() {
           <Typography
             variant="h4"
             className="pt-3 pb-4"
-            style={{ fontWeight: "bold", color: "#F89321" }}
+            style={{color:"#F89321"}}
           >
             ...y muchas más!
           </Typography>

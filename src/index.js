@@ -20,8 +20,11 @@ const theme = createMuiTheme({
       letterSpacing: "0",
       textTransform: "none",
     },
+    h1: {
+      fontWeight: "900",
+    },
     h2: {
-      fontWeight: "bold",
+      fontWeight: "900",
     },
     h3: {
       fontSize: "46px",

@@ -19,6 +19,9 @@ export const useStyles = makeStyles((theme) => ({
     ".videoResponsive": {position:"absolute",top:"0",left:"0"},
     ".MuiButton-containedPrimary": {color:"#fff"},
     ".MuiButton-outlinedSizeLarge,.MuiButton-containedSizeLarge": {padding:"7px 38px"},
+    ".h4InCel": {fontSize: "25px"},
+    ".h2InCel": {fontSize: "54px"},
+    ".subtitleHeroInCel": {fontSize: "20px"}
   },
   textColor: {
     [theme.breakpoints.up("md")]: {

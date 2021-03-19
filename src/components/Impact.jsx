@@ -6,9 +6,14 @@ import cR from "../assets/img/Impact/calendarRelog.svg";
 import pT from "../assets/img/Impact/peopleTeach.svg";
 import pG from "../assets/img/Impact/peopleGraphics.svg";
 import tC from "../assets/img/Impact/twoCircle.svg";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import classNames from "classnames";
 
 const useStyles = makeStyles((theme) => ({
   centerRow1: {
+    '& span': {
+      fontWeight: "900",
+    },
     [theme.breakpoints.up("md")]: {
       display:"flex",
       flexDirection:"column",
@@ -21,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   centerRow2: {
+    '& span': {
+      fontWeight: "900",
+    },
     [theme.breakpoints.up("md")]: {
       display:"flex",
       flexDirection:"column",
@@ -36,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Impact() {
   const classes = useStyles();
+  const matches = useMediaQuery("(max-width:600px)");
 
   return (
     <Grid container style={{backgroundColor: "#fafafa",marginTop:"-12px"}} className="pb-3">
@@ -43,7 +52,7 @@ export default function Impact() {
         <Typography
           variant="h4"
           align="center"
-          className="pt-2 pb-2"
+          className={classNames("pt-2", "pb-2", matches ? "h4InCel" : "")}
         >
           El impacto de utilizar Baustack
         </Typography>
@@ -68,7 +77,6 @@ export default function Impact() {
               <span
                 style={{
                   color: "#773090",
-                  fontWeight: "bold",
                   fontSize: "1.2em",
                 }}
               >
@@ -101,7 +109,6 @@ export default function Impact() {
               <span
                 style={{
                   color: "#773090",
-                  fontWeight: "bold",
                   fontSize: "1.2em",
                 }}
               >
@@ -128,7 +135,6 @@ export default function Impact() {
               <span
                 style={{
                   color: "#773090",
-                  fontWeight: "bold",
                   fontSize: "1.2em",
                 }}
               >
@@ -155,7 +161,6 @@ export default function Impact() {
               <span
                 style={{
                   color: "#773090",
-                  fontWeight: "bold",
                   fontSize: "1.2em",
                   paddingRight: "35px",
                 }}
@@ -181,7 +186,7 @@ export default function Impact() {
               color="textSecondary"
               align="left"
               style={{
-                paddingRight: "1.9em",
+                paddingRight: "1.7em",
                 fontSize: "1.2rem",
                 lineHeight: "1.3",
               }}
@@ -189,7 +194,6 @@ export default function Impact() {
               <span
                 style={{
                   color: "#773090",
-                  fontWeight: "bold",
                   fontSize: "1.2em",
                 }}
               >
@@ -218,7 +222,6 @@ export default function Impact() {
               <span
                 style={{
                   color: "#773090",
-                  fontWeight: "bold",
                   fontSize: "1.2em",
                   paddingRight: "1.4em",
                 }}

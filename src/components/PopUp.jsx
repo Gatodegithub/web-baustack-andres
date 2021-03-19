@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
     "& .MuiOutlinedInput-root": {
       borderRadius: "15px",
       boxShadow:
-        "0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)",
+        "3px 3px 3px -3px rgb(0 0 0 / 10%), 0px 8px 10px 1px rgb(0 0 0 / 10%), 0px 3px 14px 2px rgb(0 0 0 / 1%)",
+        // 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)
     },
     "& .MuiOutlinedInput-notchedOutline": {
       borderWidth: "0px",
@@ -34,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "16px",
       marginBottom: "0px",
     },
+    "& .MuiInputLabel-formControl": {
+      color: "rgba(0, 0, 0, 0.3)",
+    }
   },
 
   rootDialog: {
@@ -117,13 +121,13 @@ export default function PopUp(props) {
       onClose={() => setPopup(false)}
     >
       <DialogTitle align="center">
-        <Typography variant="h3" gutterBottom>
+        <Typography variant="h3" gutterBottom style={{fontWeight:"900"}}>
           Contáctanos
           <IconButton className="xBtn" color="primary" onClick={handleToggle}>
             <CancelRoundedIcon />
           </IconButton>
         </Typography>
-        <Typography align="center" style={{ fontSize: "20px" }}>
+        <Typography align="center" style={{ fontSize: "20px"}}>
           Te responderemos en seguida para agendar una demostración para tu
           empresa
         </Typography>
@@ -196,11 +200,11 @@ export default function PopUp(props) {
               <Box component="ul" className={classes.listPopup} m={1}>
                 <li>
                   <CallRoundedIcon className={classes.emailRounded} />
-                  <Typography>(+569) 9451 5329</Typography>
+                  <Typography style={{fontWeight:"500"}}>(+569) 9451 5329</Typography>
                 </li>
                 <li>
                   <CallRoundedIcon className={classes.emailRounded} />
-                  <Typography>(+569) 8804 0293</Typography>
+                  <Typography style={{fontWeight:"500"}}>(+569) 8804 0293</Typography>
                 </li>
                 <li>
                   <EmailRoundedIcon
@@ -213,7 +217,7 @@ export default function PopUp(props) {
                       fontSize: "45px",
                     }}
                   />
-                  <Typography style={{ marginLeft: "11px" }}>
+                  <Typography style={{marginLeft:"11px",fontWeight:"500"}}>
                     info@baustack.com
                   </Typography>
                 </li>

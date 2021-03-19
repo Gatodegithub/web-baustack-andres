@@ -8,13 +8,16 @@ import {
 import React, { useState } from "react";
 import classNames from "classnames";
 import PopUp from "./PopUp.jsx";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 const useStyles = makeStyles((theme) => ({
   descriptionPadding: {
     fontSize: "24px",
+    fontWeight: "lighter",
+    marginBottom: "27px",
     [theme.breakpoints.up("lg")]: {
-      paddingRight: "325px",
-      paddingLeft: "325px",
+      paddingRight: "330px",
+      paddingLeft: "330px",
     },
     [theme.breakpoints.only("md")]: {
       paddingRight: "250px",
@@ -26,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "rgba(248,147,33,.9)",
     },
     backgroundColor: "#f89321",
-    color: "#fff"
+    color: "#fff",
   },
 }));
 
@@ -40,6 +43,7 @@ export default function Heros({
   light,
 }) {
   const classes = useStyles();
+  const matches = useMediaQuery("(max-width:600px)");
 
   const [open, setOpen] = useState(false);
 
@@ -52,17 +56,19 @@ export default function Heros({
         align="center"
         style={{
           backgroundColor: `${bg}`,
-          padding: "3em 0px",
+          padding: "3em 0px 4em",
           color: `${textColor}`,
         }}
       >
         <Grid item xs={12}>
-          <Typography variant="h2">{title}</Typography>
+          <Typography variant="h2" style={{marginBottom:"-10px"}} className={matches ? "h2InCel" : ""}>
+            {title}
+          </Typography>
         </Grid>
         <Grid item xs={12}>
           <Typography
             component="p"
-            className={classes.descriptionPadding}
+            className={classNames(classes.descriptionPadding,matches ? "subtitleHeroInCel" : "")}
             gutterBottom
           >
             {description}
@@ -74,15 +80,14 @@ export default function Heros({
             variant={variant}
             className={classNames(light ? classes.colorLight : "", "btn-pill")}
             size="large"
-            onClick={()=>setOpen(true)}
+            onClick={() => setOpen(true)}
           >
             Empezar ahora
           </Button>
         </Grid>
       </Grid>
       ;
-      <PopUp openPopup={open} setPopup={setOpen}/>
-
+      <PopUp openPopup={open} setPopup={setOpen} />
     </Container>
   );
 }

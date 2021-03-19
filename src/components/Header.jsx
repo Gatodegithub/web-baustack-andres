@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
 
   },
   title: {
-    fontWeight: "bold",
     [theme.breakpoints.only("md")]: {
       fontSize: "5rem",
     },
