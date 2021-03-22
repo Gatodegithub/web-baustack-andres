@@ -16,6 +16,7 @@ import CancelRoundedIcon from "@material-ui/icons/CancelRounded";
 import whatsapp from "../assets/img/whatsapp.svg";
 import EmailRoundedIcon from "@material-ui/icons/EmailRounded";
 import CallRoundedIcon from "@material-ui/icons/CallRounded";
+import classNames from "classnames";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: "15px",
       boxShadow:
         "3px 3px 3px -3px rgb(0 0 0 / 10%), 0px 8px 10px 1px rgb(0 0 0 / 10%), 0px 3px 14px 2px rgb(0 0 0 / 1%)",
-        // 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)
+      // 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%)
     },
     "& .MuiOutlinedInput-notchedOutline": {
       borderWidth: "0px",
@@ -37,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     },
     "& .MuiInputLabel-formControl": {
       color: "rgba(0, 0, 0, 0.3)",
-    }
+    },
   },
 
   rootDialog: {
@@ -51,8 +52,8 @@ const useStyles = makeStyles((theme) => ({
         right: 0,
         top: 0,
         [theme.breakpoints.down("sm")]: {
-          top: "-10px",
-          right: "-20px",
+          top: "-15px",
+          right: "-25px",
         },
         "& svg": {
           [theme.breakpoints.up("md")]: {
@@ -73,10 +74,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       padding: theme.spacing(3),
     },
-    '& p':{
+    "& p": {
       color: "#4CC35C",
-      fontWeight: "bold"
-    }
+      fontWeight: "bold",
+    },
   },
 
   listPopup: {
@@ -94,7 +95,7 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
-  
+
   emailRounded: {
     backgroundColor: "#2680EB",
     color: "#fff",
@@ -102,6 +103,13 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "50px",
     marginRight: "10px",
     fontSize: "45px",
+  },
+
+  textSubtitle: {
+    fontSize: "20px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "18px",
+    },
   },
 }));
 
@@ -121,20 +129,20 @@ export default function PopUp(props) {
       onClose={() => setPopup(false)}
     >
       <DialogTitle align="center">
-        <Typography variant="h3" gutterBottom style={{fontWeight:"900"}}>
+        <Typography variant="h3" gutterBottom style={{ fontWeight: "900" }}>
           Contáctanos
           <IconButton className="xBtn" color="primary" onClick={handleToggle}>
             <CancelRoundedIcon />
           </IconButton>
         </Typography>
-        <Typography align="center" style={{ fontSize: "20px"}}>
+        <Typography align="center" className={classNames(classes.textSubtitle)}>
           Te responderemos en seguida para agendar una demostración para tu
           empresa
         </Typography>
       </DialogTitle>
       <DialogContent>
         <Grid container justify="center" className={classes.root}>
-          <Grid item xs={10} sm={6} md={10} align="center">
+          <Grid item xs={11} sm={10} md={10} align="center">
             <form noValidate autoComplete="off">
               <TextField
                 id="outlined-basic"
@@ -189,8 +197,7 @@ export default function PopUp(props) {
             <Grid item xs={12}>
               <Typography
                 align="center"
-                style={{ fontSize: "20px" }}
-                className="pb-1"
+                className={classNames(classes.textSubtitle, "pb-1")}
               >
                 También nos puedes llamar o escribir directamente por los
                 siguientes canales:
@@ -200,11 +207,15 @@ export default function PopUp(props) {
               <Box component="ul" className={classes.listPopup} m={1}>
                 <li>
                   <CallRoundedIcon className={classes.emailRounded} />
-                  <Typography style={{fontWeight:"500"}}>(+569) 9451 5329</Typography>
+                  <Typography style={{ fontWeight: "500" }}>
+                    (+569) 9451 5329
+                  </Typography>
                 </li>
                 <li>
                   <CallRoundedIcon className={classes.emailRounded} />
-                  <Typography style={{fontWeight:"500"}}>(+569) 8804 0293</Typography>
+                  <Typography style={{ fontWeight: "500" }}>
+                    (+569) 8804 0293
+                  </Typography>
                 </li>
                 <li>
                   <EmailRoundedIcon
@@ -217,7 +228,7 @@ export default function PopUp(props) {
                       fontSize: "45px",
                     }}
                   />
-                  <Typography style={{marginLeft:"11px",fontWeight:"500"}}>
+                  <Typography style={{ marginLeft: "11px", fontWeight: "500" }}>
                     info@baustack.com
                   </Typography>
                 </li>
@@ -236,9 +247,7 @@ export default function PopUp(props) {
                   style={{ cursor: "pointer" }}
                 >
                   <Box component="img" src={whatsapp} width="80px"></Box>
-                  <Typography>
-                    Whatsapp
-                  </Typography>
+                  <Typography>Whatsapp</Typography>
                 </Link>
               </Box>
             </Grid>

@@ -29,6 +29,9 @@ const theme = createMuiTheme({
     h3: {
       fontSize: "46px",
       fontWeight: "bold",
+      '@media (max-width:600px)': {
+        fontSize: '40px',
+      },
     },
     h4: {
       fontWeight: "bold",

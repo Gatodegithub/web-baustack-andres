@@ -41,7 +41,7 @@ export default function App() {
                 matches ? "h4InCel" : ""
               )}
               color="secondary"
-              style={{paddingTop: "3.5em"}}
+              style={{ paddingTop: "3.5em" }}
             >
               Crear tu propia aplicación con tablas inteligentes nunca fue tan
               fácil, no necesitas saber de programación!

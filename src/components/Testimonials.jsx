@@ -22,6 +22,11 @@ const useStyles = makeStyles((theme) => ({
     // }
   },
   root: {
+    // "& h5": {
+    //   [theme.breakpoints.down("sm")]: {
+
+    //   }
+    // },
     [theme.breakpoints.up("md")]: {
       padding: "1em 30px 1em 0px",
       "& h5": {
@@ -29,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     [theme.breakpoints.down("md")]: {
+      "& h5": {
+        padding: "0px 30px",
+      },
       "& h5, p": {
         marginBottom: "1em",
       },

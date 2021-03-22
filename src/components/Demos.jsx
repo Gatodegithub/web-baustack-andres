@@ -10,27 +10,28 @@ import React, { useState } from "react";
 import PopUp from "./PopUp.jsx";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import classNames from "classnames";
+import Video1 from "../assets/videos/Una fuente de información.MOV";
 
 const useStyles = makeStyles((theme) => ({
   paddingL: {
-    [theme.breakpoints.up("lg")]: { paddingLeft: "23em", textAlign: "right" },
-    [theme.breakpoints.only("md")]: { paddingLeft: "15em", textAlign: "right" },
+    [theme.breakpoints.up("lg")]: { paddingLeft: "15em", textAlign: "right" },
+    [theme.breakpoints.only("md")]: { paddingLeft: "9em", textAlign: "right" },
     [theme.breakpoints.only("sm")]: { padding: "0em 10em" },
     marginBottom: "1.5em",
   },
   paddingR: {
-    [theme.breakpoints.up("lg")]: { paddingRight: "22em", textAlign: "left" },
-    [theme.breakpoints.only("md")]: { paddingRight: "15em", textAlign: "left" },
+    [theme.breakpoints.up("lg")]: { paddingRight: "16em", textAlign: "left" },
+    [theme.breakpoints.only("md")]: { paddingRight: "12em", textAlign: "left" },
     [theme.breakpoints.only("sm")]: { padding: "0em 9em" },
     marginBottom: "1.5em",
   },
   paddingTitleL: {
     [theme.breakpoints.up("lg")]: {
-      paddingLeft: theme.spacing(25),
+      paddingLeft: theme.spacing(10),
       textAlign: "right",
     },
     [theme.breakpoints.only("md")]: {
-      paddingLeft: theme.spacing(12),
+      paddingLeft: theme.spacing(0),
       textAlign: "right",
     },
     [theme.breakpoints.only("sm")]: { paddingLeft: theme.spacing(0) },
@@ -58,7 +59,17 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "flex-start",
     },
   },
-
+  contenedorVideo: {
+    [theme.breakpoints.down("sm")]:{
+      marginTop: theme.spacing(4),
+    }
+  },
+  rowCentral: {
+    padding: "10em 0px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "5em 0px",
+    }
+  }
 }));
 
 export default function Demos() {
@@ -68,14 +79,22 @@ export default function Demos() {
   const [open, setOpen] = useState(false);
 
   return (
-    <Container component="section" style={{padding:"5em 0em"}}>
-      <Grid container alignItems="center" className="pt-2" align="center">
-        <Grid item xs={12} sm={12} md={6}>
+    <Container component="section" style={{ padding: "5em 0em" }}>
+      <Grid
+        container
+        className="pt-2"
+        alignItems="center"
+        style={{ justifyContent: "center" }}
+      >
+        <Grid item xs={12} sm={12} md={5} align="center">
           <Typography
             variant="h2"
             color="secondary"
             gutterBottom
-            className={classNames(classes.paddingTitleL, matches ? "h2InCel" : "")}
+            className={classNames(
+              classes.paddingTitleL,
+              matches ? "h2InCel" : ""
+            )}
           >
             Una sola fuente de información
           </Typography>
@@ -94,14 +113,25 @@ export default function Demos() {
               variant="outlined"
               size="large"
               className="btn-pill"
-              onClick={()=>setOpen(true)}
+              onClick={() => setOpen(true)}
             >
               Empezar ahora
             </Button>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} align="center">
-          VIDEO
+        <Grid item xs={12} sm={12} md={6} className={classes.contenedorVideo}>
+          <Box className="contVideo">
+            <video
+              autoPlay
+              muted
+              loop
+              width="100%"
+              height="100%"
+              className="videoResponsive"
+            >
+              <source src={Video1} type="video/mp4" />
+            </video>
+          </Box>
         </Grid>
       </Grid>
 
@@ -109,12 +139,12 @@ export default function Demos() {
         container
         alignItems="center"
         direction="row-reverse"
-        style={{ padding: "10em 0px" }}
+        className={classes.rowCentral}
       >
-        <Grid item xs={12} md={6} align="center">
+        <Grid item xs={12} md={5} align="center">
           <Typography
             variant="h2"
-            style={{color: "#b41764"}}
+            style={{ color: "#b41764" }}
             gutterBottom
             className={classNames(classes.paddingTitleR, "h2InCel")}
           >
@@ -135,22 +165,33 @@ export default function Demos() {
               variant="outlined"
               size="large"
               className="btn-pill"
-              onClick={()=>setOpen(true)}
+              onClick={() => setOpen(true)}
             >
               Empezar ahora
             </Button>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} align="center">
-          VIDEO
+        <Grid item xs={12} md={6} align="center" className={classes.contenedorVideo}>
+          <Box className="contVideo">
+            <video
+              autoPlay
+              muted
+              loop
+              width="100%"
+              height="100%"
+              className="videoResponsive"
+            >
+              <source src={Video1} type="video/mp4" />
+            </video>
+          </Box>
         </Grid>
       </Grid>
 
       <Grid container alignItems="center" className="pb-2">
-        <Grid item xs={12} md={6} align="center">
+        <Grid item xs={12} md={5} align="center">
           <Typography
             variant="h2"
-            style={{color:"#EA4C02"}}
+            style={{ color: "#EA4C02" }}
             gutterBottom
             className={classNames(classes.paddingTitleL, "h2InCel")}
           >
@@ -171,19 +212,29 @@ export default function Demos() {
               variant="outlined"
               size="large"
               className="btn-pill"
-              onClick={()=>setOpen(true)}
+              onClick={() => setOpen(true)}
             >
               Empezar ahora
             </Button>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} align="center">
-          VIDEO
+        <Grid item xs={12} md={6} className={classes.contenedorVideo}>
+          <Box className="contVideo">
+            <video
+              autoPlay
+              muted
+              loop
+              width="100%"
+              height="100%"
+              className="videoResponsive"
+            >
+              <source src={Video1} type="video/mp4" />
+            </video>
+          </Box>
         </Grid>
       </Grid>
 
-      <PopUp openPopup={open} setPopup={setOpen}/>
-
+      <PopUp openPopup={open} setPopup={setOpen} />
     </Container>
   );
 }

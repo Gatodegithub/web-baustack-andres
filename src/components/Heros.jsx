@@ -61,7 +61,7 @@ export default function Heros({
         }}
       >
         <Grid item xs={12}>
-          <Typography variant="h2" style={{marginBottom:"-10px"}} className={matches ? "h2InCel" : ""}>
+          <Typography variant="h2" style={{marginBottom:"-10px",padding:"0px 5px"}} className={matches ? "h2InCel" : ""}>
             {title}
           </Typography>
         </Grid>
