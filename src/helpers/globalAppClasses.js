@@ -29,11 +29,9 @@ export const useStyles = makeStyles((theme) => ({
     "html": {
       scrollBehavior: "smooth",
     },
-    "body": {
-      backgroundColor: "#fff",
-    },
     "#root": {
       overflow: "hidden",
+      backgroundColor: "#fff",
     },
   },
   textColor: {
