@@ -63,7 +63,7 @@ export default function Testimonials() {
           showArrows={false}
           pagination={true}
           className={classes.carrusel}
-          transitionMs={1000}
+          transitionMs={2000}
           easing="false"
           enableAutoPlay={true}
         >

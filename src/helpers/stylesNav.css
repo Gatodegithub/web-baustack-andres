@@ -134,14 +134,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    height: 120px;
     /* width: 100%; */
     border-bottom: 1px solid #f1f1f1;
   }
 
   .navbar ul li a {
     /* padding-right: 80px!important; */
-    line-height: 69px;
+    line-height: 119px;
     flex: 1;
     padding: 0;
   }

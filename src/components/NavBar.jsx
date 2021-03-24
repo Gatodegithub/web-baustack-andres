@@ -13,10 +13,12 @@ export default function NavBarNew() {
   };
 
   const navbarAClick = () => {
-    if (navbarMenu.classList.contains("open")) {
-      // Ejecuto evento click al navbartoggler
-      navbarToggler.click();
-    }
+    try{
+      if (navbarMenu.classList.contains("open")) {
+        // Ejecuto evento click al navbartoggler
+        navbarToggler.click();
+      }
+    }catch {}
   };
 
   return (
@@ -36,7 +38,6 @@ export default function NavBarNew() {
               href="#contact-title"
               underline="none"
               color="textPrimary"
-              style={{ fontSize: "16px" }}
               onClick={navbarAClick}
             >
               Comunícate con ventas
@@ -45,7 +46,7 @@ export default function NavBarNew() {
           <li>
             <Button
               className="btn-blue btn-pill"
-              style={{ padding: "4px 21px", fontSize: "14px" }}
+              style={{ padding: "4px 21px", fontSize: "18px" }}
               onClick={navbarAClick}
             >
               Iniciar Sesión
