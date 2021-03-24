@@ -14,6 +14,7 @@ import PopUp from "./PopUp.jsx";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    marginTop: "94px",
     [theme.breakpoints.only("md")]: {
       height: "calc(100vh - 254px)",
       paddingLeft: "72px",
@@ -75,7 +76,8 @@ export default function Header() {
             size="large"
             color="primary"
             className="btn-pill"
-            onClick={() => setOpen(true)}
+            // onClick={() => setOpen(true)}
+            href="#contact-title"
           >
             Empezar ahora
           </Button>

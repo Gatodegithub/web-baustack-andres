@@ -6,11 +6,15 @@ import { createMuiTheme } from "@material-ui/core/styles";
 
 // AVERIGUAR SI EN EL TEMA SE PUEDEN CREAR PROPIEDADES CON ESTILOS NUEVOS.
 const theme = createMuiTheme({
+  props: {
+    MuiButton: {
+      disableElevation: true,
+    },
+  },
   palette: {
     primary: {
       main: "#ff6600",
       dark: "#f89321",
-      // light: "#f89321",
     },
     secondary: { main: "#773090" },
   },
@@ -25,6 +29,9 @@ const theme = createMuiTheme({
     },
     h2: {
       fontWeight: "900",
+      '@media (max-width:600px)': {
+        fontSize: '54px',
+      },
     },
     h3: {
       fontSize: "46px",
@@ -35,6 +42,9 @@ const theme = createMuiTheme({
     },
     h4: {
       fontWeight: "bold",
+      '@media (max-width:600px)': {
+        fontSize: '25px',
+      },
     },
     h5: {
       fontWeight: "bold",

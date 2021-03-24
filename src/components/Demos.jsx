@@ -8,8 +8,6 @@ import {
 } from "@material-ui/core";
 import React, { useState } from "react";
 import PopUp from "./PopUp.jsx";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import classNames from "classnames";
 import Video1 from "../assets/videos/Una fuente de información.MOV";
 
 const useStyles = makeStyles((theme) => ({
@@ -60,21 +58,20 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   contenedorVideo: {
-    [theme.breakpoints.down("sm")]:{
+    [theme.breakpoints.down("sm")]: {
       marginTop: theme.spacing(4),
-    }
+    },
   },
   rowCentral: {
     padding: "10em 0px",
     [theme.breakpoints.down("sm")]: {
       padding: "5em 0px",
-    }
-  }
+    },
+  },
 }));
 
 export default function Demos() {
   const classes = useStyles();
-  const matches = useMediaQuery("(max-width:600px)");
 
   const [open, setOpen] = useState(false);
 
@@ -91,10 +88,7 @@ export default function Demos() {
             variant="h2"
             color="secondary"
             gutterBottom
-            className={classNames(
-              classes.paddingTitleL,
-              matches ? "h2InCel" : ""
-            )}
+            className={classes.paddingTitleL}
           >
             Una sola fuente de información
           </Typography>
@@ -113,7 +107,8 @@ export default function Demos() {
               variant="outlined"
               size="large"
               className="btn-pill"
-              onClick={() => setOpen(true)}
+              // onClick={() => setOpen(true)}
+              href="#contact-title"
             >
               Empezar ahora
             </Button>
@@ -146,7 +141,7 @@ export default function Demos() {
             variant="h2"
             style={{ color: "#b41764" }}
             gutterBottom
-            className={classNames(classes.paddingTitleR, "h2InCel")}
+            className={classes.paddingTitleR}
           >
             Fácil de configurar
           </Typography>
@@ -165,13 +160,20 @@ export default function Demos() {
               variant="outlined"
               size="large"
               className="btn-pill"
-              onClick={() => setOpen(true)}
+              // onClick={() => setOpen(true)}
+              href="#contact-title"
             >
               Empezar ahora
             </Button>
           </Box>
         </Grid>
-        <Grid item xs={12} md={6} align="center" className={classes.contenedorVideo}>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          align="center"
+          className={classes.contenedorVideo}
+        >
           <Box className="contVideo">
             <video
               autoPlay
@@ -193,7 +195,7 @@ export default function Demos() {
             variant="h2"
             style={{ color: "#EA4C02" }}
             gutterBottom
-            className={classNames(classes.paddingTitleL, "h2InCel")}
+            className={classes.paddingTitleL}
           >
             Fácil de usar
           </Typography>
@@ -212,7 +214,8 @@ export default function Demos() {
               variant="outlined"
               size="large"
               className="btn-pill"
-              onClick={() => setOpen(true)}
+              // onClick={() => setOpen(true)}
+              href="#contact-title"
             >
               Empezar ahora
             </Button>

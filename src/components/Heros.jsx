@@ -61,14 +61,20 @@ export default function Heros({
         }}
       >
         <Grid item xs={12}>
-          <Typography variant="h2" style={{marginBottom:"-10px",padding:"0px 5px"}} className={matches ? "h2InCel" : ""}>
+          <Typography
+            variant="h2"
+            style={{ marginBottom: "-10px", padding: "0px 5px" }}
+          >
             {title}
           </Typography>
         </Grid>
         <Grid item xs={12}>
           <Typography
             component="p"
-            className={classNames(classes.descriptionPadding,matches ? "subtitleHeroInCel" : "")}
+            className={classNames(
+              classes.descriptionPadding,
+              matches ? "subtitleHeroInCel" : ""
+            )}
             gutterBottom
           >
             {description}
@@ -80,7 +86,8 @@ export default function Heros({
             variant={variant}
             className={classNames(light ? classes.colorLight : "", "btn-pill")}
             size="large"
-            onClick={() => setOpen(true)}
+            // onClick={() => setOpen(true)}
+            href="#contact-title"
           >
             Empezar ahora
           </Button>

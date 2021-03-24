@@ -43,6 +43,7 @@ export default function Contact() {
           variant="h4"
           className={classNames("pt-1", "pb-1", matches ? "h4InCel" : "")}
           align="center"
+          id="contact-title"
         >
           Contacto
         </Typography>

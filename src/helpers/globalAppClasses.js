@@ -4,8 +4,12 @@ export const useStyles = makeStyles((theme) => ({
   // Clase global!
   "@global": {
     ".btn-pill": { borderRadius: "50rem!important" },
-    ".btn-blue": {backgroundColor: "#2680EB", color:"#fff", padding:"9px 38px"},
-    ".btn-blue:hover": {backgroundColor: "#2680EB", color:"#fff"},
+    ".btn-blue": {
+      backgroundColor: "#2680EB",
+      color: "#fff",
+      padding: "9px 38px",
+    },
+    ".btn-blue:hover": { backgroundColor: "#2680EB", color: "#fff" },
     // theme spacing?
     ".pt-1": { paddingTop: "1em" },
     ".pt-2": { paddingTop: "2em" },
@@ -15,13 +19,22 @@ export const useStyles = makeStyles((theme) => ({
     ".pb-2": { paddingBottom: "2em" },
     ".pb-3": { paddingBottom: "2.5em" },
     ".pb-4": { paddingBottom: "3.5em" },
-    ".contVideo": {position:"relative", paddingTop: "56.25%"},
-    ".videoResponsive": {position:"absolute",top:"0",left:"0"},
-    ".MuiButton-containedPrimary": {color:"#fff"},
-    ".MuiButton-outlinedSizeLarge,.MuiButton-containedSizeLarge": {padding:"7px 38px"},
-    ".h4InCel": {fontSize: "25px"},
-    ".h2InCel": {fontSize: "54px"},
-    ".subtitleHeroInCel": {fontSize: "20px"}
+    ".contVideo": { position: "relative", paddingTop: "56.25%" },
+    ".videoResponsive": { position: "absolute", top: "0", left: "0" },
+    ".MuiButton-containedPrimary": { color: "#fff" },
+    ".MuiButton-outlinedSizeLarge,.MuiButton-containedSizeLarge": {
+      padding: "7px 38px",
+    },
+    ".subtitleHeroInCel": { fontSize: "20px" },
+    "html": {
+      scrollBehavior: "smooth",
+    },
+    "body": {
+      backgroundColor: "#fff",
+    },
+    "#root": {
+      overflow: "hidden",
+    },
   },
   textColor: {
     [theme.breakpoints.up("md")]: {
@@ -30,3 +43,9 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
 }));
+
+window.addEventListener("load", () => {
+  const hero2 = document.querySelector("#hero2 p");
+
+  hero2.innerHTML = `Prueba gratuita de 14 días | <br/> No se requiere tarjeta de crédito`
+});

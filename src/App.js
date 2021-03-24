@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./components/NavBar.jsx";
+// import NavBar from "./components/NavBar.jsx";
 import { Box, Container, Grid, Typography } from "@material-ui/core";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
@@ -14,6 +14,7 @@ import Impact from "./components/Impact.jsx";
 import WhoWork from "./components/WhoWork.jsx";
 import Testimonials from "./components/Testimonials.jsx";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
+import NavBar from "./components/NavBar.jsx";
 // import { useTheme } from "@material-ui/core/styles";
 /* DEBO IMPORTAR LOS VIDEOS Y LAS IMAGENES YA QUE NO PUEDO PONER PATH DIRECTAMENTE */
 // DEBO AÑADIR MUTED A LA ETIQUETA VIDEO PARA QUE SE REPRODUSCA SOLO
@@ -76,14 +77,17 @@ export default function App() {
       />
       <Demos />
       {/* HERO TWO */}
-      <Heros
-        title="Prueba Baustack con tu equipo"
-        description="Prueba gratuita de 14 días | No se requiere tarjeta de crédito"
-        light
-        variant="contained"
-        bg="#773090"
-        textColor="#fff"
-      />
+      <div id="hero2">
+        <Heros
+          title="Prueba Baustack con tu equipo"
+          description="Prueba gratuita de 14 días | No se requiere tarjeta de crédito"
+          light
+          variant="contained"
+          bg="#773090"
+          textColor="#fff"
+        />
+      </div>
+
       <Impact />
       <WhoWork />
       <Testimonials />

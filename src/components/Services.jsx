@@ -24,6 +24,10 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     width: "245px",
     borderRadius: "15px",
+    // boxShadow: "3px 3px 3px -3px rgb(0 0 0 / 10%), 0px 8px 10px 1px rgb(0 0 0 / 10%), 0px 3px 14px 2px rgb(0 0 0 / 1%)",
+    '& .MuiPaper-elevation1': {
+      boxShadow:"-1px -2px 15px 2px rgba(0,0,0,0.1);",
+    }
   },
   card: {
     height: "100%",
@@ -62,7 +66,7 @@ function ServiceCard({ title, arrImg, description, id }) {
   const classes = useStyles();
 
   return (
-    <Box boxShadow={10} className={classes.paper}>
+    <Box className={classes.paper}>
       <Card className={classes.card}>
         <Typography
           variant="h6"
