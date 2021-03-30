@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export const useStyles = makeStyles((theme) => ({
+export const useStylesGlobal = makeStyles((theme) => ({
   // Clase global!
   "@global": {
     ".btn-pill": { borderRadius: "50rem!important" },
@@ -34,16 +34,14 @@ export const useStyles = makeStyles((theme) => ({
       backgroundColor: "#fff",
     },
   },
-  textColor: {
-    [theme.breakpoints.up("md")]: {
-      paddingRight: "4.8em",
-      paddingLeft: "4.8em",
-    },
-  },
 }));
 
 window.addEventListener("load", () => {
-  const hero2 = document.querySelector("#hero2 p");
+  try{
+    const hero2 = document.querySelector("#hero2 p");
 
-  hero2.innerHTML = `Prueba gratuita de 14 días | <br/> No se requiere tarjeta de crédito`
+    hero2.innerHTML = `Prueba gratuita de 14 días | <br/> No se requiere tarjeta de crédito`
+  } catch {
+    return;
+  }
 });

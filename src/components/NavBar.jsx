@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Box, Button, Link, makeStyles } from "@material-ui/core";
 import logo from "../assets/img/logo.png";
 import "../helpers/stylesNav.css";
@@ -15,24 +15,22 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function NavBarNew() {
+export default function NavBar() {
   const classes = useStyles();
 
-  const navbarMenu = document.querySelector(".navbar ul");
-  const navbarToggler = document.querySelector(".navbar-toggler");
+  const navBarMenuRef = useRef();
+  const navBarTogglerRef = useRef();
 
   const handleToggle = (e) => {
     e.currentTarget.classList.toggle("open-navbar-toggler");
-    navbarMenu.classList.toggle("open");
+    navBarMenuRef.current.classList.toggle("open");
   };
 
   const navbarAClick = () => {
-    try{
-      if (navbarMenu.classList.contains("open")) {
-        // Ejecuto evento click al navbartoggler
-        navbarToggler.click();
-      }
-    }catch {}
+    if (navBarMenuRef.current.classList.contains("open")) {
+      // Ejecuto evento click al navbartoggler
+      navBarTogglerRef.current.click();
+    }
   };
 
   return (
@@ -46,7 +44,7 @@ export default function NavBarNew() {
             style={{ verticalAlign: "middle" }}
           />
         </Link>
-        <Box component="ul">
+        <Box component="ul" className="listMenu" ref={navBarMenuRef}>
           <li>
             <Link
               href="#contact-title"
@@ -60,7 +58,7 @@ export default function NavBarNew() {
           </li>
           <li>
             <Button
-              className={classNames(classes.sizeFont,"btn-blue", "btn-pill")}
+              className={classNames(classes.sizeFont, "btn-blue", "btn-pill")}
               style={{ padding: "4px 21px" }}
               onClick={navbarAClick}
             >
@@ -68,7 +66,11 @@ export default function NavBarNew() {
             </Button>
           </li>
         </Box>
-        <button className="navbar-toggler" onClick={handleToggle}>
+        <button
+          className="navbar-toggler"
+          ref={navBarTogglerRef}
+          onClick={handleToggle}
+        >
           <span></span>
         </button>
       </nav>

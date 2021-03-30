@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+// import App from "./App";
+import AppRouter from "./components/router/AppRouter";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core/styles";
 
@@ -56,7 +57,7 @@ ReactDOM.render(
   <React.StrictMode>
     <CssBaseline />
     <ThemeProvider theme={theme}>
-      <App />
+      <AppRouter />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")

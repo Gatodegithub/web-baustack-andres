@@ -1,6 +1,6 @@
 import React from "react";
-// import NavBar from "./components/NavBar.jsx";
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import NavBar from "./components/NavBar.jsx";
+import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import Services from "./components/Services.jsx";
@@ -9,21 +9,28 @@ import Demos from "./components/Demos.jsx";
 import Contact from "./components/Contact.jsx";
 import classNames from "classnames";
 import Videos from "./assets/videos/Intro Baustack.mp4";
-import { useStyles } from "./helpers/globalAppClasses";
+// import { useStyles } from "./helpers/globalAppClasses";
 import Impact from "./components/Impact.jsx";
 import WhoWork from "./components/WhoWork.jsx";
 import Testimonials from "./components/Testimonials.jsx";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import NavBar from "./components/NavBar.jsx";
+// import NavBar from "./components/NavBar.jsx";
 // import { useTheme } from "@material-ui/core/styles";
 /* DEBO IMPORTAR LOS VIDEOS Y LAS IMAGENES YA QUE NO PUEDO PONER PATH DIRECTAMENTE */
 // DEBO AÑADIR MUTED A LA ETIQUETA VIDEO PARA QUE SE REPRODUSCA SOLO
 
+const useStyles = makeStyles((theme) => ({
+  textColor: {
+    [theme.breakpoints.up("md")]: {
+      paddingRight: "4.8em",
+      paddingLeft: "4.8em",
+    },
+  },
+}));
+
 export default function App() {
   const classes = useStyles();
   const matches = useMediaQuery("(max-width:600px)");
-
-  // const theme = useTheme();
 
   return (
     <>
@@ -66,6 +73,7 @@ export default function App() {
       </Container>
 
       <Services />
+
       {/* HERO ONE */}
       <Heros
         title="Gestiona todo en Baustack"

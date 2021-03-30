@@ -25,9 +25,9 @@ const useStyles = makeStyles((theme) => ({
     width: "245px",
     borderRadius: "15px",
     // boxShadow: "3px 3px 3px -3px rgb(0 0 0 / 10%), 0px 8px 10px 1px rgb(0 0 0 / 10%), 0px 3px 14px 2px rgb(0 0 0 / 1%)",
-    '& .MuiPaper-elevation1': {
-      boxShadow:"-1px -2px 15px 2px rgba(0,0,0,0.1);",
-    }
+    "& .MuiPaper-elevation1": {
+      boxShadow: "-1px -2px 15px 2px rgba(0,0,0,0.1);",
+    },
   },
   card: {
     height: "100%",
@@ -65,23 +65,32 @@ const useStyles = makeStyles((theme) => ({
 function ServiceCard({ title, arrImg, description, id }) {
   const classes = useStyles();
 
+  const removeAccents = (str) => {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  } 
+
   return (
     <Box className={classes.paper}>
-      <Card className={classes.card}>
-        <Typography
-          variant="h6"
-          align="center"
-          style={{ paddingTop: "15px", fontWeight: "900" }}
-        >
-          {title}
-        </Typography>
-        <CardContent align="center">
-          <Box component="img" src={arrImg[id]} width="120px"></Box>
-          <Typography color="textSecondary" className={classes.carDescription}>
-            {description}
+      <a href={`${removeAccents(title).replace(/ /g, "").toLowerCase()}`} style={{textDecoration:"none"}}>
+        <Card className={classes.card}>
+          <Typography
+            variant="h6"
+            align="center"
+            style={{ paddingTop: "15px", fontWeight: "900" }}
+          >
+            {title}
           </Typography>
-        </CardContent>
-      </Card>
+          <CardContent align="center">
+            <Box component="img" src={arrImg[id]} width="120px"></Box>
+            <Typography
+              color="textSecondary"
+              className={classes.carDescription}
+            >
+              {description}
+            </Typography>
+          </CardContent>
+        </Card>
+      </a>
     </Box>
   );
 }
@@ -113,7 +122,12 @@ export default function Services() {
         variant="h4"
         align="center"
         color="secondary"
-        className={classNames(classes.titlePadding, "pt-3", "pb-3", matches ? "h4InCel" : "")}
+        className={classNames(
+          classes.titlePadding,
+          "pt-3",
+          "pb-3",
+          matches ? "h4InCel" : ""
+        )}
       >
         Estas son algunas de las aplicaciones que puedes crear con Baustack:
       </Typography>
@@ -126,7 +140,7 @@ export default function Services() {
           <Typography
             variant="h4"
             className="pt-3 pb-4"
-            style={{color:"#F89321"}}
+            style={{ color: "#F89321" }}
           >
             ...y muchas más!
           </Typography>
