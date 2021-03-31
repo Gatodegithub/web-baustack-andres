@@ -2,16 +2,38 @@ import {
   Button,
   ClickAwayListener,
   Grow,
+  makeStyles,
   MenuItem,
   MenuList,
   Paper,
   Popper,
 } from "@material-ui/core";
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import { Link } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 
+const useStyles = makeStyles((theme) => ({
+  menuBtn: {
+    fontSize: "18px",
+  },
+  paper: {
+    width: "300px",
+    "& li": {
+      padding: "0",
+      "& a": {
+        padding: "20px",
+        width: "100%",
+        height: "100%",
+        textDecoration: "none",
+        color: [theme.palette.text.secondary],
+        fontSize: "18px",
+      },
+    },
+  },
+}));
+
 export default function MenuListComposition() {
+  const classes = useStyles();
   const [open, setOpen] = useState(false);
   const anchorRef = useRef(null);
 
@@ -51,9 +73,15 @@ export default function MenuListComposition() {
         aria-controls={open ? "menu-list-grow" : undefined}
         aria-haspopup="true"
         onClick={handleToggle}
-        endIcon={<ArrowDropDownIcon style={{fontSize: "30px",marginBottom: "1px"}}/>}
+        className={classes.menuBtn}
+        disableTouchRipple
+        endIcon={
+          <ArrowDropDownIcon
+            style={{ fontSize: "30px", marginBottom: "1px" }}
+          />
+        }
       >
-        Toggle Menu Grow
+        Categorías
       </Button>
       <Popper
         open={open}
@@ -70,16 +98,31 @@ export default function MenuListComposition() {
                 placement === "bottom" ? "center top" : "center bottom",
             }}
           >
-            <Paper>
+            <Paper className={classes.paper}>
               <ClickAwayListener onClickAway={handleClose}>
                 <MenuList
                   autoFocusItem={open}
                   id="menu-list-grow"
                   onKeyDown={handleListKeyDown}
                 >
-                  <MenuItem onClick={handleClose}><Link to="/crm">crm</Link></MenuItem>
-                  <MenuItem onClick={handleClose}><Link to="/gestiondecausas">Gestion de causas</Link></MenuItem>
-                  <MenuItem onClick={handleClose}>Logout</MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/crm">Crm</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/gestiondecausas">Gestion de causas</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/contratosporvencer">Contratos Por Vencer</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/controldepolizas">Control De Polizas</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/planificaciondeeventos">Planificación De Eventos</Link>
+                  </MenuItem>
+                  <MenuItem onClick={handleClose}>
+                    <Link to="/gestiondeproyectos">Gestión De Proyectos</Link>
+                  </MenuItem>
                 </MenuList>
               </ClickAwayListener>
             </Paper>

@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 // import App from "./App";
 import AppRouter from "./components/router/AppRouter";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
-import { createMuiTheme } from "@material-ui/core/styles";
+// import { createMuiTheme } from "@material-ui/core/styles";
+import { unstable_createMuiStrictModeTheme as createMuiTheme } from '@material-ui/core';
 
 // AVERIGUAR SI EN EL TEMA SE PUEDEN CREAR PROPIEDADES CON ESTILOS NUEVOS.
 const theme = createMuiTheme({
