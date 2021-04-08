@@ -1,4 +1,5 @@
 import ActionButtonSet from "baustack-lib/Sets/ActionButtonSet";
+import BoxDescriptionSet from "@lib/Sets/BoxDescriptionSet";
 import styles from "@lib/Library.module.scss";
 
 const DOCS = () => (
@@ -41,6 +42,7 @@ export default function LibreriaIndex() {
       <DOCS />
       </div>
       <ActionButtonSet />
+      <BoxDescriptionSet />
     </>
   );
 }
