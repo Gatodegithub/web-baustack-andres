@@ -1,5 +1,6 @@
 import ActionButtonSet from "baustack-lib/Sets/ActionButtonSet";
-import BoxDescriptionSet from "@lib/Sets/BoxDescriptionSet";
+import BoxDescriptionSet from "baustack-lib/Sets/BoxDescriptionSet";
+import HeroSet from "baustack-lib/Sets/HeroSet";
 import styles from "@lib/Library.module.scss";
 
 const DOCS = () => (
@@ -26,7 +27,8 @@ const DOCS = () => (
             </li>
             <li>
               <b>properties</b>: se describen propiedades del componente,
-              métodos, argumentos que recibe, etc. Debe ser una lista, {"<ol>"} o {"<ul>"}
+              métodos, argumentos que recibe, etc. Debe ser una lista, {"<ol>"}{" "}
+              o {"<ul>"}
             </li>
           </ul>
         </li>
@@ -38,11 +40,12 @@ const DOCS = () => (
 export default function LibreriaIndex() {
   return (
     <>
-      <div style={{backgroundColor: 'rgb(193, 61, 122)'}}>
-      <DOCS />
+      <div style={{ backgroundColor: "rgb(193, 61, 122)" }}>
+        <DOCS />
       </div>
       <ActionButtonSet />
       <BoxDescriptionSet />
+      <HeroSet />
     </>
   );
 }

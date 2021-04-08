@@ -17,7 +17,14 @@ html {
   color: #687377;
 }
 
-h1,h2,h3,h4,h5,h6,strong,b{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
   color: #00324c;
 }
 
@@ -35,27 +42,68 @@ a {
   background-color: transparent;
 }
 
-a, button {cursor: pointer;}
+a,
+button {
+  cursor: pointer;
+}
 
-ul,ol{
+ul,
+ol {
   padding: 16px 0 16px 32px;
 }
-ul ol, ol ul{
+ul ol,
+ol ul {
   padding: 8px 0 8px 32px;
 }
-ul>li, ol>li{
+ul > li,
+ol > li {
   padding-bottom: 8px;
-  &:last-of-type{
+  &:last-of-type {
     padding-bottom: 0;
   }
 }
 
-p, li{
+p,
+li {
   font-size: 15px;
   line-height: 26px;
 }
 
-:root{
-  --primary-action-color : #012f63;
-  --primary-action-color-hover : rgb(167, 190, 60);
+// .row {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-right: -15px;
+//   margin-left: -15px;
+// }
+
+// .container {
+//   width: 100%;
+//   padding-right: 15px;
+//   padding-left: 15px;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
+
+// @media (min-width: 992px) {
+//   .container {
+//     max-width: 960px;
+//   }
+// }
+
+// @media (min-width: 768px) {
+//   .container {
+//     max-width: 720px;
+//   }
+// }
+
+// @media (min-width: 576px) {
+//   .container {
+//     max-width: 540px;
+//   }
+// }
+
+:root {
+  --primary-action-color: #012f63;
+  --primary-action-color-hover: rgb(167, 190, 60);
+  // --tertiary-color-svg: #36f;
 }

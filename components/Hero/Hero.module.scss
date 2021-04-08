@@ -1,0 +1,33 @@
+.cntdescrhero {
+  text-align: center;
+  // padding-top: 110px;
+
+  & p {
+    padding: 0 4% 35px 0;
+  }
+
+  & h2 {
+    padding-bottom: 25px;
+  }
+
+  & a::before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+    font-family: icomoon;
+    font-size: 24px;
+    content: "\e900";
+    color: #36f;
+    transition: all .3s ease 0s;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .cnt-descr-hero {
+    padding-top: 80px;
+
+    & h2 {
+      padding-bottom: 15px;
+    }
+  }
+}
