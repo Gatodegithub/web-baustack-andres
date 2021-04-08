@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Baustack Website
 
-## Getting Started
-
-First, run the development server:
-
+### Control
 ```bash
-npm run dev
-# or
-yarn dev
+npm run dev # desarollo
+npm run build # genera kit para Node.JS
+npm run start # corre sobre Node.JS
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Objetivos
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Usando como referencia el sitio web https://baustack.com/
+1. Se deberán extraer estilos gráficos.
+1. Copiar de manera idéntica los componentes, pero utilzando colores y tipografías "variables", que puedan ser cambiadas en un archivo y afectar la totalidad de la aplicación.
+1. Las variables deben ser declaradas en styles/index.scss :root (al final de dicha hoja de estilos).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+---
+## Componentes Baustack:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Se espera que los componentes sean:
+1. 100% reutilizables.
+1. Polimórficos.
+1. Aislados: el comportamiento del componente debe ser autónomo.
+1. Formas absolutas, tal y como vienen desde el ejemplo (border, shadow, margin), pero pintados con variables.
+1. El árbol de componentes debe respetar la siguiente estructura:
+    * Nivel 1: components, carpeta padre.
+    * Nivel 2: organismos, conjuntos de componente por contexto funcional "Inputs", "Buttons", "Images", etc. En este nivel declaramos los SASS como módulos (NombreConjunto.module.scss). Se entiende que todas las moléculas dentro comparten elementos comunes, por esa razón, se deberá trabajar SASS utilzando @mixin e @include cada vez que sea posible.
+    * Nivel 3: moléculas. Unidades particulares dentro del conjunto.
+    * Nivel 4: átomos. Archivos independientes, componentes stateless, stateful, funciones de apoyo, etc.
 
-## Learn More
+---
+## Librería Baustack:
 
-To learn more about Next.js, take a look at the following resources:
+Se solicita seguir las siguientes buenas prácticas para la librería:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Se crea un Set en "baustack-lib/Sets" y se importa desde @lib/Utils/Set (ruta absoluta).
+1. El compontent Set recibe 3 atributos: title, docs, properties:
+    * title: el título del conjunto, nombre del componente.
+    * docs: al descripción del componente, casos de uso, variantes, qué resuelve, etc.
+    * properties: se describen propiedades del componente, métodos, argumentos que recibe, etc. 
+1. Una vez completado un Set, se importa en la ruta "pages/libreria/index.js". Aquí ingresa en la página para poder visualizarlo.
