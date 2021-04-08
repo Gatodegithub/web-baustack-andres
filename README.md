@@ -37,5 +37,5 @@ Se solicita seguir las siguientes buenas prácticas para la librería:
 1. El compontent Set recibe 3 atributos: title, docs, properties:
     * title: el título del conjunto, nombre del componente.
     * docs: al descripción del componente, casos de uso, variantes, qué resuelve, etc.
-    * properties: se describen propiedades del componente, métodos, argumentos que recibe, etc. 
+    * properties: se describen propiedades del componente, métodos, argumentos que recibe, etc. Debe ser una lista, <ol> o <ul>
 1. Una vez completado un Set, se importa en la ruta "pages/libreria/index.js". Aquí ingresa en la página para poder visualizarlo.
