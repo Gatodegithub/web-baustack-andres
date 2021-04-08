@@ -1,0 +1,41 @@
+.boxIconLeft {
+  text-align: center;
+  & .iconLeft {
+    margin-bottom: 20px;
+    border-radius: 50%;
+    width: 103px;
+    height: 103px;
+  }
+}
+
+.descrBlock {
+  padding-left: 15px;
+
+  & h3 {
+    padding: 0px 0px 10px;
+  }
+
+  & p {
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .boxIconLeft {
+    display: flex;
+    text-align: left;
+
+    & .iconLeft {
+      margin-bottom: 30px;
+      border-radius: 50%;
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  .descrBlock {
+    & h3 {
+      padding: 10px 0px;
+    }
+  }
+}

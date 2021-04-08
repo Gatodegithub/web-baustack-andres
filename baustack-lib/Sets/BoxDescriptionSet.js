@@ -1,5 +1,5 @@
 import Set from "@lib/Utils/Set";
-import BoxDescription from "@components/Box-description/BoxDescription";
+import BoxDescription from "@components/Box-icontop/BoxDescription";
 
 export default function BoxDescriptionSet() {
   const docs = <p>Box para las descripciónes</p>;

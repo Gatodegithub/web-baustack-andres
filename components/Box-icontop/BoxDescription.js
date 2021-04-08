@@ -1,4 +1,4 @@
-import styles from "@components/Box-description/Box.module.scss";
+import styles from "@components/Box-icontop/Box.module.scss";
 
 export default function BoxDescription({ icon, title, description }) {
   return (
