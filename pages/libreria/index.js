@@ -22,7 +22,7 @@ const DOCS = () => (
               <b>title</b>: el título del conjunto, nombre del componente.
             </li>
             <li>
-              <b>docs</b>: al descripción del componente, casos de uso,
+              <b>docs</b>: la descripción del componente, casos de uso,
               variantes, qué resuelve, etc.
             </li>
             <li>
