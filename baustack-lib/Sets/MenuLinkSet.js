@@ -1,5 +1,5 @@
 import Set from "@lib/Utils/Set";
-import MenuLink from "@components/NavBar/MenuLink";
+import MenuLink from "@components/NavBar/Links/MenuLink";
 
 export default function MenuLinkSet() {
   const docs = <p>Links correspondientes al menú, cada propiedad representa el link ya predefinido en el componente</p>;
@@ -14,9 +14,19 @@ export default function MenuLinkSet() {
   return (
     <Set title="Menú links" docs={docs} properties={properties}>
       <MenuLink
-        firstHref={null}
-        secondHref={null}
-        thirdHref={null}
+        linkArray={[{
+          sectionID: null,
+          name: 'Inicio'
+        },
+        {
+          sectionID: null,
+          name: 'Precios'
+        },
+        {
+          sectionID: null,
+          name: 'Contacto'
+        }]}
+
       />
     </Set>
   );
