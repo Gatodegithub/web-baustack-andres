@@ -5,6 +5,9 @@ $bk-variant1: rgb(193, 43, 138);
 $bk-variant2: rgb(103, 43, 205);
 $bk-variant3: rgb(159, 95, 224);
 $bk-variant4: rgb(222, 165, 57);
+$bk-variant5: rgb(51, 102, 255);
+$text-white: rgb(255, 255, 255);
+$text-river-bed: rgb(85, 102, 101);
 
 // MIXINS
 @mixin tablet() {
@@ -15,6 +18,12 @@ $bk-variant4: rgb(222, 165, 57);
 
 @mixin desktop() {
   @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin medium() {
+  @media only screen and (max-width: 991px) {
     @content;
   }
 }

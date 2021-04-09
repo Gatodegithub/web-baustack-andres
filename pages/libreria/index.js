@@ -1,7 +1,8 @@
 import ActionButtonSet from "baustack-lib/Sets/ActionButtonSet";
-// import BoxDescriptionSet from "baustack-lib/Sets/BoxDescriptionSet";
+import BoxDescriptionSet from "baustack-lib/Sets/BoxDescriptionSet";
 import BoxIconLeft from "baustack-lib/Sets/BoxIconLeftSet";
-// import HeroSet from "baustack-lib/Sets/HeroSet";
+import HeroSet from "@lib/Sets/BoxCallToActionSet";
+import MenuLinkSet from "@lib/Sets/MenuLinkSet";
 import styles from "@lib/Library.module.scss";
 
 const DOCS = () => (
@@ -45,8 +46,9 @@ export default function LibreriaIndex() {
         <DOCS />
       </div>
       <ActionButtonSet />
-      {/* <BoxDescriptionSet />
-      <HeroSet /> */}
+      <MenuLinkSet />
+      <BoxDescriptionSet />
+      <HeroSet />
       <BoxIconLeft />
     </>
   );

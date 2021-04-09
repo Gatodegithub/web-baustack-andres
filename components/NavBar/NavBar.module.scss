@@ -1,0 +1,22 @@
+@import "../Lib.scss";
+
+.MenuContainer {
+  @include medium {
+    display: flex;
+    flex-direction: column;
+  }
+  & a {
+    font-weight: 500;
+    color: $text-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 30px 15px;
+    font-size: 15px;
+    @include medium {
+      width: max-content;
+      color: $text-river-bed;
+      padding: 6px 15px;
+      font-size: 16px;
+    }
+  }
+}

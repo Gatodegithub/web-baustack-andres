@@ -1,5 +1,5 @@
 import Set from "@lib/Utils/Set";
-import Hero from "@components/Hero/Hero";
+import Hero from "@components/TextBox/BoxCallToAction/BoxCallToAction";
 
 export default function BoxDescriptionSet() {
   const docs = <p>Heros con descripción y foto</p>;

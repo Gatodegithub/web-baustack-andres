@@ -1,6 +1,6 @@
 import Set from "@lib/Utils/Set";
 import BoxIconLeft from "@components/TextBox/BoxIcon/BoxIconLeft";
-//import {AdminIcon, People} from '@components/SVG';
+
 import AdminIcon from "@components/SVG/AdminIcon";
 
 export default function BoxDescriptionSet() {

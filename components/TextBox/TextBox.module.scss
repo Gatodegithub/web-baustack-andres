@@ -1,10 +1,60 @@
-@import '../Lib.scss';
+@import "../Lib.scss";
 
+// BoxIconTop
+@mixin box{
+  text-align: center;
+  padding: 0 6%;
+}
+
+.Box {
+  @include box;
+  & h3 {
+    font-weight: 300;
+    font-size: 22px;
+    padding: 40px 5% 30px;
+  }
+  & p {
+    padding-bottom: 30px;
+  }
+}
+
+.IconTop svg{
+  fill: $bk-variant4;
+}
+
+// BoxIconLeft
 .BoxIconLeft {
   display: flex;
 
-  h3{
+  & h3 {
     padding-bottom: 8px;
+  }
+}
+
+// Hero
+.hero {
+  text-align: center;
+
+  & p {
+    padding: 0 4% 35px 0;
+  }
+
+  & h2 {
+    padding-bottom: 25px;
+  }
+
+  & a::before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+    font-size: 24px;
+    content: "\e900";
+    color: #36f;
+    transition: all 0.3s ease 0s;
+  }
+
+  & a:hover::before {
+    color: var(--primary-action-color-hover);
   }
 }
 
@@ -16,27 +66,30 @@
     height: 100px;
     width: 100px;
     border-radius: 50px;
-    
-    @include tablet{
+
+    @include tablet {
       height: 36px;
       width: 36px;
     }
 
-    @include desktop{
+    @include desktop {
       height: 50px;
       width: 50px;
     }
   }
 }
-.BkVariant1 svg{
+.BkVariant1 svg {
   fill: $bk-variant1;
 }
-.BkVariant2 svg{
+.BkVariant2 svg {
   fill: $bk-variant2;
 }
-.BkVariant3 svg{
+.BkVariant3 svg {
   fill: $bk-variant3;
 }
-.BkVariant4 svg{
+.BkVariant4 svg {
   fill: $bk-variant4;
+}
+.BkVariant5 svg {
+  fill: #36f;
 }
