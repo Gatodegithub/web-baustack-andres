@@ -20,7 +20,7 @@ export default function BoxDescriptionSet() {
   return (
     <Set title="Box icon left description" docs={docs} properties={properties}>
       <BoxIconLeft
-        icon={<AdminIcon />}
+        svgComponent={<AdminIcon />}
         variant={1}
         title={title}
         description={description}
