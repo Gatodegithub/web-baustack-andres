@@ -1,0 +1,42 @@
+@import '../Lib.scss';
+
+.BoxIconLeft {
+  display: flex;
+
+  h3{
+    padding-bottom: 8px;
+  }
+}
+
+// ICONS
+.Icon {
+  margin-right: 16px;
+
+  svg {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    
+    @include tablet{
+      height: 36px;
+      width: 36px;
+    }
+
+    @include desktop{
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+.BkVariant1 svg{
+  fill: $bk-variant1;
+}
+.BkVariant2 svg{
+  fill: $bk-variant2;
+}
+.BkVariant3 svg{
+  fill: $bk-variant3;
+}
+.BkVariant4 svg{
+  fill: $bk-variant4;
+}
