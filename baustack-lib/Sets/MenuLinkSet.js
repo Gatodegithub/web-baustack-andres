@@ -26,7 +26,6 @@ export default function MenuLinkSet() {
           sectionID: null,
           name: 'Contacto'
         }]}
-
       />
     </Set>
   );
