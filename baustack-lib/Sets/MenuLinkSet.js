@@ -14,9 +14,18 @@ export default function MenuLinkSet() {
   return (
     <Set title="Menú links" docs={docs} properties={properties}>
       <MenuLink
-        firstHref={null}
-        secondHref={null}
-        thirdHref={null}
+        linkArray={[{
+          sectionID: null,
+          name: 'Inicio'
+        },
+        {
+          sectionID: null,
+          name: 'Precios'
+        },
+        {
+          sectionID: null,
+          name: 'Contacto'
+        }]}
       />
     </Set>
   );
