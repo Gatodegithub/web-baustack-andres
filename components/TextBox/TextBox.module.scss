@@ -1,7 +1,7 @@
 @import "../Lib.scss";
 
 // BoxIconTop
-@mixin box{
+@mixin box {
   text-align: center;
   padding: 0 6%;
 }
@@ -18,8 +18,37 @@
   }
 }
 
-.IconTop svg{
+.IconTop svg {
   fill: $bk-variant4;
+}
+
+.BoxCallToAction {
+  text-align: center;
+
+  p {
+    padding-bottom: 25px;
+  }
+
+  h2 {
+    padding-bottom: 25px;
+  }
+
+  a {
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      margin-right: 12px;
+      fill: #36f;
+      transition: all 0.3s ease 0s;
+    }
+
+    &:hover {
+      fill: var(--primary-action-color-hover);
+    }
+  }
 }
 
 // BoxIconLeft
@@ -29,55 +58,33 @@
   & h3 {
     padding-bottom: 8px;
   }
-}
 
-// Hero
-.hero {
-  text-align: center;
+  .Icon {
+    margin-right: 16px;
 
-  & p {
-    padding: 0 4% 35px 0;
-  }
+    svg {
+      height: 100px;
+      width: 100px;
+      border-radius: 50px;
 
-  & h2 {
-    padding-bottom: 25px;
-  }
+      @include tablet {
+        height: 36px;
+        width: 36px;
+      }
 
-  & a::before {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 12px;
-    font-size: 24px;
-    content: "\e900";
-    color: #36f;
-    transition: all 0.3s ease 0s;
-  }
-
-  & a:hover::before {
-    color: var(--primary-action-color-hover);
-  }
-}
-
-// ICONS
-.Icon {
-  margin-right: 16px;
-
-  svg {
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
-
-    @include tablet {
-      height: 36px;
-      width: 36px;
-    }
-
-    @include desktop {
-      height: 50px;
-      width: 50px;
+      @include desktop {
+        height: 50px;
+        width: 50px;
+      }
     }
   }
 }
+
+.BkBlue svg {
+  fill: $blue;
+}
+
+// Variants para IconLeft responsive
 .BkVariant1 svg {
   fill: $bk-variant1;
 }
@@ -89,7 +96,4 @@
 }
 .BkVariant4 svg {
   fill: $bk-variant4;
-}
-.BkVariant5 svg {
-  fill: #36f;
 }

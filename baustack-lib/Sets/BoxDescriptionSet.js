@@ -1,28 +1,43 @@
-import Set from "@lib/Utils/Set";
-import BoxDescription from "@components/TextBox/BoxIconTop/BoxDescription";
-import BdIcon from "@components/SVG/BdIcon";
+import SetBlock, {
+  SetTitle,
+  SetDescription,
+  SetFeatureList,
+  SetExemple,
+} from "@lib/Utils/SetBlock";
+import BoxDescription from "@components/TextBox/BoxIcon/BoxIconTop";
+import {DatabaseIcon} from "@components/SVG";
 
 export default function BoxDescriptionSet() {
-  const docs = <p>Box para las descripciónes</p>;
-  const properties = (
-    <ul>
-      <li>
-        Acepta 3 propiedades: <b>"icono(solo svg)", "titulo", "descripción"</b>
-      </li>
-    </ul>
-  );
-
-  const title = "Crea tu sistema de información",
-    description =
-      "Crear tu sistema de gestión a medida, generando tablas e indicando los campos de información que requiere tu proceso de negocio.";
-
+  const list = [
+    {
+      icon: <DatabaseIcon />,
+      title: "Crea tu sistema de información",
+      description:
+        "Crear tu sistema de gestión a medida, generando tablas e indicando los campos de información que requiere tu proceso de negocio.",
+    },
+  ];
+ 
   return (
-    <Set title="Box description" docs={docs} properties={properties}>
-      <BoxDescription
-        icon={<BdIcon />}
-        title={title}
-        description={description}
-      />
-    </Set>
+    <SetBlock>
+      <SetTitle>Box description</SetTitle>
+      <SetDescription>Box para las descripciones</SetDescription>
+      <SetFeatureList>
+        <ul>
+          <li>
+            Acepta 3 propiedades:
+            <b>"icono(solo svg)", "titulo", "descripción"</b>
+          </li>
+        </ul>
+      </SetFeatureList>
+      <SetExemple>
+        {list.map((el) => (
+          <BoxDescription
+            icon={el.icon}
+            title={el.title}
+            description={el.description}
+          />
+        ))}
+      </SetExemple>
+    </SetBlock>
   );
 }

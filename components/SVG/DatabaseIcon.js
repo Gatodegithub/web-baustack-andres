@@ -1,4 +1,4 @@
-export default function BdIcon() {
+export default function DatabaseIcon() {
   return (
     <svg
       version="1.1"

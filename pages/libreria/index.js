@@ -1,10 +1,9 @@
-import ActionButtonSet from "baustack-lib/Sets/ActionButtonSet";
-import BoxDescriptionSet from "baustack-lib/Sets/BoxDescriptionSet";
-import BoxIconLeft from "baustack-lib/Sets/BoxIconLeftSet";
-import HeroSet from "@lib/Sets/BoxCallToActionSet";
-import MenuLinkSet from "@lib/Sets/MenuLinkSet";
-import SignButtonSet from "@lib/Sets/SignButtonSet";
+import ActionButtonSet from '@lib/Sets/ActionButtonSet'
+import BoxCallToActionSet from '@lib/Sets/BoxCallToActionSet'
+import BoxDescriptionSet from '@lib/Sets/BoxDescriptionSet'
+
 import styles from "@lib/Library.module.scss";
+
 
 const DOCS = () => (
   <div className={styles.Header}>
@@ -46,12 +45,10 @@ export default function LibreriaIndex() {
       <div style={{ backgroundColor: "rgb(193, 61, 122)" }}>
         <DOCS />
       </div>
-      <ActionButtonSet />
-      <MenuLinkSet />
-      <SignButtonSet />
       <BoxDescriptionSet />
-      <HeroSet />
-      <BoxIconLeft />
+      
+      <BoxCallToActionSet />
+      <ActionButtonSet />
     </>
   );
 }

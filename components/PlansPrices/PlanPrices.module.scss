@@ -9,7 +9,7 @@
   transition: all 0.3s ease 0s;
   max-width: 210px;
   text-align: center;
-  color: $text-white;
+  color: $white;
   line-height: 1;
 
   & .ContTotal {
@@ -41,19 +41,8 @@
 }
 
 .BkVariant1 {
-  background-color: $bk-variant5;
+  background-color: $blue;
 }
 .BkVariant2 {
   background-color: $text-river-bed;
-}
-
-
-// Modulos
-.IconPlay {
-  color: #d0dadd;
-  padding-right: 5px;
-
-  &:before {
-    content: "\e901";
-  }
 }

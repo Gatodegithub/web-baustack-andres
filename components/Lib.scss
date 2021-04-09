@@ -1,13 +1,18 @@
 // VARIABLES
 $primary-action-color: #012f63;
 $primary-action-color-hover: rgb(167, 190, 60);
+$blue: #36f;
+$white: #fff;
+
+
+$text-river-bed: rgb(85, 102, 101);
+
+// Variantes de background iconos
 $bk-variant1: rgb(193, 43, 138);
 $bk-variant2: rgb(103, 43, 205);
 $bk-variant3: rgb(159, 95, 224);
 $bk-variant4: rgb(222, 165, 57);
-$bk-variant5: rgb(51, 102, 255);
-$text-white: rgb(255, 255, 255);
-$text-river-bed: rgb(85, 102, 101);
+
 
 // MIXINS
 @mixin tablet() {

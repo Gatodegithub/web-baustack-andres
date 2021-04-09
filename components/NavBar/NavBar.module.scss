@@ -8,7 +8,7 @@
   }
   & a {
     font-weight: 500;
-    color: $text-white;
+    color: $white;
     text-decoration: none;
     text-transform: uppercase;
     padding: 30px 15px;
@@ -29,21 +29,21 @@
     text-transform: uppercase;
     padding: 10px 24px;
     text-decoration: none;
-    color: $text-white;
-    border: 2px solid $text-white;
+    color: $white;
+    border: 2px solid $white;
     background: none;
     transition: all 0.3s ease 0s;
 
     &:hover {
-      background-color: $bk-variant5;
+      background-color: $blue;
     }
 
     @include medium {
-      color: $bk-variant5;
-      border: 2px solid $bk-variant5;
+      color: $blue;
+      border: 2px solid $blue;
 
       &:hover {
-        color: $text-white;
+        color: $white;
       }
     }
   }
