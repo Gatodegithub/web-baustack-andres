@@ -1,3 +1,5 @@
-export {default as AdminIcon} from './AdminIcon';
-export {default as People} from './People';
-export {default as BdIcon} from './BdIcon';
+import AdminIcon from "./AdminIcon";
+import People from "./People";
+import Logo from "./People";
+
+export { AdminIcon, People, Logo };

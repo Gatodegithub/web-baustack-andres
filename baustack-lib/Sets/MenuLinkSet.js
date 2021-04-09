@@ -14,9 +14,9 @@ export default function MenuLinkSet() {
   return (
     <Set title="Menú links" docs={docs} properties={properties}>
       <MenuLink
-        firstHref={false}
-        secondHref={false}
-        thirdHref={false}
+        firstHref={null}
+        secondHref={null}
+        thirdHref={null}
       />
     </Set>
   );
