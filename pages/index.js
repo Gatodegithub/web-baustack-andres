@@ -1,3 +1,5 @@
+import PlanPrice from "@components/PlansPrices/BoxPrices/PlanPrice";
+import Module from "@components/PlansPrices/Module/Module";
 import Link from "next/link";
 
 export default function Index() {
@@ -7,6 +9,8 @@ export default function Index() {
       <Link href="/libreria">
         <a>Librería</a>
       </Link>
+      <PlanPrice variant={1} total={10} />
+      <Module text='Systems' />
     </div>
   );
 }
