@@ -5,6 +5,5 @@ import ActionButtonSet from "./Sets/ActionButtonSet";
 // groups
 const Buttons = Library.addGroup('Buttons');
 Buttons.add({...ActionButtonSet});
-Buttons.add({...ActionButtonSet});
 
 export default Library.data;
