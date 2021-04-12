@@ -1,5 +1,5 @@
-// <link rel="preconnect" <<< que es preconnect?
-// ¿El tamaño de la fuente solo se usara 400 y 700?
+@import 'global.scss';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +14,7 @@ html {
 body,
 html {
   font-family: "Poppins", sans-serif;
-  color: #687377;
+  color: $font;
 }
 
 h1,
@@ -46,6 +46,8 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
+  color: inherit;
 }
 
 a,

@@ -6,11 +6,9 @@ export default function Index() {
   return (
     <div>
       <h1>Home</h1>
-      <Link href="/libreria">
+      <Link href="/library">
         <a>Librería</a>
       </Link>
-      <PlanPrice variant={1} total={10} />
-      <Module text='Systems' />
     </div>
   );
 }

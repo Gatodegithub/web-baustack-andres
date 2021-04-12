@@ -1,0 +1,122 @@
+@import '../global';
+
+// Main Header
+.Header {
+  background-color: rgb(39, 40, 44);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+
+  svg {
+    fill: $white;
+    height: 32px;
+    margin-right: 16px;
+  }
+
+  h1 {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+  }
+}
+
+// Main container > grid
+.Container {
+  display: grid;
+  grid-template-columns: auto 300px;
+  background-color: white;
+}
+
+// Main body sections container
+.Group {
+  &__title {
+    padding: 32px 16px 16px 16px;
+  }
+}
+
+
+// Aside menu
+.Menu {
+  top: 0;
+  position: sticky;
+  background-color: $grey;
+  padding: 16px;
+  height: 100vh;
+  width: 100%;
+
+  &__anchor{
+    display: flex;
+    align-items: stretch;
+    a{
+      display: block;
+      cursor: pointer;
+      padding: 8px 0;
+    }
+
+    &:last-of-type .Menu__line{
+      &:before{
+        height: 50%;
+      }
+    }
+  }
+
+  &__line{
+    position: relative;
+    width: 32px;
+    &:before, &:after{
+      display: block;
+      background-color: $font;
+      content: '';
+      position: absolute;
+    }
+    &:before{
+      height: 100%;
+      width: 3px;
+      left: 50%;
+    }
+    &:after{
+      width: 30%;
+      left:50%;
+      top: 47%;
+      height: 3px;
+    }
+  }
+}
+
+
+// Set container title, description, features & exemples
+.Set {
+  width: 100%;
+  padding: 16px;
+
+  &__title {
+    padding-top: 16px;
+    margin-bottom: 16px;
+    border-top: 1px solid rgb(220,220,220);
+  }
+
+  &__description {
+    padding: 0 0 16px 32px;
+    color: rgb(100, 100, 100);
+    font-style: italic;
+  }
+
+  &__features {
+    padding-left: 32px;
+
+    li {
+      line-height: 24px;
+    }
+  }
+
+  &__exemple{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+  }
+}
+
+
+
+
