@@ -9,7 +9,7 @@ Cada archivo debe contenter las propiedades como sigue:
 const title = '';
 const description = '';
 const features = <ul></ul>; // lista
-const exemple = <div></div>; // segmento de ejemplos
+const exemple = <></>; // se debe declarar con Fragment
 
-export {title, description, features, exemple}
+export default {title, description, features, exemple}
 ```
