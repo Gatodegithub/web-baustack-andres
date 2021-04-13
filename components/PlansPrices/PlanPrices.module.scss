@@ -1,4 +1,4 @@
-@import "../Lib.scss";
+@import '../Lib.scss';
 
 // Box price
 .Price {
@@ -32,7 +32,7 @@
     display: inline-block;
     position: relative;
     line-height: 0;
-    top: -.5em;
+    top: -0.5em;
     font-size: 24px;
     font-weight: 300;
     vertical-align: super;
@@ -45,4 +45,34 @@
 }
 .BkVariant2 {
   background-color: $text-river-bed;
+}
+
+// Module
+.Module {
+  display: flex;
+  align-items: center;
+}
+
+.IconPlay,
+.IconCancel {
+  fill: #d0dadd;
+}
+
+.IconPlay {
+  padding: 4px 5px 0px 0px;
+}
+
+.IconPlay svg {
+  width: 20px;
+  height: 20px;
+}
+
+.IconCancel svg,
+.IconCheck svg{
+  width: 25px;
+  height: 25px;
+}
+
+.IconCheck {
+  fill: $blue;
 }

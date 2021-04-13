@@ -1,4 +1,4 @@
-@import "../Lib.scss";
+@import '../Lib.scss';
 
 // BoxIconTop
 @mixin box {
@@ -62,7 +62,7 @@
   .Icon {
     margin-right: 16px;
 
-    svg {
+    & svg {
       height: 100px;
       width: 100px;
       border-radius: 50px;
@@ -96,4 +96,44 @@
 }
 .BkVariant4 svg {
   fill: $bk-variant4;
+}
+
+// BoxIconCheck
+.BoxIconCheck {
+  display: flex;
+  text-align: center;
+
+  & svg {
+    position: relative;
+    right: 15px;
+    height: 30px;
+    width: 30px;
+    fill: $blue;
+  }
+}
+
+// Box icon top SHADOW
+.CircleShadowContainer {
+  text-align: center;
+
+  h3 {
+    padding: 30px 0px 20px;
+  }
+}
+.CircleShadow {
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: 10px 10px 12px rgb(0 0 0 / 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    height: 35px;
+    width: 40px;
+    fill: $blue;
+  }
 }
