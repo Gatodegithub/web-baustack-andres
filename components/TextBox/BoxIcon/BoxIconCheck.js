@@ -1,10 +1,12 @@
-import styles from "@components/TextBox/TextBox.module.scss";
+import styles from '@components/TextBox/TextBox.module.scss';
 import { CheckIcon } from '../../SVG/';
 
-export default function BoxIcon({description}) {
+export default function BoxIcon({ description }) {
   return (
     <div className={styles.BoxIconCheck}>
-      {<CheckIcon />}
+      <div>
+        <CheckIcon />
+      </div>
       <p>{description}</p>
     </div>
   );

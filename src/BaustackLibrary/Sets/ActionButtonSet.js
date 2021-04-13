@@ -1,6 +1,5 @@
 import ActionButton from "@components/Buttons/Action/ActionButton";
 
-
 const title = 'Action Button';
 
 const description = 'Botones primarios de acción, llamativos, para formularios, call to action, etc...';
