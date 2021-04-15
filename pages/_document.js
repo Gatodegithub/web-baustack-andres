@@ -14,6 +14,9 @@ class CustomDocument extends Document {
           <meta name="author" content="Baustack" />
           <meta property="og:site_name" content="Baustack" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+          <link rel="shortcut icon" href=""></link>
+          
           <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
             rel="stylesheet"
@@ -40,6 +43,7 @@ class CustomDocument extends Document {
           {/* <meta property="twitter:title" content="Baustack" /> */}
           {/* <meta property="twitter:description" content="" /> */}
           {/* <meta property="twitter:image" content="path..." /> */}
+          <title>Baustack</title>
         </Head>
         <body>
           <Main />
