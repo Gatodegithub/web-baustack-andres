@@ -1,5 +1,5 @@
-import Library from '../src/BaustackLibrary';
+import Librarys from '../src/BaustackLibrary';
 
 export default function LibraryPage(){
-  return <Library/>;
+  return <Librarys/>;
 }
