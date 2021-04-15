@@ -1,4 +1,4 @@
-import BoxIconTop from '@components/TextBox/BoxIcon/BoxIconTop';
+import BoxIconTop from '@components/Atoms/TextBox/BoxIcon/BoxIconTop';
 import { DatabaseIcon } from '@components/SVG';
 
 const title = 'Box Description Icon Top';

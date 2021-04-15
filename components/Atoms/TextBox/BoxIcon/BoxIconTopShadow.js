@@ -1,4 +1,4 @@
-import styles from "@components/TextBox/TextBox.module.scss";
+import styles from "@components/Atoms/TextBox/TextBox.module.scss";
 
 export default function BoxIconTopShadow({svgComponent, title, description}) {
   return (

@@ -1,4 +1,4 @@
-import BoxIconLeft from '@components/TextBox/BoxIcon/BoxIconLeft';
+import BoxIconLeft from '@components/Atoms/TextBox/BoxIcon/BoxIconLeft';
 import { AdminIcon } from '@components/SVG/';
 
 const title = 'Box Icon Left';
@@ -42,8 +42,9 @@ const params = [
 
 const exemple = (
   <>
-    {params.map((el) => (
+    {params.map((el,index) => (
       <BoxIconLeft
+        // key={`input${index}`}
         svgComponent={el.svgComponent}
         variant={el.variant}
         title={el.title}

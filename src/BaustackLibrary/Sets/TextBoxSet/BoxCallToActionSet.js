@@ -1,4 +1,4 @@
-import BoxCallToAction from '@components/TextBox/BoxIcon/BoxCallToAction';
+import BoxCallToAction from '@components/Atoms/TextBox/BoxIcon/BoxCallToAction';
 
 const title = 'Box Call To Action';
 

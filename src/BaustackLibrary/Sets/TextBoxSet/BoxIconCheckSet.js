@@ -1,4 +1,4 @@
-import BoxIconCheck from "@components/TextBox/BoxIcon/BoxIconCheck";
+import BoxIconCheck from "@components/Atoms/TextBox/BoxIcon/BoxIconCheck";
 
 const title = 'Box Icon Check';
 

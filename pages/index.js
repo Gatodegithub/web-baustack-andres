@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ContactSection from "@components/Contact/index"
 
 export default function Index() {
   return (
@@ -7,6 +8,8 @@ export default function Index() {
       <Link href="/library">
         <a>Librería</a>
       </Link>
+
+      <ContactSection />
     </div>
   );
 }

@@ -1,5 +1,5 @@
+import styles from '@components/Atoms/Buttons/Buttons.module.scss';
 import Link from "next/link";
-import styles from '@components/Buttons/Buttons.module.scss';
 
 export default function ActionButton({ children, type, href, onClick }) {
   const Button = () => {

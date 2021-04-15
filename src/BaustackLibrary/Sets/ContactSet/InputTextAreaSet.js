@@ -1,6 +1,6 @@
 import InputTextArea from '@components/Contact/Inputs/InputTextArea';
 
-const title = 'Input textarea contact form';
+const title = 'Textarea contact form';
 
 const description = 'Textarea para el formulario de contacto';
 

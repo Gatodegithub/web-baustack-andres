@@ -4,7 +4,7 @@ import SetBlock, {
   SetFeatureList,
   SetExemple,
 } from "@lib/Utils/SetBlock";
-import BoxCallToAction from "@components/TextBox/BoxIcon/BoxCallToAction";
+import BoxCallToAction from "@components/Atoms/TextBox/BoxIcon/BoxCallToAction";
 
 export default function BoxCallToActionSet() {
   const title = "Formato responsivo multiplataforma",

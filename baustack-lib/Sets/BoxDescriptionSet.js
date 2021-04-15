@@ -4,7 +4,7 @@ import SetBlock, {
   SetFeatureList,
   SetExemple,
 } from "@lib/Utils/SetBlock";
-import BoxDescription from "@components/TextBox/BoxIcon/BoxIconTop";
+import BoxDescription from "@components/Atoms/TextBox/BoxIcon/BoxIconTop";
 import {DatabaseIcon} from "@components/SVG";
 
 export default function BoxDescriptionSet() {

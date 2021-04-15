@@ -1,4 +1,4 @@
-import ActionButton from "@components/Buttons/Action/ActionButton";
+import ActionButton from "@components/Atoms/Buttons/Action/ActionButton";
 
 const title = 'Action Button';
 

@@ -1,5 +1,5 @@
-import styles from '@components/TextBox/TextBox.module.scss';
-import { CheckIcon } from '../../SVG/';
+import styles from "@components/Atoms/TextBox/TextBox.module.scss";
+import { CheckIcon } from '../../../SVG';
 
 export default function BoxIcon({ description }) {
   return (

@@ -1,6 +1,6 @@
 import PlanPrice from '@components/PlansPrices/BoxPrices/PlanPrice';
 
-const title = 'Precio del plan';
+const title = 'Box price';
 
 const description = 'Caja con el precio del plan';
 

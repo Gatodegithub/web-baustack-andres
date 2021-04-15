@@ -1,4 +1,7 @@
-@import '../global';
+// variables
+$white: white;
+$grey: rgb(245, 245, 245);
+$font: #687377;
 
 // Main Header
 .Header {
@@ -14,9 +17,9 @@
   }
 
   h1 {
-    color: white;
+    color: $white;
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 24px;
   }
 }
@@ -25,7 +28,23 @@
 .Container {
   display: grid;
   grid-template-columns: auto 300px;
-  background-color: white;
+  background-color: $white;
+
+  ul,
+  ol {
+    padding: 16px 0 16px 32px;
+  }
+  ul ol,
+  ol ul {
+    padding: 8px 0 8px 32px;
+  }
+  ul > li,
+  ol > li {
+    padding-bottom: 8px;
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
 }
 
 // Main body sections container
@@ -34,7 +53,6 @@
     padding: 32px 16px 16px 16px;
   }
 }
-
 
 // Aside menu
 .Menu {
@@ -45,45 +63,45 @@
   height: 100vh;
   width: 100%;
 
-  &__anchor{
+  &__anchor {
     display: flex;
     align-items: stretch;
-    a{
+    a {
       display: block;
       cursor: pointer;
       padding: 8px 0;
     }
 
-    &:last-of-type .Menu__line{
-      &:before{
+    &:last-of-type .Menu__line {
+      &:before {
         height: 50%;
       }
     }
   }
 
-  &__line{
+  &__line {
     position: relative;
     width: 32px;
-    &:before, &:after{
+    &:before,
+    &:after {
       display: block;
       background-color: $font;
       content: '';
       position: absolute;
     }
-    &:before{
+    &:before {
       height: 100%;
       width: 3px;
       left: 50%;
     }
-    &:after{
+    &:after {
       width: 30%;
-      left:50%;
+      left: 50%;
       top: 47%;
       height: 3px;
     }
   }
 }
-
 
 // Set container title, description, features & exemples
 .Set {
@@ -93,7 +111,7 @@
   &__title {
     padding-top: 16px;
     margin-bottom: 16px;
-    border-top: 1px solid rgb(220,220,220);
+    border-top: 1px solid rgb(220, 220, 220);
   }
 
   &__description {
@@ -110,13 +128,9 @@
     }
   }
 
-  &__exemple{
+  &__exemple {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 16px;
   }
 }
-
-
-
-

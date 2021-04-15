@@ -1,5 +1,39 @@
 @import '../Lib.scss';
 
+.ContainerSection {
+  display: flex;
+  align-items: center;
+
+  .ContainerInputs {
+    width: 60%;
+
+    & > div {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    // textarea {
+    //   grid-column-start: 1;
+    //   grid-column-end: 3;
+    // }
+  }
+
+  &__info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > h6 {
+      font-weight: 400;
+      padding: 30px 0px;
+    }
+  }
+}
+
+
+// Components
 .ContactInfo {
   max-width: 300px;
   margin: auto;
@@ -40,7 +74,6 @@
   }
 
   h6 {
-    font-size: 14px;
     font-weight: 600;
   }
 

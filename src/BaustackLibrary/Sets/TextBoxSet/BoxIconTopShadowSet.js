@@ -1,6 +1,6 @@
-import BoxIconTop from '@components/TextBox/BoxIcon/BoxIconTop';
+import BoxIconTop from '@components/Atoms/TextBox/BoxIcon/BoxIconTop';
 import { SettingsIcon } from '@components/SVG';
-import BoxIconTopShadow from '@components/TextBox/BoxIcon/BoxIconTopShadow';
+import BoxIconTopShadow from '@components/Atoms/TextBox/BoxIcon/BoxIconTopShadow';
 
 const title = 'Box icon top with shadow';
 

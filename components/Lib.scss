@@ -3,7 +3,8 @@ $primary-action-color: #012f63;
 $primary-action-color-hover: rgb(167, 190, 60);
 $blue: #36f;
 $white: #fff;
-
+$grey: rgb(245, 245, 245);
+$font: #687377;
 
 $text-river-bed: rgb(85, 102, 101);
 
@@ -15,20 +16,56 @@ $bk-variant4: rgb(222, 165, 57);
 
 
 // MIXINS
+@mixin mobil() {
+  @media only screen and (min-width: 576px){
+    @content;
+  }
+}
+
 @mixin tablet() {
   @media only screen and (min-width: 768px) {
     @content;
   }
 }
 
-@mixin desktop() {
-  @media only screen and (min-width: 1024px) {
+@mixin medium() {
+  @media only screen and (max-width: 992px) {
     @content;
   }
 }
 
-@mixin medium() {
-  @media only screen and (max-width: 991px) {
+@mixin desktop() {
+  @media only screen and (min-width: 1281px) {
     @content;
   }
+}
+
+// ContainerSection
+@media (min-width: 576px) {
+  .ContainerSection {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .ContainerSection {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .ContainerSection {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .ContainerSection {
+    max-width: 1140px;
+  }
+}
+
+.ContainerSection {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }

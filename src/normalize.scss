@@ -1,4 +1,5 @@
-@import 'global.scss';
+// VARIABLES
+$font: #687377;
 
 * {
   box-sizing: border-box;
@@ -39,6 +40,10 @@ h3{
   line-height: 26px;
 }
 
+h6 {
+  font-size: 15px;
+}
+
 pre {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
@@ -53,22 +58,6 @@ a {
 a,
 button {
   cursor: pointer;
-}
-
-ul,
-ol {
-  padding: 16px 0 16px 32px;
-}
-ul ol,
-ol ul {
-  padding: 8px 0 8px 32px;
-}
-ul > li,
-ol > li {
-  padding-bottom: 8px;
-  &:last-of-type {
-    padding-bottom: 0;
-  }
 }
 
 p,

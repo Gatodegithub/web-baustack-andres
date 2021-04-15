@@ -1,4 +1,4 @@
-import styles from "@components/TextBox/TextBox.module.scss";
+import styles from "@components/Atoms/TextBox/TextBox.module.scss";
 import {PlayIcon} from "@components/SVG";
 
 export default function BoxCallToAction({
