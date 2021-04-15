@@ -43,7 +43,6 @@ class CustomDocument extends Document {
           {/* <meta property="twitter:title" content="Baustack" /> */}
           {/* <meta property="twitter:description" content="" /> */}
           {/* <meta property="twitter:image" content="path..." /> */}
-          <title>Baustack</title>
         </Head>
         <body>
           <Main />

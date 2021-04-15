@@ -15,7 +15,7 @@ $bk-variant3: rgb(159, 95, 224);
 $bk-variant4: rgb(222, 165, 57);
 
 
-// MIXINS
+// MIXINS - min-width: total pixeles para arriba
 @mixin mobil() {
   @media only screen and (min-width: 576px){
     @content;
@@ -29,7 +29,7 @@ $bk-variant4: rgb(222, 165, 57);
 }
 
 @mixin medium() {
-  @media only screen and (max-width: 992px) {
+  @media only screen and (min-width: 992px) {
     @content;
   }
 }

@@ -2,8 +2,8 @@ import ContactSection from "@components/Contact/index"
 
 export default function Index() {
   return (
-    <div style={{ marginLeft: '1em' }}>
-      <h1>Home</h1>
+    <div>
+      <h1>Mobile First</h1>
 
       <ContactSection />
     </div>
