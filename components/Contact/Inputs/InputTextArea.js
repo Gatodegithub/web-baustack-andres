@@ -1,4 +1,4 @@
-import styles from '@components/Contact/Contact.module.scss';
+import styles from './Inputs.module.scss';
 
 export default function InputTextArea() {
   return (

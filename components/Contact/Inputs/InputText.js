@@ -1,4 +1,5 @@
-import styles from '@components/Contact/Contact.module.scss';
+import styles from './Inputs.module.scss';
+
 // const params = [
 //   {
 //     labelText: 'Nombre',

@@ -1,11 +1,13 @@
-import ContactSection from "@components/Contact/index"
+import ContactSection from '@components/Contact/index';
 
 export default function Index() {
   return (
-    <div>
-      <h1>Mobile First</h1>
+    <>
+      <h1>Home</h1>
 
-      <ContactSection />
-    </div>
+      <section>
+        <ContactSection />
+      </section>
+    </>
   );
 }

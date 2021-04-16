@@ -1,4 +1,4 @@
-import styles from '@components/Contact/Contact.module.scss';
+import styles from './ContactInformation.module.scss';
 import { LocationIcon, PhoneIcon, MailIcon } from '../../SVG/';
 
 export default function ContactInformation() {

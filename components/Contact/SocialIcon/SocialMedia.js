@@ -1,4 +1,4 @@
-import styles from '@components/Contact/Contact.module.scss';
+import styles from './SocialMedia.module.scss';
 import { FacebookIcon, TwitterIcon } from '@components/SVG';
 
 export default function SocialMedia() {
