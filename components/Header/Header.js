@@ -11,8 +11,11 @@ const Header = () => {
     <HeaderContainer>
       <Navbar />
       <HeaderInfoContainer>
-        <HeaderImg />
-        <HeaderInfo />
+        <HeaderImg>imagen</HeaderImg>
+        <HeaderInfo>
+          Potencia la experiencia de tus clientes creando aplicaciones simples y
+          en la nube.
+        </HeaderInfo>
       </HeaderInfoContainer>
     </HeaderContainer>
   );

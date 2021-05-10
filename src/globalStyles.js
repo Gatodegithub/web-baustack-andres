@@ -24,11 +24,20 @@ export const Container = styled.div`
     max-width: 960px;
   }
   @media ${Device.desktop} {
-    max-width: 1140px;
+    max-width: 1210px;
   }
 `;
 
-export const Button = styled.button``;
+// export const Button = styled.button`
+//   font-size: 16px;
+//   outline: none;
+//   border: none;
+//   color: ${props => props.theme.colorWhite};
+//   width: 253px;
+//   height: 60px;
+//   border-radius: 30px;
+//   background-color: ${props => props.theme.colorRed};
+// `;
 
 const GlobalStyle = createGlobalStyle`
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
