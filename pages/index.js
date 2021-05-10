@@ -1,13 +1,9 @@
-import ContactSection from '@components/Contact/index';
+import Header from '@components/Header/Header';
 
 export default function Index() {
   return (
     <>
-      <h1>Home</h1>
-
-      <section>
-        <ContactSection />
-      </section>
+      <Header />
     </>
   );
 }
