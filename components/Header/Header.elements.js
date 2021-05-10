@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
   height: 100vh;
   width: 100%;
   /* background: linear-gradient(106.35deg, #4316DB 0.01%, #3A0CA3 0.02%, #7209B7 99.89%); */
-  background: url('../../public/HeaderBackground.svg');
+  background: url('/HeaderBackground.svg');
 `;
 
 export const HeaderInfoContainer = styled.div`
