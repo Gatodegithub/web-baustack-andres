@@ -1,3 +1,4 @@
+import { Button } from 'src/globalStyles';
 import {
   HeaderContainer,
   HeaderImg,
@@ -15,6 +16,7 @@ const Header = () => {
         <HeaderInfo>
           Potencia la experiencia de tus clientes creando aplicaciones simples y
           en la nube.
+          <Button>PRUEBA GRATUITA</Button>
         </HeaderInfo>
       </HeaderInfoContainer>
     </HeaderContainer>

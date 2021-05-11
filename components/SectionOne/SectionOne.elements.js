@@ -22,4 +22,5 @@ export const SvgContainer = styled.img`
   position: sticky;
   top: 0;
   z-index: 10;
+  width: 400px;
 `;

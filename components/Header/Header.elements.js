@@ -4,9 +4,10 @@ import { Device } from '../../src/globalStyles';
 export const HeaderContainer = styled.header`
   height: 100vh;
   width: 100%;
-  background: url('/HeaderBackground.svg');
+  background: url('/headerbg.svg');
   background-repeat: no-repeat;
-  background-position: bottom left;
+  background-position: 30% 70%;
+  padding-bottom: 100px;
 `;
 
 export const HeaderInfoContainer = styled.div`
@@ -35,9 +36,14 @@ export const HeaderInfo = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 2em;
-  padding-right: 70px;
+  padding-right: 60px;
   color: ${(props) => props.theme.colorWhite};
   font-size: 48px;
   font-weight: bold;
   text-align: right;
+
+  & button {
+    align-self: flex-end;
+    margin-top: 30px;
+  }
 `;

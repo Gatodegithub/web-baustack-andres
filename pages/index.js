@@ -1,5 +1,7 @@
 import Header from '@components/Header/Header';
+import SectionFooter from '@components/SectionFooter/SectionFooter';
 import SectionOne from '@components/SectionOne/SectionOne';
+import SectionThree from '@components/SectionThree/SectionThree';
 import SectionTwo from '@components/SectionTwo/SectionTwo';
 
 export default function Index() {
@@ -8,6 +10,8 @@ export default function Index() {
       <Header />
       <SectionOne />
       <SectionTwo />
+      <SectionThree />
+      <SectionFooter />
     </>
   );
 }

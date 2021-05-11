@@ -28,16 +28,25 @@ export const Container = styled.div`
   }
 `;
 
-// export const Button = styled.button`
-//   font-size: 16px;
-//   outline: none;
-//   border: none;
-//   color: ${props => props.theme.colorWhite};
-//   width: 253px;
-//   height: 60px;
-//   border-radius: 30px;
-//   background-color: ${props => props.theme.colorRed};
-// `;
+export const Button = styled.button`
+  font-size: 16px;
+  outline: none;
+  border: none;
+  color: ${props => props.theme.colorWhite};
+  width: 253px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: ${props => props.theme.colorRed};
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: url('/Flask.svg');
+    margin-right: 10px;
+  }
+`;
 
 const GlobalStyle = createGlobalStyle`
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
