@@ -16,34 +16,47 @@ export const HeaderInfoContainer = styled.div`
   @media ${Device.mobile} {
     grid-template-columns: repeat(1, 1fr);
   }
-  
+
   @media ${Device.medium} {
     grid-template-columns: repeat(2, 40% 60%);
   }
 `;
 
-export const HeaderDifuminado = styled.div`
-  /* position: absolute;
-  background: url('./difuminado.svg');
-  width: 797px;
-  height: 499px;
-  overflow: visible; */
-`;
-
 export const ContainerImgs = styled.div`
   position: relative;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: url('/degradeHeader.svg');
+    top: -100px;
+    z-index: -1;
+    /* box-shadow: 3px 7px 10px -1px #000000; */
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 100px;
+    width: 83%;
+    z-index: -1;
+    bottom: 30px;
+    right: -30px;
+    transform: rotate(5deg);
+    box-shadow: 10px 20px 23px 0px #000000;
+  }
 `;
 
 export const HeaderImg = styled.img`
   margin-top: 60px;
   margin-left: 65px;
   transform: rotate(5deg);
-  /* box-shadow: 3px 7px 10px -1px #000000; */
+  /* z-index: 1; */
 `;
 
 export const HeaderImgCharacter = styled.img`
   position: absolute;
-  bottom: -100px;
+  bottom: -130px;
   left: 0;
 `;
 

@@ -38,6 +38,14 @@ export const TextContainer = styled.div`
     position: absolute;
     left: -68px;
     top: -640px;
+    z-index: -2;
+  }
+
+  &::after {
+    content: url('/degrade.svg');
+    position: absolute;
+    left: -70px;
+    top: -300px;
     z-index: -1;
   }
 
