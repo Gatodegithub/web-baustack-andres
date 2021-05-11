@@ -6,7 +6,7 @@ export const HeaderContainer = styled.header`
   width: 100%;
   background: url('/headerbg.svg');
   background-repeat: no-repeat;
-  background-position: 30% 70%;
+  background-position: 30% 60%;
   padding-bottom: 100px;
 `;
 
@@ -30,15 +30,30 @@ export const HeaderDifuminado = styled.div`
   overflow: visible; */
 `;
 
-export const HeaderImg = styled.div``;
+export const ContainerImgs = styled.div`
+  position: relative;
+`;
+
+export const HeaderImg = styled.img`
+  margin-top: 60px;
+  margin-left: 65px;
+  transform: rotate(5deg);
+  /* box-shadow: 3px 7px 10px -1px #000000; */
+`;
+
+export const HeaderImgCharacter = styled.img`
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+`;
 
 export const HeaderInfo = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 2em;
+  padding-top: 2.5em;
   padding-right: 60px;
   color: ${(props) => props.theme.colorWhite};
-  font-size: 48px;
+  font-size: 42px;
   font-weight: bold;
   text-align: right;
 

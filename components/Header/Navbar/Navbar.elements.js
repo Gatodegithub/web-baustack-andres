@@ -4,6 +4,6 @@ export const Nav = styled.nav`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
+  padding: 20px 0px;
   width: 100%;
 `;
