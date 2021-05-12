@@ -5,14 +5,15 @@ import styled from 'styled-components';
 export const ContainerImg = styled.section`
   height: 100vh;
   width: 100%;
-  background: url('./sectiondos.svg');
+  background: url('./bgcentralpng.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
+  overflow-x: hidden;
 
   @media (min-width: 900px) {
-    height: 100vh;
-    padding-bottom: 580px;
+    padding-bottom: 520px;
+    background-size: cover;
   }
 `;
 
@@ -54,10 +55,6 @@ export const TextContainer = styled.div`
   }
 `;
 
-// export const Img = styled.div`
-//   width: 100%;
-//   /* background: url('./SectionTwo.svg'); */
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   height: 100%;
-// `
+export const Img = styled.img`
+  
+`

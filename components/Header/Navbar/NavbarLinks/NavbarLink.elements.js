@@ -4,6 +4,10 @@ import {Device, Container} from '../../../../src/globalStyles';
 export const List = styled.ul`
   display: flex;
   list-style: none;
+
+  @media screen and (max-width: 900px){
+    display: none;
+  }
 `;
 
 export const ListItem = styled.li`

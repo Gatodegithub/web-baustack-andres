@@ -1,26 +1,34 @@
-import { Container } from 'src/globalStyles';
+import { Container, Device } from 'src/globalStyles';
 import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
-  background: url('/Footerbg.svg');
+  background: url('/footerbgpng.png');
   height: 700px;
   background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 export const FooterWrapper = styled(Container)`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: flex-start;
-  align-items: flex-end;
-  height: 80%;
+    display: grid;
+    justify-items: center;
+    height: 100%;
+    align-items: flex-end;
+    grid-template-rows: 500px 100px;
 
-  & button {
-    margin-bottom: 40px;
+  @media ${Device.desktop} {
+    grid-template-columns: 1fr 1fr;
+    justify-items: flex-start;
+    align-items: flex-end;
+    height: 80%;
+
+    & button {
+      margin-bottom: 40px;
+    }
   }
 `;
 
 export const TextWrap = styled.div`
-  color: ${props => props.theme.colorWhite};
+  color: ${(props) => props.theme.colorWhite};
   width: 260px;
 `;
 
@@ -37,10 +45,10 @@ export const List = styled.ul`
   margin: 0;
   padding: 0px;
   justify-content: flex-start;
-`
+`;
 
 export const ListItem = styled.li`
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-right: 25px;
   }
 `;

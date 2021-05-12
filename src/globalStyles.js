@@ -8,7 +8,6 @@ export const Device = {
 };
 
 export const Container = styled.div`
-  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -45,6 +44,33 @@ export const Button = styled.button`
   &::before {
     content: url('/Flask.svg');
     margin-right: 10px;
+  }
+`;
+
+export const RectangularBox = styled.div`
+  background-color: ${props => props.theme.colorPrimary};
+  color: ${props => props.theme.colorWhite};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 20px 0px;
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 32px;
+  min-height: 50px;
+  font-weight: bold;
+  font-size: 18px;
+  width: max-content;
+
+  & svg {
+    min-width: 72px;
+    min-height: 72px;
+    margin-left: 15px;
+  }
+
+  & p {
+    margin-left: 15px;
+    margin-right: 35px;
   }
 `;
 

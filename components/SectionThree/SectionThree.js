@@ -2,7 +2,8 @@ import { Button, Container } from 'src/globalStyles';
 import {
   Description,
   ImgWrap,
-  Polygon,
+  PolygonLeft,
+  PolygonRight,
   SectionThreeContainer,
   Slider,
   TextWrap,
@@ -18,17 +19,17 @@ const SectionThree = () => {
           Nuestros clientes resuelven sus problemas operativos con Baustack
         </Title>
         <Slider>
-          <Polygon src={'/Polygon 2.svg'}></Polygon>
+          <PolygonLeft src={'/Polygon 2.svg'}></PolygonLeft>
           <ImgWrap src={'/imgSlider.svg'}></ImgWrap>
           <TextWrap>
             <TitleDesc>SINTONIZA</TitleDesc>
             <Description>
-              Sintoniza logró crear una bitácora de capacitación con cientos de
-              usuarios en minutos…
+              Sintoniza logró crear una bitácora de <br/>capacitación con cientos de
+              usuarios <br/> en minutos…
             </Description>
             <Button>PRUEBA GRATUITA</Button>
           </TextWrap>
-          <Polygon src={'/Polygon 3.svg'}></Polygon>
+          <PolygonRight src={'/Polygon 3.svg'}></PolygonRight>
         </Slider>
       </SectionThreeContainer>
     </Container>

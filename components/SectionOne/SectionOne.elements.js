@@ -4,23 +4,33 @@ import styled from 'styled-components';
 export const ContainerSectionOne = styled(Container)`
   display: grid;
   height: 100vh;
+  justify-items: center;
+  align-items: center;
 
   @media ${Device.mobile} {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 200px 500px;
   }
-  
-  @media ${Device.medium} {
-    grid-template-columns: repeat(2, 40% 60%);
+
+  @media ${Device.desktop} {
+    grid-template-rows: none;
+    grid-template-columns: repeat(2, 60% 40%);
   }
 `;
 
 export const TextContainer = styled.div`
-  
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  font-size: 48px;
+  font-weight: bold;
+  height: 100vh;
+  text-align: left;
+  max-width: 650px;
 `;
 
 export const SvgContainer = styled.img`
   position: sticky;
-  top: 0;
+  bottom: 0;
   z-index: 10;
-  width: 400px;
+  width: 300px;
 `;

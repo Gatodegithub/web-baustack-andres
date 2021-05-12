@@ -6,6 +6,7 @@ import {
   HeaderInfoContainer,
   HeaderImgCharacter,
   ContainerImgs,
+  HeaderImgDegrade,
 } from './Header.elements';
 import Navbar from './Navbar/Navbar';
 
@@ -15,8 +16,9 @@ const Header = () => {
       <Navbar />
       <HeaderInfoContainer>
         <ContainerImgs>
-          <HeaderImg src={'/Mockup App.svg'}></HeaderImg>
+          <HeaderImg src={'/Mockup App.png'}></HeaderImg>
           <HeaderImgCharacter src={'/character.svg'}></HeaderImgCharacter>
+          {/* <HeaderImgDegrade src={'/degradeHeader.svg'}></HeaderImgDegrade> */}
         </ContainerImgs>
         <HeaderInfo>
           Potencia la experiencia de tus clientes creando aplicaciones simples y
