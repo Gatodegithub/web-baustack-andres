@@ -1,4 +1,4 @@
-import { Button } from 'src/globalStyles';
+import { Button } from 'components/src/globalStyles';
 import {
   Description,
   FooterContainer,

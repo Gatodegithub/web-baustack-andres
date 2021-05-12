@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Device, Container} from '../../../../src/globalStyles';
+import {Device, Container} from '../../../src/globalStyles';
 
 export const List = styled.ul`
   display: flex;

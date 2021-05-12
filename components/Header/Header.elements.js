@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Device } from '../../src/globalStyles';
+import { Device } from '../src/globalStyles';
 
 export const HeaderContainer = styled.header`
   height: 100vh;

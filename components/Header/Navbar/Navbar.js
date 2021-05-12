@@ -1,4 +1,4 @@
-import { Container } from 'src/globalStyles';
+import { Container } from 'components/src/globalStyles';
 import { Nav } from './Navbar.elements';
 import NavbarLogo from './NavbarLogo/NavbarLogo';
 import NavbarLinks from './NavbarLinks/NavbarLinks';

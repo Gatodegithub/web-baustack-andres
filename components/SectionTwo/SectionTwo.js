@@ -1,5 +1,5 @@
 import Idea from '@components/SVG/Idea';
-import { Button, RectangularBox } from 'src/globalStyles';
+import { Button, RectangularBox } from 'components/src/globalStyles';
 import { ContainerImg, TextContainer, Wrapper, Img } from './SectionTwo.elements';
 
 const SectionTwo = () => {

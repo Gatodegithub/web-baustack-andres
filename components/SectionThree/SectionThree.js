@@ -1,4 +1,4 @@
-import { Button, Container } from 'src/globalStyles';
+import { Button, Container } from 'components/src/globalStyles';
 import {
   Description,
   ImgWrap,
