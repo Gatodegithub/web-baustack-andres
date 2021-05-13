@@ -1,5 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
+// min-width: de x pixeles HACIA ARRIBA
+// max-width: de x pixeles HACIA ABAJO
 export const Device = {
   mobile: `(min-width: 576px)`,
   tablet: `(min-width: 768px)`,
@@ -23,7 +25,7 @@ export const Container = styled.div`
     max-width: 960px;
   }
   @media ${Device.desktop} {
-    max-width: 1210px;
+    max-width: 1200px;
   }
 `;
 
@@ -258,6 +260,10 @@ template {
 
 [hidden] {
   display: none;
+}
+
+ul, li {
+  margin: 0;
 }
 `;
 

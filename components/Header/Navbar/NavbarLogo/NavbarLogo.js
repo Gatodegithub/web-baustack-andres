@@ -1,5 +1,7 @@
+import * as React from "react"
+
 import { LogoContainer } from './NavbarLogo.elements';
-import { Logo } from '@components/SVG';
+import { Logo } from '../../../SVG';
 
 const NavbarLogo = () => {
   return (

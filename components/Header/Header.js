@@ -1,14 +1,16 @@
-import { Button } from 'components/src/globalStyles';
+import * as React from "react";
+
+import { Button } from "../src/globalStyles";
 import {
   HeaderContainer,
   HeaderImg,
   HeaderInfo,
   HeaderInfoContainer,
   HeaderImgCharacter,
+  HeaderImgWave,
   ContainerImgs,
-  HeaderImgDegrade,
-} from './Header.elements';
-import Navbar from './Navbar/Navbar';
+} from "./Header.elements";
+import Navbar from "./Navbar/Navbar";
 
 const Header = () => {
   return (
@@ -16,10 +18,11 @@ const Header = () => {
       <Navbar />
       <HeaderInfoContainer>
         <ContainerImgs>
-          <HeaderImg src={'/Mockup App.png'}></HeaderImg>
-          <HeaderImgCharacter src={'/character.svg'}></HeaderImgCharacter>
-          {/* <HeaderImgDegrade src={'/degradeHeader.svg'}></HeaderImgDegrade> */}
+          <HeaderImg src={"/Mockup App.png"}></HeaderImg>
+          <HeaderImgCharacter src={"/character.svg"}></HeaderImgCharacter>
         </ContainerImgs>
+
+        <HeaderImgWave src={"/headerbgwave.png"}></HeaderImgWave>
         <HeaderInfo>
           Potencia la experiencia de tus clientes creando aplicaciones simples y
           en la nube.

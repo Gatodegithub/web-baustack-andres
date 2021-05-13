@@ -1,4 +1,6 @@
-import { Button, Container } from 'components/src/globalStyles';
+import * as React from "react";
+
+import { Button, Container } from '../src/globalStyles';
 import {
   Description,
   ImgWrap,

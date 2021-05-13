@@ -1,4 +1,5 @@
-import { Button } from 'components/src/globalStyles';
+import * as React from "react";
+import { Button } from '../src/globalStyles';
 import {
   Description,
   FooterContainer,

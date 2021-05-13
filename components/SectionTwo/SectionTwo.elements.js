@@ -1,4 +1,4 @@
-import { Container } from 'components/src/globalStyles';
+import { Container } from '../src/globalStyles';
 import styled from 'styled-components';
 
 // Como hago para adaptar el background image al tamaño del contenedor ??

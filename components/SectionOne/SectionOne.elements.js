@@ -1,9 +1,8 @@
-import { Container, Device } from 'components/src/globalStyles';
+import { Container, Device } from '../src/globalStyles';
 import styled from 'styled-components';
 
 export const ContainerSectionOne = styled(Container)`
   display: grid;
-  height: 100vh;
   justify-items: center;
   align-items: center;
 
@@ -30,7 +29,14 @@ export const TextContainer = styled.div`
 
 export const SvgContainer = styled.img`
   position: sticky;
-  bottom: 0;
+  
   z-index: 10;
   width: 300px;
+  @media ${Device.desktop} {
+    top: 0;
+  }
+  
+  @media screen and (max-width: 1281px) {
+    bottom: 0;
+  }
 `;

@@ -2,16 +2,16 @@ import styled from 'styled-components';
 import { Device } from '../src/globalStyles';
 
 export const HeaderContainer = styled.header`
-  height: 100vh;
+  height: 117vh;
   width: 100%;
-  background: url('/headerbgpng.png');
+  background: url('/headerbgpng.png') bottom;
   background-repeat: no-repeat;
-  background-position: center;
-  padding-bottom: 100px;
   background-size: cover;
+  position: relative;
 `;
 
 export const HeaderInfoContainer = styled.div`
+  padding-top: 105px;
   display: grid;
 
   @media ${Device.desktop} {
@@ -21,27 +21,6 @@ export const HeaderInfoContainer = styled.div`
 
 export const ContainerImgs = styled.div`
   position: relative;
-  z-index: 1;
-  /* 
-  &::after {
-    position: absolute;
-    content: url('/degradeHeader.svg');
-    top: -100px;
-    z-index: -1;
-    box-shadow: 3px 7px 10px -1px #000000;
-  } */
-
-  /* &::before {
-    position: absolute;
-    content: '';
-    height: 100px;
-    width: 83%;
-    z-index: -1;
-    bottom: 30px;
-    right: -30px;
-    transform: rotate(5deg);
-    box-shadow: 10px 20px 23px 0px #000000;
-  } */
 `;
 
 export const HeaderImg = styled.img`
@@ -60,23 +39,34 @@ export const HeaderImg = styled.img`
 
 export const HeaderImgCharacter = styled.img`
   position: absolute;
-  bottom: -130px;
+  bottom: -145px;
   left: 0;
   @media (max-width: 1281px) {
     height: 210px;
   }
 `;
 
-export const HeaderImgDegrade = styled.img`
+export const HeaderImgWave = styled.img`
   position: absolute;
-  left: -50px;
-  top: -110px;
   z-index: -1;
+  top: 0;
+  /* height: 100%; */
+  /* width: 100%; */
 
-  /* @media (max-width: 1281px){
-    width: 100%;
-    left: 0px;
-    top: -100px;
+  /* @media (max-width: 1400px) {
+    top: 200px;
+  } */
+
+  /* @media (max-width: 1200px) {
+    top: 250px;
+  }
+
+  @media (max-width: 800px) {
+    top: 450px;
+  }
+
+  @media (max-width: 450px) {
+    top: 750px;
   } */
 `;
 

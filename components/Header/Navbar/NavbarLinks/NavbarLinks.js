@@ -1,7 +1,8 @@
-import { IdeaIcon, CardIcon, PhoneIcon, PeopleIcon } from '@components/SVG';
+import * as React from "react"
+import { IdeaIcon, CardIcon, PhoneIcon, PeopleIcon } from '../../../SVG';
 import { List, ListItem, Link } from './NavbarLink.elements';
 
-const NavbarLinks = () => {
+const NavbarLinks = ({click}) => {
   const arrayLinks = [
     {
       icon: <IdeaIcon />,
@@ -26,7 +27,7 @@ const NavbarLinks = () => {
   ];
 
   return (
-    <List>
+    <List click={click}>
       {arrayLinks.map((el, index) => {
         return (
           <ListItem key={index}>

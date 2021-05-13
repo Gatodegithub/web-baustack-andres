@@ -1,4 +1,4 @@
-import { Device } from 'components/src/globalStyles';
+import { Device } from '../src/globalStyles';
 import styled from 'styled-components';
 
 export const SectionThreeContainer = styled.div`
