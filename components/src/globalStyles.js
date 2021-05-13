@@ -63,6 +63,7 @@ export const RectangularBox = styled.div`
   font-weight: bold;
   font-size: 18px;
   width: max-content;
+  z-index: 200;
 
   & svg {
     min-width: 72px;
