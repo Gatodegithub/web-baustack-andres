@@ -11,11 +11,12 @@ export const HeaderContainer = styled.header`
 `;
 
 export const HeaderInfoContainer = styled.div`
-  padding-top: 105px;
+  padding-top: 110px;
   display: grid;
 
   @media ${Device.desktop} {
     grid-template-columns: repeat(2, 40% 60%);
+    padding-top: 85px;
   }
 `;
 
