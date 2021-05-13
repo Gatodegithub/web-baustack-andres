@@ -5,16 +5,23 @@ import styled from 'styled-components';
 export const ContainerImg = styled.section`
   height: 100vh;
   width: 100%;
-  background: url('./bgcentralpng.png');
+  /* background: url('./bgcentralpng.png'); */
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: bottom;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 
   @media (min-width: 900px) {
     padding-bottom: 520px;
     background-size: cover;
   }
+`;
+
+export const Imgs = styled.img`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -100;
 `;
 
 export const Wrapper = styled(Container)`

@@ -1,11 +1,12 @@
 import * as React from "react";
 import Idea from '../SVG/Idea';
 import { Button, RectangularBox } from '../src/globalStyles';
-import { ContainerImg, TextContainer, Wrapper } from './SectionTwo.elements';
+import { ContainerImg, TextContainer, Wrapper, Imgs } from './SectionTwo.elements';
 
 const SectionTwo = () => {
   return (
     <ContainerImg>
+      <Imgs src={'/bgcentralpng.png'}></Imgs>
       <Wrapper>
         <TextContainer>
           ¿Cómo funciona Baustack?
