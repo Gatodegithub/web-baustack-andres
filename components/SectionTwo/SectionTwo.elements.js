@@ -1,15 +1,14 @@
-import { Container } from '../src/globalStyles';
-import styled from 'styled-components';
+import { Container } from "../src/globalStyles";
+import styled from "styled-components";
 
 // Como hago para adaptar el background image al tamaño del contenedor ??
 export const ContainerImg = styled.section`
+  margin-top: 300px;
   height: 100vh;
   position: relative;
-  /* background: url('./bgcentralpng.png'); */
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
-  /* overflow-x: hidden; */
+  /* @media (max-width: 900px){
+    overflow-x: hidden; 
+  } */
 `;
 
 export const Imgs = styled.img`
@@ -17,13 +16,19 @@ export const Imgs = styled.img`
   height: 200%;
   position: absolute;
   z-index: -100;
+  top: -300px;
 `;
 
 export const Wrapper = styled.div`
-  height: 200%;
+  height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+
+  @media (max-width: 960px) {
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -35,16 +40,16 @@ export const TextContainer = styled.div`
   /* position: relative; */
   line-height: 65px;
   z-index: 100;
-  
+
   &::before {
-    content: url('/aro.svg');
+    content: url("/aro.svg");
     position: absolute;
     bottom: 0;
     z-index: -2;
   }
 
   &::after {
-    content: url('/degrade.svg');
+    content: url("/degrade.svg");
     position: absolute;
     left: -70px;
     top: -300px;
@@ -54,8 +59,13 @@ export const TextContainer = styled.div`
   & button {
     margin-top: 30px;
   }
-`;
+  @media (max-width: 960px) {
+    &::before {
+      content: none;
+    }
 
-export const Img = styled.img`
-  
-`
+    &::after {
+      content: none;
+    }
+  }
+`;

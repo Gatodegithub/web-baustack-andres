@@ -6,19 +6,12 @@ import { ContainerImg, TextContainer, Wrapper, Imgs } from './SectionTwo.element
 const SectionTwo = () => {
   return (
     <ContainerImg>
-      <Imgs src={'/bgcentralpng.png'}></Imgs>
+      <Imgs src={'/bgcentralpng.png'} />
       <Wrapper>
         <TextContainer>
           ¿Cómo funciona Baustack?
           <Button>PRUEBA GRATUITA</Button>
         </TextContainer>
-        <RectangularBox>
-          <Idea />
-          <p>
-            Programa notificaciones
-            <br /> por correo
-          </p>
-        </RectangularBox>
         <RectangularBox>
           <Idea />
           <p>

@@ -2,12 +2,16 @@ import styled from 'styled-components';
 import { Device } from '../src/globalStyles';
 
 export const HeaderContainer = styled.header`
-  height: 117vh;
+  height: 118vh;
   width: 100%;
   background: url('/headerbgpng.png') bottom;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+
+  @media (max-width: 1281px){
+    height: 130vh;
+  }
 `;
 
 export const HeaderInfoContainer = styled.div`
@@ -15,6 +19,7 @@ export const HeaderInfoContainer = styled.div`
   display: grid;
 
   @media ${Device.desktop} {
+    grid-template-rows: none;
     grid-template-columns: repeat(2, 40% 60%);
     padding-top: 85px;
   }
