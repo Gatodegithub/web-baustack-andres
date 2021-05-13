@@ -72,8 +72,7 @@ export const RectangularBox = styled.div`
   }
 
   & p {
-    margin-left: 15px;
-    margin-right: 35px;
+    margin: 0 15px 0 35px;
   }
 `;
 
