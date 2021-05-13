@@ -11,7 +11,7 @@ export const List = styled.ul`
     width: 100%;
     height: 90vh;
     position: absolute;
-    top: 70px;
+    top: 65px;
     left: ${({click}) => (click ? 0 : '-120%')};
     transition: left 1s ease;
     background: ${props => props.theme.colorPrimary};
