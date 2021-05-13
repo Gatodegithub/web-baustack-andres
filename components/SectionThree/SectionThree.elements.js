@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const SectionThreeContainer = styled.div`
   display: grid;
   grid-template-rows: 200px 400px;
-  margin-top: 35em;
+  margin-top: 20em;
 
   & h1 {
     justify-self: center;
