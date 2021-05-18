@@ -8,33 +8,34 @@ import PublicMenu from "./PublicMenu";
 import Waves from './Main/Waves';
 import TryMeButton from './TryMeButton';
 import responsive from './main/responsive';
+import ContainerStyled from './main/styles/ContainerStyled';
 
 export default function PublicHeader({children}) {
   return (
     <>
       <PublicMenu/>
       <Wrapper gradient={true}>
+
+      <ContainerStyled >
         <Row
           css={{
             default: `
-              padding: 96px 16px 0px;
+              padding: 96px 0px 0px;
               display: grid;
               gap: 32px;
             `,
             md: `
-              grid-template-columns: 40% 60%;
+              grid-template-columns: 350px 1fr;
               gap: 0px;
             `,
             lg: `
-              grid-template-columns: 45% 55%;
+              grid-template-columns: 450px 1fr;
             `,
             xl: `
-              margin-left: 40px;
-              grid-template-columns: 550px 1fr;
+              grid-template-columns: 530px 1fr;
             `
           }}
         >
-
           <ImportantShape>
             <TableStyled>
               <img src={TableSVG} alt=""/>
@@ -53,6 +54,8 @@ export default function PublicHeader({children}) {
             </TryMeContainerStyled>
           </TitleContainerStyled>
         </Row>
+        </ContainerStyled>
+
         <Waves.Bottom />
       </Wrapper>
     </>
@@ -83,7 +86,7 @@ const TitleContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   padding: 32px 0;
-  ${responsive({lg: `justify-content: center; height: 390px;padding-right: 30px;`})}
+  ${responsive({lg: `justify-content: center; height: 390px;`})}
   ${responsive({xl: `justify-content: flex-end;`})}
 
   h1 {

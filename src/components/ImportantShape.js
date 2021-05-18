@@ -6,9 +6,8 @@ import responsive from './main/responsive';
 const ShapeContainer = styled.figure`
   position: absolute;
   height: 100%;
-  left: -100px;
-  right: -100px;
-  top: -80px;
+  left: -30px;
+  right: -10px;
   ${responsive({md: `left: -100px; right: -100px;top: -60px;`})}
   ${responsive({lg: `left: -240px; right: -290px; top: -150px`})}
 `;
