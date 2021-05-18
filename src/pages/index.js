@@ -1,11 +1,15 @@
 import * as React from "react";
-import Button from "../components/Main/Button";
-import Layout from "../components/Main/Layout";
+import Layout from "../components/main/Layout";
+import PublicHeader from '../components/PublicHeader';
+import SectionFeatures from "../components/SectionFeatures";
+import SectionWhatWeDo from "../components/SectionWhatWeDo";
 
 const IndexPage = () => (
   <>
     <Layout title={'Baustack'} metaDescription={'Tablas inteligentes'}>
-      <Button to={"/"}>PRUEBA GRATUITA</Button>
+      <PublicHeader />
+      <SectionFeatures />
+      <SectionWhatWeDo />
     </Layout>
   </>
 );
