@@ -101,6 +101,6 @@ const TryMeContainerStyled = styled.div`
   display: flex;
   justify-content: center;
   padding: 32px 0;
-  ${responsive({lg: `justify-content: right;`})}
+  ${responsive({lg: `justify-content: flex-end;`})}
   ${responsive({xl: `padding-bottom: 0px;`})}
 `;
