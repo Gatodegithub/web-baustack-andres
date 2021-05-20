@@ -1,10 +1,8 @@
 import * as React from "react";
 
-export default function Facebook() {
+export default function Instagram() {
   return (
     <svg
-      width="36"
-      height="36"
       viewBox="0 0 36 36"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -21,14 +19,22 @@ export default function Facebook() {
         strokeLinejoin="round"
       />
       <path
-        d="M18 26.9999V12.5249C18 9.44991 20.46 8.48991 22.92 9.23991"
+        d="M27 21C27 24.315 24.315 27 21 27C17.685 27 15 24.315 15 21C15 17.685 17.685 15 21 15C24.315 15 27 17.685 27 21Z"
+        fill="#9275EF"
+      />
+      <path
+        d="M24 18C24 21.315 21.315 24 18 24C14.685 24 12 21.315 12 18C12 14.685 14.685 12 18 12C21.315 12 24 14.685 24 18Z"
         stroke="white"
         strokeMiterlimit="10"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M14.25 16.5H21.75"
+        d="M31.5 11.25C31.5 11.67 31.17 12 30.75 12C30.33 12 30 11.67 30 11.25C30 10.83 30.33 10.5 30.75 10.5C31.17 10.5 31.5 10.83 31.5 11.25Z"
+        fill="#9275EF"
+      />
+      <path
+        d="M28.5 8.25C28.5 8.67 28.17 9 27.75 9C27.33 9 27 8.67 27 8.25C27 7.83 27.33 7.5 27.75 7.5C28.17 7.5 28.5 7.83 28.5 8.25Z"
         stroke="white"
         strokeMiterlimit="10"
         strokeLinecap="round"

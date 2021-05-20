@@ -1,8 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
+import responsive from "./responsive";
 
 const WavesContainerStyled = styled.div`
   height: 80px;
+  position: relative;
   overflow: hidden;
   top: ${props => props.top || 'auto'};
   bottom: ${props => props.bottom || 'auto'};
@@ -10,11 +12,12 @@ const WavesContainerStyled = styled.div`
   svg {
     fill: white;
     position: absolute;
-    height: 80px;
+    height: 100%;
     ${props => props.svgTheme || ''}
   }
 
   ${props => props.theme || ''}
+  ${responsive({md: `height: 166px;`})}
 `;
 
 

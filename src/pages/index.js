@@ -3,6 +3,7 @@ import Layout from "../components/helpers/Layout";
 import PublicHeader from '../components/header/PublicHeader';
 import SectionFeatures from "../components/sectionFeatures/SectionFeatures";
 import SectionWhatWeDo from "../components/SectionWhatWeDo/SectionWhatWeDo";
+import Footer from "../components/footer/Footer";
 
 const IndexPage = () => (
   <>
@@ -10,6 +11,7 @@ const IndexPage = () => (
       <PublicHeader />
       <SectionFeatures />
       <SectionWhatWeDo />
+      <Footer />
     </Layout>
   </>
 );

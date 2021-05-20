@@ -6,10 +6,38 @@ import Spinning from "../../images/spinning.png";
 import ImportantShape from "../../images/important-shape.png";
 import ContainerStyled from "../helpers/styles/ContainerStyled";
 import TryMeButton from "../header/TryMeButton";
-import Idea from "../helpers/JSSVG/Idea";
+import { Idea, Database, CodeFile, Gauge, Edit } from "../helpers/JSSVG/";
 import responsive from "../helpers/responsive";
 
 export default function SectionWhatWeDo() {
+  const Info = [
+    [
+      <Idea />,
+      <p>
+        Cuéntanos tu proceso de <br />
+        negocio
+      </p>,
+    ],
+    [
+      <CodeFile />,
+      <p>
+        Co-creamos
+        <br /> aplicaciones en minutos
+        <br /> utilizando la tecnología <br />
+        “No Code”
+      </p>,
+    ],
+    [
+      <Database />,
+      <p>
+        Crea y controla bases de <br />
+        datos sin código
+      </p>,
+    ],
+    [<Gauge />, <p>Construye indicadores</p>],
+    [<Edit />, <p>Filtra, ordena, asigna</p>],
+  ];
+
   return (
     <Wrapper gradient={true} style={{ marginTop: "5em" }}>
       <Waves.Top />
@@ -29,34 +57,20 @@ export default function SectionWhatWeDo() {
           <ActionContainerStyled>
             <div>
               <img src={ImportantShape} alt="" />
-              <Title.H2 color={"white"}>¿Cómo funciona Baustack?</Title.H2>
+              <Title.H2 color={"white"}>
+                ¿Cómo <br />
+                funciona <br />
+                Baustack?
+              </Title.H2>
               <TryMeButton to={"#"}>PRUEBA GRATUITA</TryMeButton>
             </div>
           </ActionContainerStyled>
           <div>
-            <RectangleContainerBox>
-              <RectangleBox>
-                <Idea />
-                <p>
-                  Co-creamos
-                  <br /> aplicaciones en minutos
-                  <br /> utilizando la tecnología <br />
-                  “No Code”
-                </p>
-              </RectangleBox>
-            </RectangleContainerBox>
-            <RectangleContainerBox>
-              <RectangleBox>
-                <Idea />
-                <p>Co-creamos</p>
-              </RectangleBox>
-            </RectangleContainerBox>
-            <RectangleContainerBox>
-              <RectangleBox>
-                <Idea />
-                <p>Co-creamos</p>
-              </RectangleBox>
-            </RectangleContainerBox>
+            {Info.map((el, idx) => (
+              <RectangleContainerBox key={idx}>
+                <RectangleBox>{el}</RectangleBox>
+              </RectangleContainerBox>
+            ))}
           </div>
         </Row>
       </ContainerStyled>
@@ -71,17 +85,18 @@ const FigureSpinning = styled.figure`
     bottom: -100px;
     max-width: 270px;
     ${responsive({
-      lg: `max-width: 650px;height:700px;bottom: -300px;left:-100px;`,
+      lg: `max-width: 650px;height:700px;bottom: -400px;left:-100px;`,
     })}
   }
 `;
 
 const ActionContainerStyled = styled.div`
   margin-top: 5em;
+  margin-bottom: 15em;
   position: sticky;
-  top: 100px;
+  top: 70px;
   z-index: 10;
-  ${responsive({ md: `position:static;margin-top: 15em;` })}
+  ${responsive({ md: `position:static;margin-top: 10em;margin-bottom: 8em` })}
 
   & > div {
     ${responsive({ md: `position: sticky;top: 200px;` })}
@@ -89,19 +104,19 @@ const ActionContainerStyled = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    ${responsive({ md: `align-items: flex-start;margin-left: 4em;` })}
     h2 {
       text-align: center;
+      line-height: 1.5em;
       margin-bottom: 1em;
+      ${responsive({ md: `text-align: left;font-size: 38px;` })}
     }
     img {
       position: absolute;
       max-width: 100vw;
       bottom: -30px;
-      @media screen and (min-width: 430px) and (max-width: 768px) {
-        bottom: -100px;
-      }
-      ${responsive({ md: `bottom: -170%;` })}
-      ${responsive({ lg: `width: 70vw;bottom: -300%;` })}
+      ${responsive({ md: `bottom: -70%;left: -300px` })}
+      ${responsive({ lg: `max-width: 1000px;bottom: -30%;left: -300px` })}
     }
   }
 `;
@@ -133,12 +148,13 @@ const RectangleBox = styled.div`
   font-size: 18px;
 
   & svg {
-    min-width: 72px;
-    min-height: 72px;
+    max-width: 50px;
+    max-height: 50px;
     margin-left: 15px;
   }
 
   & p {
     margin: 0 15px 0 35px;
+    line-height: 1.2em;
   }
 `;

@@ -6,7 +6,7 @@ const ContainerStyled = styled.div`
   margin: auto;
   max-width: 1360px;
   padding: 0 16px;
-  ${responsive({xl: `padding: 0 52px;`})}
+  ${responsive({lg: `padding: 0 52px;`})}
 
   /* ${(props) =>
     props.grid
