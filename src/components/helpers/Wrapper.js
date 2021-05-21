@@ -8,6 +8,8 @@ const WrapperStyled = styled.section`
   margin-right: auto;
   margin-left: auto;
   background-image: ${props => props.gradient ? Theme.gradient : 'none'};
+  margin-top: ${({mt}) => mt ? mt : ''};
+  margin-bottom: ${({mb}) => mb ? mb : ''};
 `;
 
 const Wrapper = props => <WrapperStyled {...props}/>
