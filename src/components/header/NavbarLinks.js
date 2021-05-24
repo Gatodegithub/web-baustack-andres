@@ -7,22 +7,22 @@ const NavbarLinks = ({click}) => {
     {
       icon: <IdeaIcon />,
       text: 'SERVICIOS',
-      href: '#',
+      href: '/',
     },
     {
       icon: <CardIcon />,
       text: 'PRECIOS',
-      href: '#',
+      href: '/',
     },
     {
       icon: <PhoneIcon />,
       text: 'CONTACTO',
-      href: '#',
+      href: '/',
     },
     {
       icon: <PeopleIcon />,
       text: 'LOGIN',
-      href: '#',
+      href: '/',
     },
   ];
 

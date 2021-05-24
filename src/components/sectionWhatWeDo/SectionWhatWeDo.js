@@ -22,8 +22,8 @@ export default function SectionWhatWeDo() {
       <CodeFile />,
       <p>
         Co-creamos
-        <br /> aplicaciones en minutos
-        <br /> utilizando la tecnología <br />
+        <br /> aplicaciones en minutos <br />
+        utilizando la tecnología <br />
         “No Code”
       </p>,
     ],
@@ -62,7 +62,7 @@ export default function SectionWhatWeDo() {
                 funciona <br />
                 Baustack?
               </Title.H2>
-              <TryMeButton to={"#"}>PRUEBA GRATUITA</TryMeButton>
+              <TryMeButton to="#">PRUEBA GRATUITA</TryMeButton>
             </div>
           </ActionContainerStyled>
           <div>
@@ -137,7 +137,6 @@ const RectangleBox = styled.div`
   background-color: #3a0ca3;
   color: white;
   display: inline-flex;
-  justify-content: space-between;
   align-items: center;
   text-align: left;
   padding: 20px 0px;
@@ -146,6 +145,7 @@ const RectangleBox = styled.div`
   height: max-content;
   font-weight: bold;
   font-size: 18px;
+  ${responsive({md: `width: 350px;`})}
 
   & svg {
     max-width: 50px;

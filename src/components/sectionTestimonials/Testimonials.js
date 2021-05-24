@@ -5,6 +5,7 @@ import ContainerStyled from "../helpers/styles/ContainerStyled";
 import PolygonSli from "../../images/Polygon.svg";
 import ImgSlider from "../../images/imgSlider.svg";
 import TryMeButton from "./TryMeButton";
+import responsive from "../helpers/responsive";
 
 function Testimonials() {
   return (
@@ -34,7 +35,7 @@ function Testimonials() {
                   Sintoniza logró crear una bitácora de capacitación con cientos
                   de usuarios en minutos…
                 </Title.P>
-                <TryMeButton>PRUEBA GRATUITA</TryMeButton>
+                <TryMeButton to="#">PRUEBA GRATUITA</TryMeButton>
               </FigCaption>
             </Content>
             <Polygon>
@@ -59,6 +60,7 @@ export const Polygon = styled.figure`
   width: 100%;
   img {
     width: 20px;
+    ${responsive({lg: `width: 40px;`})}
   }
 `;
 
@@ -66,6 +68,7 @@ export const Figure = styled.figure`
   display: flex;
   img {
     width: 170px;
+    ${responsive({lg: `width: 260px;`})}
   }
 `;
 
@@ -88,7 +91,8 @@ export const Slider = styled.div`
   width: 100%;
   background-color: ${Theme.darkmauve};
   height: auto;
-  padding-bottom: 1em;
+  padding: 1em 0;
+  ${responsive({lg: `grid-template-columns: 100px 1fr 100px;`})}
 
   & > figure:nth-child(3) img {
     transform: rotate(180deg);
@@ -99,6 +103,8 @@ export const Content = styled.div`
   display: grid;
   grid-template-rows: 200px 1fr;
   row-gap: 20px;
+
+  ${responsive({md : `grid-template-rows: none;grid-template-columns: 1fr 1fr;height: 300px;place-items: center;`})}
 `;
 
 export default Testimonials;
