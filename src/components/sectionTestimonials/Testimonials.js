@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useState  } from "react";
 import styled from "styled-components";
 import { Row, Theme, Title, Wrapper } from "../helpers";
 import ContainerStyled from "../helpers/styles/ContainerStyled";
 import PolygonSli from "../../images/Polygon.svg";
-import ImgSlider from "../../images/imgSlider.svg";
 import TryMeButton from "./TryMeButton";
 import responsive from "../helpers/responsive";
 
+const data = [
+  {
+    img: require('../../images/imgSlider.svg').default,
+    title: "SINTONIZA",
+    description:
+      "Sintoniza logró crear una bitácora de capacitación con cientos de usuarios en minutos…",
+  },
+  {
+    img: require('../../images/person.svg').default,
+    title: "segundo titulo",
+    description: "segunda descripción",
+  },
+  {
+    img: require('../../images/person.svg').default,
+    title: "tercer titulo",
+    description: "tercera descripción",
+  },
+];
+
 function Testimonials() {
+  const [state, setState] = useState(0);
+
+  console.log(state);
   return (
     <Wrapper>
       <ContainerStyled>
@@ -22,23 +43,22 @@ function Testimonials() {
             </Title.H2>
           </TextContainer>
           <Slider>
-            <Polygon>
+            <Polygon onClick={() => state === 0 ? setState(data.length - 1) : setState(state - 1)}>
               <img src={PolygonSli} alt="Polygon slider" />
             </Polygon>
             <Content>
               <Figure>
-                <img src={ImgSlider} alt="Polygon slider" />
+                <img src={data[state].img} alt="Polygon slider" />
               </Figure>
               <FigCaption>
-                <Title.H2 color={'white'}>SINTONIZA</Title.H2>
-                <Title.P color={'white'}>
-                  Sintoniza logró crear una bitácora de capacitación con cientos
-                  de usuarios en minutos…
+                <Title.H2 color={"white"}>{data[state].title}</Title.H2>
+                <Title.P color={"white"}>
+                  {data[state].description}
                 </Title.P>
                 <TryMeButton to="#">PRUEBA GRATUITA</TryMeButton>
               </FigCaption>
             </Content>
-            <Polygon>
+            <Polygon onClick={() => state === data.length - 1 ? setState(0) : setState(state + 1)}>
               <img src={PolygonSli} alt="Polygon slider" />
             </Polygon>
           </Slider>
@@ -54,13 +74,14 @@ export const TextContainer = styled.div`
 `;
 
 export const Polygon = styled.figure`
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   img {
     width: 20px;
-    ${responsive({lg: `width: 40px;`})}
+    ${responsive({ lg: `width: 40px;` })}
   }
 `;
 
@@ -68,7 +89,7 @@ export const Figure = styled.figure`
   display: flex;
   img {
     width: 170px;
-    ${responsive({lg: `width: 260px;`})}
+    ${responsive({ lg: `width: 260px;` })}
   }
 `;
 
@@ -92,7 +113,7 @@ export const Slider = styled.div`
   background-color: ${Theme.darkmauve};
   height: auto;
   padding: 1em 0;
-  ${responsive({lg: `grid-template-columns: 100px 1fr 100px;`})}
+  ${responsive({ lg: `grid-template-columns: 100px 1fr 100px;` })}
 
   & > figure:nth-child(3) img {
     transform: rotate(180deg);
@@ -104,7 +125,9 @@ export const Content = styled.div`
   grid-template-rows: 200px 1fr;
   row-gap: 20px;
 
-  ${responsive({md : `grid-template-rows: none;grid-template-columns: 1fr 1fr;height: 300px;place-items: center;`})}
+  ${responsive({
+    md: `grid-template-rows: none;grid-template-columns: 1fr 1fr;height: 300px;place-items: center;`,
+  })}
 `;
 
 export default Testimonials;
