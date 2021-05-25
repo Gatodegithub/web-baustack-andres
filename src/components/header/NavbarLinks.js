@@ -1,6 +1,7 @@
 import * as React from "react"
 import styled from 'styled-components';
 import {IdeaIcon, CardIcon, PhoneIcon, PeopleIcon} from '../helpers/JSSVG';
+import shortID from "shortid";
 
 const NavbarLinks = ({click}) => {
   const arrayLinks = [
@@ -28,9 +29,9 @@ const NavbarLinks = ({click}) => {
 
   return (
     <List click={click}>
-      {arrayLinks.map((el, index) => {
+      {arrayLinks.map((el) => {
         return (
-          <ListItem key={index}>
+          <ListItem key={shortID.generate()}>
             <Link href={el.href}>
               {el.icon} {el.text}
             </Link>

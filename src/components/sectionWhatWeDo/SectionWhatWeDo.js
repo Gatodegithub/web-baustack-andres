@@ -8,6 +8,10 @@ import ContainerStyled from "../helpers/styles/ContainerStyled";
 import TryMeButton from "../header/TryMeButton";
 import { Idea, Database, CodeFile, Gauge, Edit } from "../helpers/JSSVG/";
 import responsive from "../helpers/responsive";
+import shortID from "shortid";
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function SectionWhatWeDo() {
   const Info = [
@@ -38,13 +42,21 @@ export default function SectionWhatWeDo() {
     [<Edit />, <p>Filtra, ordena, asigna</p>],
   ];
 
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    gsap.from(".rectangulo", {
+      duration: 4,
+      x: -1000,
+      y: 500,
+      scrollTrigger: ".animate",
+    });
+  }, []);
+
   return (
     <Wrapper gradient={true} style={{ marginTop: "5em" }}>
       <Waves.Top />
       <ContainerStyled>
-        <FigureSpinning>
-          <img src={Spinning} alt="" />
-        </FigureSpinning>
         <Row
           css={{
             default: `
@@ -56,22 +68,25 @@ export default function SectionWhatWeDo() {
         >
           <ActionContainerStyled>
             <div>
+              <FigureSpinning>
+                <img src={Spinning} alt="" />
+              </FigureSpinning>
               <img src={ImportantShape} alt="" />
-              <Title.H2 color={"white"}>
+              <Title.H3 color={"white"} className="animate">
                 ¿Cómo <br />
                 funciona <br />
                 Baustack?
-              </Title.H2>
+              </Title.H3>
               <TryMeButton to="#">PRUEBA GRATUITA</TryMeButton>
             </div>
           </ActionContainerStyled>
-          <div>
-            {Info.map((el, idx) => (
-              <RectangleContainerBox key={idx}>
+          <DivAnimate>
+            {Info.map((el) => (
+              <RectangleContainerBox key={shortID.generate()}>
                 <RectangleBox>{el}</RectangleBox>
               </RectangleContainerBox>
             ))}
-          </div>
+          </DivAnimate>
         </Row>
       </ContainerStyled>
       <Waves.Bottom />
@@ -79,15 +94,29 @@ export default function SectionWhatWeDo() {
   );
 }
 
-const FigureSpinning = styled.figure`
-  img {
-    position: absolute;
-    bottom: -100px;
-    max-width: 270px;
-    ${responsive({
-      lg: `max-width: 650px;height:700px;bottom: -400px;left:-100px;`,
-    })}
+const DivAnimate = styled.div`
+  ${responsive({
+    md: `div:nth-child(2) {
+    right: 0px;
+  };
+  div:nth-child(3) {
+    right: 0px;
+  };
+  div:nth-child(4) {
+    right: 0px;
+  }`,
+  })}
+  ${responsive({
+    lg: `div:nth-child(2) {
+    right: 100px;
   }
+  div:nth-child(3) {
+    right: 200px;
+  }
+  div:nth-child(4) {
+    right: 100px;
+  }`,
+  })}
 `;
 
 const ActionContainerStyled = styled.div`
@@ -105,19 +134,41 @@ const ActionContainerStyled = styled.div`
     justify-content: center;
     align-items: center;
     ${responsive({ md: `align-items: flex-start;margin-left: 4em;` })}
-    h2 {
+    h3 {
       text-align: center;
       line-height: 1.5em;
       margin-bottom: 1em;
       ${responsive({ md: `text-align: left;font-size: 38px;` })}
     }
-    img {
+    & > img {
       position: absolute;
       max-width: 100vw;
-      bottom: -30px;
+      bottom: 0px;
       ${responsive({ md: `bottom: -70%;left: -300px` })}
-      ${responsive({ lg: `max-width: 1000px;bottom: -30%;left: -300px` })}
+      ${responsive({ lg: `max-width: 1000px;bottom: -40%;left: -400px` })}
     }
+  }
+`;
+
+const FigureSpinning = styled.figure`
+  position: absolute;
+  bottom: 150px;
+  left: -100px;
+  ${responsive({ md: `left: -160px;` })}
+  ${responsive({ lg: `left: -250px;bottom: 80px;` })}
+  img {
+    @keyframes rotating {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    animation: rotating 30s linear infinite;
+    max-width: 320px !important;
+    ${responsive({ md: `max-width: 500px!important;` })}
+    ${responsive({ lg: `max-width: 650px!important;` })}
   }
 `;
 
@@ -128,12 +179,14 @@ const RectangleContainerBox = styled.div`
 
   height: 50vh;
 
-  &:not(:first-child) {
+  /* &:not(:first-child) {
     height: 80vh;
-  }
+  } */
 `;
 
-const RectangleBox = styled.div`
+const RectangleBox = styled.div.attrs((props) => ({
+  className: "rectangulo",
+}))`
   background-color: #3a0ca3;
   color: white;
   display: inline-flex;
@@ -145,7 +198,7 @@ const RectangleBox = styled.div`
   height: max-content;
   font-weight: bold;
   font-size: 18px;
-  ${responsive({md: `width: 350px;`})}
+  ${responsive({ md: `width: 350px;` })}
 
   & svg {
     max-width: 50px;

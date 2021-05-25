@@ -40,7 +40,7 @@ export default function Footer() {
             </List>
           </TextContainer>
           <ButtonContainer>
-            <TryMeButton>PRUEBA GRATUITA</TryMeButton>
+            <TryMeButton to="#">PRUEBA GRATUITA</TryMeButton>
           </ButtonContainer>
         </Row>
       </ContainerStyled>

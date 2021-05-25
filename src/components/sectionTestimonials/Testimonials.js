@@ -5,21 +5,23 @@ import ContainerStyled from "../helpers/styles/ContainerStyled";
 import PolygonSli from "../../images/Polygon.svg";
 import TryMeButton from "./TryMeButton";
 import responsive from "../helpers/responsive";
+import imgSlider from "../../images/imgSlider.svg";
 
 const data = [
   {
-    img: require('../../images/imgSlider.svg').default,
+    img: <img src={imgSlider} alt='imgSlider' />,
+    // img: require('../../images/imgSlider.svg').default,
     title: "SINTONIZA",
     description:
       "Sintoniza logró crear una bitácora de capacitación con cientos de usuarios en minutos…",
   },
   {
-    img: require('../../images/person.svg').default,
+    img: <img src={imgSlider} alt='imgSlider' />,
     title: "segundo titulo",
     description: "segunda descripción",
   },
   {
-    img: require('../../images/person.svg').default,
+    img: <img src={imgSlider} alt='imgSlider' />,
     title: "tercer titulo",
     description: "tercera descripción",
   },
@@ -28,7 +30,6 @@ const data = [
 function Testimonials() {
   const [state, setState] = useState(0);
 
-  console.log(state);
   return (
     <Wrapper>
       <ContainerStyled>
@@ -48,10 +49,10 @@ function Testimonials() {
             </Polygon>
             <Content>
               <Figure>
-                <img src={data[state].img} alt="Polygon slider" />
+                {data[state].img}
               </Figure>
-              <FigCaption>
-                <Title.H2 color={"white"}>{data[state].title}</Title.H2>
+              <FigCaption className="fade">
+                <Title.H3 color={"white"}>{data[state].title}</Title.H3>
                 <Title.P color={"white"}>
                   {data[state].description}
                 </Title.P>
@@ -71,6 +72,7 @@ function Testimonials() {
 export const TextContainer = styled.div`
   text-align: center;
   margin: 3em 0 5em;
+  ${responsive({md: `margin: 3em auto 5em;max-width: 550px;`})}
 `;
 
 export const Polygon = styled.figure`
@@ -95,7 +97,7 @@ export const Figure = styled.figure`
 
 export const FigCaption = styled.figcaption`
   text-align: left;
-  h2 {
+  h3 {
     margin-bottom: 1em;
   }
   p {

@@ -5,6 +5,7 @@ import Table from '../helpers/JSSVG/Table'
 import {Row, Wrapper} from "../helpers";
 import ContainerStyled from '../helpers/styles/ContainerStyled';
 import responsive from '../helpers/responsive';
+import shortID from 'shortid';
 
 export default function SectionFeatures() {
   return (
@@ -17,8 +18,8 @@ export default function SectionFeatures() {
         `
       }}>
         <DataContainerStyled>
-          {dataFeatures.map((el, idx) => (
-            <TextBlockStyled key={idx}>
+          {dataFeatures.map((el) => (
+            <TextBlockStyled key={shortID.generate()}>
               <Text.H2 style={{lineHeight: '40px'}} >
                 {el}
               </Text.H2>

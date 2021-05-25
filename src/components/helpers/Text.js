@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import responsive from './responsive';
 import Theme from "./Theme";
-
 
 const H1Styled = styled.h1`
   font-size: 32px;
@@ -14,12 +14,14 @@ const H2Styled = styled.h2`
   font-size: 26px;
   color: ${props => props.color || Theme.black};
   ${props => props.style ||  ''}
+  ${responsive({md: `font-size: 29px;`})}
 `;
 
 const H3Styled = styled.h3`
-  font-size: 20px;
+  font-size: 29px;
   color: ${props => props.color || Theme.black};
   ${props => props.style ||  ''}
+  ${responsive({md: `font-size: 32px;`})}
 `;
 
 const PStyled = styled.p`
