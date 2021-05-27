@@ -9,47 +9,64 @@ import TryMeButton from "../header/TryMeButton";
 import { Idea, Database, CodeFile, Gauge, Edit } from "../helpers/JSSVG/";
 import responsive from "../helpers/responsive";
 import shortID from "shortid";
-import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+
+const Info = [
+  [
+    <Idea />,
+    <p>
+      Cuéntanos tu proceso de <br />
+      negocio
+    </p>,
+  ],
+  [
+    <CodeFile />,
+    <p>
+      Co-creamos
+      <br /> aplicaciones en minutos <br />
+      utilizando la tecnología <br />
+      “No Code”
+    </p>,
+  ],
+  [
+    <Database />,
+    <p>
+      Crea y controla bases de <br />
+      datos sin código
+    </p>,
+  ],
+  [<Gauge />, <p>Construye indicadores</p>],
+  [<Edit />, <p>Filtra, ordena, asigna</p>],
+];
 
 export default function SectionWhatWeDo() {
-  const Info = [
-    [
-      <Idea />,
-      <p>
-        Cuéntanos tu proceso de <br />
-        negocio
-      </p>,
-    ],
-    [
-      <CodeFile />,
-      <p>
-        Co-creamos
-        <br /> aplicaciones en minutos <br />
-        utilizando la tecnología <br />
-        “No Code”
-      </p>,
-    ],
-    [
-      <Database />,
-      <p>
-        Crea y controla bases de <br />
-        datos sin código
-      </p>,
-    ],
-    [<Gauge />, <p>Construye indicadores</p>],
-    [<Edit />, <p>Filtra, ordena, asigna</p>],
-  ];
-
   gsap.registerPlugin(ScrollTrigger);
 
-  useEffect(() => {
-    gsap.from(".rectangulo", {
-      duration: 4,
+  //Create a custom bounce ease:
+  const animation = ([classe, duration]) => {
+    if (window.innerWidth <= 680) return;
+
+    gsap.from(`${classe}`, {
+      duration: `${duration}`,
       x: -1000,
       y: 500,
       scrollTrigger: ".animate",
+    });
+  };
+
+  useEffect(() => {
+    const data = [
+      [".rectangulo1", 2],
+      [".rectangulo2", 4],
+      [".rectangulo3", 6],
+      [".rectangulo4", 8],
+      [".rectangulo5", 10],
+    ];
+
+    data.forEach((el) => {
+      animation(el);
     });
   }, []);
 
@@ -81,9 +98,11 @@ export default function SectionWhatWeDo() {
             </div>
           </ActionContainerStyled>
           <DivAnimate>
-            {Info.map((el) => (
+            {Info.map((el, idx) => (
               <RectangleContainerBox key={shortID.generate()}>
-                <RectangleBox>{el}</RectangleBox>
+                <RectangleBox className={`rectangulo${idx + 1}`}>
+                  {el}
+                </RectangleBox>
               </RectangleContainerBox>
             ))}
           </DivAnimate>
@@ -184,9 +203,7 @@ const RectangleContainerBox = styled.div`
   } */
 `;
 
-const RectangleBox = styled.div.attrs((props) => ({
-  className: "rectangulo",
-}))`
+const RectangleBox = styled.div`
   background-color: #3a0ca3;
   color: white;
   display: inline-flex;
