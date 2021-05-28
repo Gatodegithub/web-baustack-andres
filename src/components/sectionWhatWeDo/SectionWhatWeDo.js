@@ -5,7 +5,7 @@ import { Row, Wrapper, Title } from "../helpers";
 import Spinning from "../../images/spinning.png";
 import ImportantShape from "../../images/important-shape.png";
 import ContainerStyled from "../helpers/styles/ContainerStyled";
-import TryMeButton from "../header/TryMeButton";
+import TryMeButton from "../actionButton/TryMeButton";
 import { Idea, Database, CodeFile, Gauge, Edit } from "../helpers/JSSVG/";
 import responsive from "../helpers/responsive";
 import shortID from "shortid";
@@ -154,6 +154,7 @@ const ActionContainerStyled = styled.div`
     align-items: center;
     ${responsive({ md: `align-items: flex-start;margin-left: 4em;` })}
     h3 {
+      z-index: 3;
       text-align: center;
       line-height: 1.5em;
       margin-bottom: 1em;
@@ -163,7 +164,8 @@ const ActionContainerStyled = styled.div`
       position: absolute;
       max-width: 100vw;
       bottom: 0px;
-      ${responsive({ md: `bottom: -70%;left: -300px` })}
+      background: linear-gradient(106.35deg, #4316DB 0.01%, #3A0CA3 0.02%, #7209B7 190%);
+      ${responsive({ md: `bottom: -70%;left: -300px;background: none;` })}
       ${responsive({ lg: `max-width: 1000px;bottom: -40%;left: -400px` })}
     }
   }
@@ -173,6 +175,7 @@ const FigureSpinning = styled.figure`
   position: absolute;
   bottom: 150px;
   left: -100px;
+  z-index: 2;
   ${responsive({ md: `left: -160px;` })}
   ${responsive({ lg: `left: -250px;bottom: 80px;` })}
   img {

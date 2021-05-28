@@ -5,7 +5,7 @@ import Wrapper from "../helpers/Wrapper";
 import Waves from "../helpers/Waves";
 import Text from "../helpers/Text";
 import ContainerStyled from "../helpers/styles/ContainerStyled";
-import TryMeButton from "./TryMeButton";
+import TryMeButton from "../actionButton/TryMeButton";
 import Instagram from "../helpers/JSSVG/Instagram";
 import Facebook from "../helpers/JSSVG/Facebook";
 import responsive from "../helpers/responsive";

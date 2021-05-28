@@ -6,7 +6,7 @@ import ImportantShape from './ImportantShape';
 import styled from 'styled-components';
 import PublicMenu from "./PublicMenu";
 import Waves from '../helpers/Waves';
-import TryMeButton from './TryMeButton';
+import TryMeButton from '../actionButton/TryMeButton';
 import responsive from '../helpers/responsive';
 import ContainerStyled from '../helpers/styles/ContainerStyled';
 

@@ -1,0 +1,43 @@
+.SliderContainer {
+  width: 100%;
+  background-color: #9275ef;
+  border-radius: 20px;
+  box-shadow: -15px -15px 0px 0px #9275ef,
+    -15px -10px 5px 0px rgba(0, 0, 0, 0.2), 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: #9275ef99;
+}
+
+.swiper-button-next {
+  right: 5px;
+}
+.swiper-button-prev {
+  left: 5px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  width: 20px;
+}
+@media screen and (min-width: 768px) {
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    width: 45px;
+  }
+  .swiper-button-next {
+    right: 15px;
+  }
+  .swiper-button-prev {
+    left: 15px;
+  }
+}
+
+.swiper-button-prev::after {
+  content: url("/Polygon.svg");
+}
+
+.swiper-button-next::after {
+  content: url("/Polygon.svg");
+  transform: rotate(180deg);
+}
