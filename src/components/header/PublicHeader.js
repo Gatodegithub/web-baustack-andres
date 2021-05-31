@@ -14,7 +14,7 @@ export default function PublicHeader({children}) {
   return (
     <>
       <PublicMenu/>
-      <Wrapper gradient={true}>
+      <Wrapper gradient={true} style={{overflow: 'hidden'}}>
 
       <ContainerStyled >
         <Row
@@ -64,7 +64,7 @@ export default function PublicHeader({children}) {
 
 
 const TableStyled = styled.figure`
-  padding: 16px;
+  padding: 16px 0px 0px;
 
   img {
     width: 80%;
@@ -78,14 +78,14 @@ const PersonStyled = styled.figure`
   width: 50%;
   top: 50%;
   ${responsive({md: `width: 70%; left: -100px; top: 40%;`})}
-  ${responsive({lg: `width: 70%; left: -130px; top: 50%;`})}
-  ${responsive({xl: `width: 70%; left: -200px; top: 65%;`})}
+  ${responsive({lg: `width: 70%; left: -160px; top: 46%;`})}
+  ${responsive({xl: `width: 70%; left: -180px; top: 50%;`})}
 `;
 
 const TitleContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 32px 0;
+  padding: 32px 0 32px 16px;
   ${responsive({lg: `justify-content: center; height: 390px;`})}
   ${responsive({xl: `justify-content: flex-end;`})}
 

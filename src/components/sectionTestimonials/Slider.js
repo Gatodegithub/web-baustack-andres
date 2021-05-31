@@ -64,7 +64,7 @@ const Slider = () => {
         wrapperTag="ul"
         navigation
         pagination={{ type: "progressbar" }}
-        spaceBetween={5}
+        spaceBetween={1}
         slidesPerView={1}
         onInit={(swiper) => {
           console.log("Swiper inicializado", swiper);

@@ -17,7 +17,7 @@ const WavesContainerStyled = styled.div`
   }
 
   ${props => props.theme || ''}
-  ${responsive({md: `height: 166px;`})}
+  ${responsive({md: `height: 167px;`})}
 `;
 
 

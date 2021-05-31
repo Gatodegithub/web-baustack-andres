@@ -164,7 +164,9 @@ const ActionContainerStyled = styled.div`
       position: absolute;
       max-width: 100vw;
       bottom: 0px;
-      background: linear-gradient(106.35deg, #4316DB 0.01%, #3A0CA3 0.02%, #7209B7 190%);
+      /* *** */
+      /* background: linear-gradient(180.35deg, #4316DB 0.10%, #3A0CA3 0.10%, #7209B7 150%); */
+      /* *** */
       ${responsive({ md: `bottom: -70%;left: -300px;background: none;` })}
       ${responsive({ lg: `max-width: 1000px;bottom: -40%;left: -400px` })}
     }
@@ -218,7 +220,7 @@ const RectangleBox = styled.div`
   height: max-content;
   font-weight: bold;
   font-size: 18px;
-  ${responsive({ md: `width: 350px;` })}
+  ${responsive({ md: `width: 350px;z-index: 10;` })}
 
   & svg {
     max-width: 50px;

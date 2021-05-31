@@ -53,6 +53,7 @@ const ImagesContainerStyled = styled.div`
   position: sticky;
   bottom: 0;
   background-color: white;
+  ${responsive({md: `position: static;`})}
 
   svg {
     ${responsive({md: `position:sticky;top: 30%;margin-top: 2.2em;`})}
