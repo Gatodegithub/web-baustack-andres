@@ -1,0 +1,8 @@
+{
+  "main.js": "render-page.js",
+  "render-page.js.map": "render-page.js.map",
+  "static/imgSlider.svg": "static/imgSlider-53ff5387537c374ce3026669278c55b4.svg",
+  "static/important-shape.png": "static/important-shape-c20ecfca3fb71e7cd032bc173ce15b46.png",
+  "static/main-table.svg": "static/main-table-09ccb0c2572dedca7758e010e77289f3.svg",
+  "static/spinning.png": "static/spinning-820c5264a82a967872e1e8e129c6c09b.png"
+}
