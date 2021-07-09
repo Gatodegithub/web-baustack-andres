@@ -66,13 +66,6 @@ const Slider = () => {
         pagination={{ type: "progressbar" }}
         spaceBetween={1}
         slidesPerView={1}
-        onInit={(swiper) => {
-          console.log("Swiper inicializado", swiper);
-        }}
-        onSlideChange={(swiper) => {
-          console.log("Slider index cambio a: ", swiper.activeIndex);
-        }}
-        onReachEnd={() => console.log("Swiper end reached")}
       >
         {slides}
       </Swiper>
