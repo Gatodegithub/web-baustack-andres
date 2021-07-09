@@ -1,14 +1,14 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import smoothScroll from "smooth-scroll";
-import "./Globalstyles.css";
+// import smoothScroll from "smooth-scroll";
+import "./GlobalStyles.css";
 
 export default function Layout(props) {
   const title = props.title || 'Baustack';
   const metaDescription = props.metaDescription || 'Baustack';
 
   // Es una verificación idiomática para ver si el script se está ejecutando en una página web dentro de un navegador web o no.
-  if (typeof window !== 'undefined') smoothScroll('a[href*="#"]');
+  // if (typeof window !== 'undefined') smoothScroll('a[href*="#"]');
 
   return (
     <>
